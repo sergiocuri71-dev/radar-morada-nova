@@ -25,4 +25,4 @@ Os dados de cada dia ficam guardados na pasta `dados/`, com histórico.
 - Dado ausente não é falta.
 
 ## Achou um erro?
-Abra uma *issue* neste repositório.
+Escreva para radarmnm@gmail.com ou abra uma *issue* neste repositório.
