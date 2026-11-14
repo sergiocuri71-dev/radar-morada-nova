@@ -22,3 +22,26 @@ def pedido(texto, limite=320):
         corte = trecho[:limite].rsplit(' ', 1)[0]
         trecho = corte.rstrip(',;:') + '…'
     return trecho
+
+import unicodedata
+def _sa(t):
+    return ''.join(c for c in unicodedata.normalize('NFD', t) if unicodedata.category(c) != 'Mn').lower()
+
+def autores(texto, nomes, autor_registrado):
+    """Quem assina: nomes de vereadores no cabeçalho, antes de 'vereador(es) desta Casa'.
+    Ex.: 'DOUGLAS MIGUEL ... e MUNIQUE PRISCILA DA SILVA, vereadores desta Casa, vêm...'"""
+    t = _sa(re.sub(r'\s+', ' ', texto or ''))
+    m = re.search(r'senhor presidente,?(.{0,400}?),?\s*vereador(?:a|es|as)? (?:desta|dessa|da) casa', t)
+    achados = []
+    if m:
+        cab = m.group(1)
+        for n in nomes:
+            partes = _sa(n).split()
+            # nome completo, ou primeiro + último nome
+            if _sa(n) in cab or (partes[0] in cab and partes[-1] in cab):
+                if n not in achados:
+                    achados.append(n)
+    # ordem de assinatura no documento
+    if m:
+        achados.sort(key=lambda n: cab.find(_sa(n).split()[0]))
+    return achados or [autor_registrado]

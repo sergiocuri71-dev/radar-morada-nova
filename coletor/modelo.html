@@ -67,6 +67,7 @@
   .g-melhoria{background:#e3f0fb;color:#1d4e89}.g-cobranca{background:#fdf0dc;color:#7a5410}.g-homenagem{background:#f1e8f7;color:#6b3a8a}.g-lei{background:#dff2ea;color:#1c6b55}
   .conflito{background:#fbe3e6;color:#7a1f2b;margin:0 0 8px}.conflito strong{color:#7a1f2b}
   ul.ausencias{padding-left:18px;margin:6px 0;font-size:.93rem}ul.ausencias li{margin:4px 0}
+  .nota-autor{font-size:.85rem;color:var(--suave);margin:2px 0 6px}
   .vazio{color:var(--suave);font-style:italic;padding:12px 0}
   footer{border-top:1px solid var(--linha);padding:18px 0 40px;color:var(--suave);font-size:.85rem}
   dl.glossario dt{font-weight:700;color:var(--texto);margin-top:8px}
@@ -118,7 +119,8 @@ const badge = voto => { const [t,c] = VOTO[voto] || [voto,'v-outro']; return `<s
 
 const GRUPO = Object.fromEntries(D.grupos.map(g => [g.id, g]));
 const resumoGrupos = ps => D.grupos.map(g => [g, ps.filter(p => p.grupo === g.id).length]).filter(([,n]) => n);
-const propsDe = v => D.props.filter(p => p.autor === v.nome).sort(ordemData);
+const propsDe = v => D.props.filter(p => p.autores.includes(v.nome)).sort(ordemData);
+const notaAutoria = p => p.autores.includes(p.autor) ? '' : `<p class="nota-autor">O cadastro da Câmara registra ${esc(p.autor)} como autor, mas o documento é assinado por ${esc(p.autores.join(' e '))}.</p>`;
 const votosDe = v => D.votacoes.filter(x => !x.conflito).map(x => ({x, voto:(x.votos.find(y => y.v === v.id) || {}).voto})).filter(o => o.voto);
 
 const TIPO_EXPLICA = {
@@ -196,7 +198,7 @@ function vereador(id){
     document.getElementById('lista').innerHTML = (lista.slice(0, mostrar).map(p => `
       <div class="item">
         <div class="meta"><span class="grupo g-${p.grupo}">${esc(GRUPO[p.grupo].nome)}</span> <b>${esc(p.tipo)} nº ${p.numero}/${p.ano}</b> · ${p.projeto ? 'apresentado em ' + esc(p.data) : dataNum(p.data) > hoje ? `<span class="pauta">pautada para ${esc(p.data)}</span>` : 'reunião de ' + esc(p.data)}${p.dest ? ' · para: ' + esc(p.dest) : ''}</div>
-        <p>${esc(p.pedido)}</p>
+        <p>${esc(p.pedido)}</p>${p.autores.length > 1 ? `<p class="nota-autor">Proposta conjunta: ${esc(p.autores.join(', '))}.</p>` : ''}${notaAutoria(p)}
         ${fonte(p.url,'texto completo na Câmara')}
       </div>`).join('') || '<p class="vazio">Nada encontrado com esse filtro.</p>') +
       (lista.length > mostrar ? `<button class="mais" id="mais">Mostrar mais (${lista.length - mostrar} restantes)</button>` : '');
@@ -241,8 +243,8 @@ const nomeLugar = k => { const l = D.lugares[k]; return l ? `${l.tipo} ${l.nome}
 const autorLink = nome => { const v = porNome[nome]; return v ? `<a href="#vereador-${v.id}">${esc(v.nome)}</a>` : esc(nome); };
 const itemProp = p => `
       <div class="item">
-        <div class="meta"><span class="grupo g-${p.grupo}">${esc(GRUPO[p.grupo].nome)}</span> <b>${esc(p.tipo)} nº ${p.numero}/${p.ano}</b> · ${dataNum(p.data) > hoje ? `<span class="pauta">pautada para ${esc(p.data)}</span>` : esc(p.data)} · por ${autorLink(p.autor)}</div>
-        <p>${esc(p.pedido)}</p>
+        <div class="meta"><span class="grupo g-${p.grupo}">${esc(GRUPO[p.grupo].nome)}</span> <b>${esc(p.tipo)} nº ${p.numero}/${p.ano}</b> · ${dataNum(p.data) > hoje ? `<span class="pauta">pautada para ${esc(p.data)}</span>` : esc(p.data)} · por ${p.autores.map(autorLink).join(', ')}</div>
+        <p>${esc(p.pedido)}</p>${notaAutoria(p)}
         ${fonte(p.url,'texto completo na Câmara')}
       </div>`;
 const AVISO_REPETIDO = `<div class="caixa"><strong>Atenção:</strong> pedido repetido não prova que a Prefeitura ignorou. O mesmo assunto pode voltar porque o problema é grande, porque surgiram novos pontos na mesma rua, ou porque foi resolvido e voltou a acontecer. A resposta a cada pedido, quando existe, fica na página dele no site da Câmara.</div>`;
@@ -263,7 +265,7 @@ function lugaresView(){
       html += `<h3 id="voltam">Pedidos que voltam</h3>
         <p class="intro">Quando o mesmo tipo de pedido aparece mais de uma vez para o mesmo lugar, desde 2025. Toque para ver cada pedido.</p>${AVISO_REPETIDO}
         ${D.repetidos.map(([k,t,ids]) => { const ps = ids.map(i => propPorId[i]).sort((a,b) => dataNum(a.data)-dataNum(b.data));
-          const autores = [...new Set(ps.map(p => p.autor))];
+          const autores = [...new Set(ps.flatMap(p => p.autores))];
           return `<div class="item"><div><b>${esc(t[0].toUpperCase()+t.slice(1))}</b> · ${esc(nomeLugar(k))}</div>
             <div class="meta"><b>${ps.length} pedidos</b>, de ${esc(ps[0].data)} a ${esc(ps[ps.length-1].data)} · ${autores.length === 1 ? '1 vereador' : autores.length + ' vereadores'}</div>
             <details><summary>Ver os ${ps.length} pedidos</summary>${ps.map(itemProp).join('')}</details></div>`; }).join('')}`;
@@ -275,7 +277,7 @@ function lugaresView(){
       else if (lugaresAchados.length) html += `<div class="tipos">${lugaresAchados.slice(0,12).map(k => `<button data-l="${esc(k)}">${esc(nomeLugar(k))}</button>`).join('')}</div>`;
       const reps = D.repetidos.filter(([k]) => sel ? k === sel : lugaresAchados.includes(k));
       if (reps.length) html += `<div class="caixa"><strong>Pedidos que voltam aqui:</strong> ${reps.map(([k,t,ids]) => `${esc(t)} (${ids.length} pedidos${sel ? '' : ', ' + esc(nomeLugar(k))})`).join('; ')}. Pedido repetido não prova que a Prefeitura ignorou.</div>`;
-      const autores = {}; lista.forEach(p => autores[p.autor] = (autores[p.autor]||0) + 1);
+      const autores = {}; lista.forEach(p => p.autores.forEach(a => autores[a] = (autores[a]||0) + 1));
       html += `<p class="intro">${lista.length ? `<b>${lista.length}</b> ${lista.length === 1 ? 'pedido encontrado' : 'pedidos encontrados'}. Quem pediu: ${Object.entries(autores).sort((a,b)=>b[1]-a[1]).map(([n,c]) => `${autorLink(n)} (${c})`).join(', ')}.` : 'Nenhum pedido encontrado. Tente outra grafia ou só parte do nome.'}</p>`;
       html += lista.slice(0, mostrar).map(itemProp).join('') + (lista.length > mostrar ? `<button class="mais" id="maisL">Mostrar mais (${lista.length - mostrar} restantes)</button>` : '');
     }
@@ -301,7 +303,7 @@ function sobre(){
     </div>
     <h3>O que você precisa saber</h3>
     <div class="caixa">
-      <p><strong>Propostas:</strong> contamos cada requerimento, indicação, moção e projeto apresentado desde 2025, pelo autor que a Câmara registra. Propostas feitas em conjunto aparecem só para o primeiro autor, por isso a ficha oficial de alguns vereadores mostra um número um pouco diferente. Projetos do Prefeito e da Mesa Diretora não entram na conta de nenhum vereador.</p>
+      <p><strong>Propostas:</strong> contamos cada requerimento, indicação, moção e projeto apresentado desde 2025. O autor é quem assina o documento: uma proposta assinada por dois vereadores conta para os dois. Quando o cadastro da Câmara aponta outro autor, o site mostra o aviso na própria proposta. Por isso a ficha oficial de alguns vereadores pode mostrar um número um pouco diferente. Propostas já pautadas para a próxima reunião também entram. Projetos do Prefeito e da Mesa Diretora não entram na conta de nenhum vereador.</p>
       <p><strong>Presença:</strong> a ficha da Câmara mostra 100% para todos. O site também lê as atas das reuniões (ordinárias, extraordinárias e audiências; não entram comissões, posse e sessões solenes) e lista cada ausência registrada, dizendo se a ata fala em justificativa ou falta abonada. As atas são escaneadas e lidas por reconhecimento de texto, por isso cada ausência tem o link para a ata.</p>
       <p><strong>Votações em conflito:</strong> quando uma votação publicada não aparece na ata da reunião, ou mostra votando alguém que a ata dá como ausente, o site avisa e não conta essa votação para nenhum vereador.</p>
       <p><strong>Votos:</strong> a Câmara publica o voto de cada vereador desde agosto de 2026. O presidente só vota em caso de empate ou quando o Regimento exige; nas outras votações aparece como "Presidente, sem voto".</p>

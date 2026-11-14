@@ -2,7 +2,7 @@
 Uso: python3 montar.py dados site/index.html"""
 import json, re, sys, os, datetime
 sys.path.insert(0, os.path.dirname(__file__))
-from pedido import pedido
+from pedido import pedido, autores
 from lugares import indexar, tema
 from classificar import classificar_proposicao, classificar_projeto, GRUPOS, EXPLICA
 
@@ -26,12 +26,14 @@ for v in d["vereadores"]:
         "url": f"{SITE}/vereador/{v['id']}",
     })
 nomes = {v["nome"] for v in d["vereadores"]}
+lista_nomes = sorted(nomes)
 props = []
 for p in d["proposicoes"]:
     props.append({
         "grupo": classificar_proposicao(p["tipo"], pedido(p.get("texto_completo") or p.get("texto") or "", 3000)),
         "id": p["id"], "tipo": p["tipo"].strip().capitalize().replace("Indicação", "Indicação"),
         "numero": p["numero"], "ano": p["ano"], "data": p["data"], "autor": p["autoria"],
+        "autores": autores(p.get("texto_completo") or "", lista_nomes, p["autoria"]),
         "dest": (p.get("destinatario") or "").strip(), "pedido": resumo(p.get("texto_completo") or p.get("texto")),
         "url": f"{SITE}/Proposicao/{p['id']}",
     })
@@ -42,6 +44,7 @@ for x in d.get("projetos", []):
     props.append({
         "grupo": classificar_projeto(x["tipo"], assunto), "id": x["cod"], "tipo": x["tipo"],
         "numero": x["numero"], "ano": x["ano"], "data": x["data_recebimento"], "autor": x["autoria"],
+        "autores": [x["autoria"]] + [c for c in (x.get("coautores") or []) if isinstance(c, str) and c in nomes],
         "dest": "", "pedido": assunto[:1].upper() + assunto[1:].lower() if assunto.isupper() else assunto,
         "url": f"{SITE}/Projeto/{x['cod']}", "projeto": True,
     })
@@ -102,6 +105,8 @@ for x in votacoes:
     votou_ausente = [nome_por_id.get(y["v"], "") for y in x["votos"] if y["voto"] not in ("ausente",) and nome_por_id.get(y["v"]) in ausentes]
     if votou_ausente:
         problemas.append("a ata registra como ausente quem aparece votando: " + ", ".join(votou_ausente))
+    if m and int(m.group(2)) < 2025:
+        problemas.insert(0, f"o projeto é de {m.group(2)}, da legislatura anterior, mas a votação aparece com data de {x['data']} e com os votos dos vereadores atuais, vários dos quais não eram vereadores em {m.group(2)}")
     if problemas:
         x["conflito"] = "; ".join(problemas)
 coletado = datetime.datetime.fromisoformat(d["coletado_em"]).astimezone(datetime.timezone(datetime.timedelta(hours=-3)))
