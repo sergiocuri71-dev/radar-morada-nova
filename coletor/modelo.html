@@ -104,10 +104,14 @@
   .tabela{width:100%;border-collapse:collapse;background:var(--branco);border-radius:18px;overflow:hidden;font-size:.93rem}
   .tabela th,.tabela td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--linha)}
   .tabela th{font-size:.8rem;color:var(--suave);font-weight:600}
-  .tabela td.n{text-align:center;font-family:var(--titulo);font-weight:700}
+  .tabela td.n{text-align:center;font-family:var(--titulo);font-weight:700;white-space:nowrap}
   footer{border-top:1px solid var(--linha);padding:18px 0 40px;color:var(--suave);font-size:.85rem}
   dl.glossario dt{font-weight:700;color:var(--texto);margin-top:8px}
   dl.glossario dd{margin:0}
+  .bloco.largo{grid-column:1 / -1;min-height:0;flex-direction:row;align-items:center}
+  .barra.grossa{height:14px;margin:10px 0 2px}
+  b.grande{font-family:var(--titulo);font-size:1.5rem}
+  .area{margin:10px 0}.area-topo{display:flex;justify-content:space-between;gap:10px;font-size:.92rem}.area.destaque span{font-weight:700}
   @media (min-width:700px){ .blocos{grid-template-columns:repeat(4,minmax(0,1fr))} .grade-ver{grid-template-columns:repeat(5,minmax(0,1fr))} }
 </style>
 </head>
@@ -121,6 +125,7 @@
       <a href="#lugares" data-aba="lugares">Meu bairro</a>
       <a href="#votacoes" data-aba="votacoes">Votações</a>
       <a href="#presenca" data-aba="presenca">Presença</a>
+      <a href="#contas" data-aba="contas">Contas</a>
       <a href="#sobre" data-aba="sobre">Sobre</a>
     </nav>
   </div>
@@ -168,7 +173,7 @@ const TIPO_EXPLICA = {
   'Moção':'manifestação da Câmara: homenagem, aplauso, pesar ou protesto'
 };
 
-const ICO = {"v": "<circle cx=\"9\" cy=\"8\" r=\"3.5\"/><path d=\"M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5\"/><circle cx=\"17.5\" cy=\"9\" r=\"2.5\"/><path d=\"M17 14.5c2.4.2 4 1.8 4.5 4.5\"/>", "b": "<path d=\"M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z\"/><circle cx=\"12\" cy=\"9.5\" r=\"2.5\"/>", "o": "<path d=\"M5 12l4 4 10-10\"/><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"3\"/>", "a": "<path d=\"M7 3h7l5 5v13H7z\"/><path d=\"M14 3v5h5\"/><path d=\"M10 13h6M10 17h6\"/>"};
+const ICO = {"v": "<circle cx=\"9\" cy=\"8\" r=\"3.5\"/><path d=\"M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5\"/><circle cx=\"17.5\" cy=\"9\" r=\"2.5\"/><path d=\"M17 14.5c2.4.2 4 1.8 4.5 4.5\"/>", "b": "<path d=\"M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z\"/><circle cx=\"12\" cy=\"9.5\" r=\"2.5\"/>", "o": "<path d=\"M5 12l4 4 10-10\"/><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"3\"/>", "a": "<path d=\"M7 3h7l5 5v13H7z\"/><path d=\"M14 3v5h5\"/><path d=\"M10 13h6M10 17h6\"/>", "r": "<rect x=\"2\" y=\"6\" width=\"20\" height=\"12\" rx=\"2\"/><circle cx=\"12\" cy=\"12\" r=\"2.5\"/><path d=\"M6 12h.01M18 12h.01\"/>"};
 const icone = k => `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICO[k]}</svg>`;
 const MESES = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
 const mesAno = d => { const [,m,a] = d.split('/'); return `${MESES[+m-1]}/${a}`; };
@@ -205,6 +210,10 @@ function noticias(){
   }
   const aus = D.vereadores.reduce((s, v) => s + v.ausencias.length, 0);
   const todos100 = D.vereadores.every(v => String(v.presenca) === '100');
+  if (D.fin && D.fin.municipio.atual){
+    const m = D.fin.municipio.atual;
+    notas.push([pct(m.receita_realizada, m.receita_prevista) + '%', `da receita prevista para ${m.ano} já foi arrecadada pela Prefeitura até ${m.meses.split('–')[1]}/${m.ano}.`, '#contas']);
+  }
   notas.push([aus, `${aus === 1 ? 'ausência registrada' : 'ausências registradas'} nas ${D.totalAtas} atas de reunião desde 2025.${todos100 ? ' A ficha oficial mostra 100% de presença para todos.' : ''}`, '#presenca']);
   html += `<h3>Em destaque</h3><div class="notas">${notas.map(([n, t, h]) => `<a class="nota" href="${h}"><b>${n}</b><span>${t}</span></a>`).join('')}</div>`;
   return html;
@@ -224,11 +233,83 @@ function inicio(){
       <a class="bloco" href="#lugares"><div class="ic">${icone('b')}</div><div><b>Meu bairro</b><span>${nLugares} lugares citados</span></div></a>
       <a class="bloco" href="#votacoes"><div class="ic">${icone('o')}</div><div><b>Votações</b><span>${validas} com o voto de cada um</span></div></a>
       <a class="bloco" href="#presenca"><div class="ic">${icone('a')}</div><div><b>Presença</b><span>lida em ${D.totalAtas} atas</span></div></a>
+      ${D.fin ? `<a class="bloco largo" href="#contas"><div class="ic">${icone('r')}</div><div><b>Contas da Prefeitura e da Câmara</b><span>quanto entrou, quanto saiu e para onde foi</span></div></a>` : ''}
     </nav>
     ${noticias()}
     <h3>Vereadores</h3>
     <div class="grade-ver">${vs.map(v => `<a class="mini" href="#vereador-${v.id}"><div class="avatar" aria-hidden="true">${iniciais(v.nome)}</div><b>${esc(apelido(v))}</b><span>${esc(v.sigla)} · ${propsDe(v).length}</span></a>`).join('')}</div>
     <p class="intro" style="margin-top:10px">Ordem alfabética. O número é o total de propostas desde 2025.</p>`;
+}
+
+const reais = v => v == null ? '—' : v >= 1e6 ? 'R$ ' + (v/1e6).toLocaleString('pt-BR', {maximumFractionDigits: 1, minimumFractionDigits: 1}) + ' mi'
+  : 'R$ ' + (v/1e3).toLocaleString('pt-BR', {maximumFractionDigits: 0}) + ' mil';
+const pct = (a, b) => b ? Math.round(100 * a / b) : 0;
+const barraValor = (v, total, cor='var(--azul)') => `<div class="barra grossa" aria-hidden="true"><i style="width:${Math.min(100, 100*(v||0)/(total||1))}%;background:${cor}"></i></div>`;
+const NOMES_AREA = {'Legislativa':'Legislativa (Câmara)','Encargos Especiais':'Encargos especiais (dívidas, precatórios)','Previdência Social':'Previdência dos servidores'};
+
+function contasView(){
+  const F = D.fin;
+  if (!F || !F.municipio.atual){ $c.innerHTML = '<p class="vazio">Dados de contas ainda não disponíveis.</p>'; return; }
+  const m = F.municipio.atual, ant = F.municipio.ano_anterior, cp = F.camara_pessoal, pp = F.prefeitura_pessoal;
+  const leg = m.funcoes.find(f => f.funcao === 'Legislativa') || {};
+  const legAnt = ant ? (ant.funcoes.find(f => f.funcao === 'Legislativa') || {}) : {};
+  const maxF = Math.max(...m.funcoes.map(f => f.liquidado || 0));
+  const periodo = `${m.meses.replace('–', ' a ')} de ${m.ano}`;
+  $c.innerHTML = `
+    <h2>Contas da Prefeitura e da Câmara</h2>
+    <p class="intro">Quanto o município arrecadou e gastou, segundo os relatórios oficiais que a Prefeitura e a Câmara enviam ao Tesouro Nacional. Os números de ${m.ano} vão de ${periodo}: são do relatório bimestral mais recente e ainda podem ser revisados no balanço anual.</p>
+
+    <h3>Prefeitura (todo o município)</h3>
+    <div class="item">
+      <div class="meta">Dinheiro que entrou em ${m.ano}</div>
+      <p style="margin:4px 0"><b class="grande">${reais(m.receita_realizada)}</b> arrecadados de ${reais(m.receita_prevista)} previstos para o ano (${pct(m.receita_realizada, m.receita_prevista)}%).</p>
+      ${barraValor(m.receita_realizada, m.receita_prevista, 'var(--favor)')}
+    </div>
+    <div class="item">
+      <div class="meta">Dinheiro que saiu em ${m.ano}</div>
+      <p style="margin:4px 0"><b class="grande">${reais(m.despesa_paga)}</b> pagos. Já estão reservados (empenhados) ${reais(m.despesa_empenhada)} de ${reais(m.despesa_autorizada)} autorizados para o ano.</p>
+      ${barraValor(m.despesa_empenhada, m.despesa_autorizada)}
+    </div>
+
+    <h3>Para onde foi o dinheiro</h3>
+    <p class="intro">Gasto por área em ${periodo}, considerando o que já foi entregue ou prestado (despesa liquidada).</p>
+    <div class="item">${m.funcoes.filter(f => f.liquidado).map(f => `
+      <div class="area${f.funcao === 'Legislativa' ? ' destaque' : ''}"><div class="area-topo"><span>${esc(NOMES_AREA[f.funcao] || f.funcao)}</span><b>${reais(f.liquidado)}</b></div>${barraValor(f.liquidado, maxF, f.funcao === 'Legislativa' ? 'var(--amarelo)' : 'var(--azul)')}</div>`).join('')}
+    </div>
+    ${pp ? `<div class="item"><div class="meta">Gasto da Prefeitura com pessoal (12 meses até ${pp.semestre === 1 ? 'junho' : 'dezembro'} de ${pp.ano})</div>
+      <p style="margin:4px 0"><b class="grande">${String(pp.pessoal_pct).replace('.', ',')}%</b> da receita corrente líquida. O limite da Lei de Responsabilidade Fiscal é ${pp.limite_pct}%.</p>
+      ${barraValor(pp.pessoal_pct, pp.limite_pct)}</div>` : ''}
+
+    <h3>Câmara Municipal</h3>
+    <div class="caixa">A Câmara não cobra impostos. Ela recebe da Prefeitura, todo mês, uma parte do orçamento (o chamado duodécimo) para pagar vereadores, servidores e as despesas da Casa.</div>
+    <div class="item">
+      <div class="meta">Gastos da Câmara em ${m.ano} (área Legislativa)</div>
+      <p style="margin:4px 0"><b class="grande">${reais(leg.liquidado)}</b> já gastos de ${reais(leg.dotacao)} autorizados para o ano. Reservados (empenhados): ${reais(leg.empenhado)}.</p>
+      ${barraValor(leg.liquidado, leg.dotacao, 'var(--amarelo)')}
+      ${legAnt.liquidado ? `<p class="meta" style="margin-top:8px">Em ${ant.ano} inteiro, a Câmara gastou ${reais(legAnt.liquidado)} (${esc(ant.tipo || 'balanço')}).</p>` : ''}
+    </div>
+    ${cp ? `<div class="item"><div class="meta">Gasto da Câmara com pessoal (12 meses até ${cp.semestre === 1 ? 'junho' : 'dezembro'} de ${cp.ano})</div>
+      <p style="margin:4px 0"><b class="grande">${reais(cp.pessoal_12m)}</b>, o que equivale a ${String(cp.pessoal_pct).replace('.', ',')}% da receita corrente líquida do município. O limite legal para a Câmara é ${cp.limite_pct}%.</p>
+      ${barraValor(cp.pessoal_pct, cp.limite_pct, 'var(--amarelo)')}</div>` : ''}
+
+    ${ant ? `<h3>${ant.ano} completo</h3><p class="intro">Do ${esc(ant.tipo || 'balanço anual')} de ${ant.ano}, o documento definitivo do ano.</p>
+    <table class="tabela"><tbody>
+      <tr><td>Receita arrecadada</td><td class="n">${reais(ant.receita_realizada)}</td></tr>
+      <tr><td>Despesa reservada (empenhada)</td><td class="n">${reais(ant.despesa_empenhada)}</td></tr>
+      <tr><td>Despesa paga</td><td class="n">${reais(ant.despesa_paga)}</td></tr>
+      <tr><td>Gastos da Câmara (área Legislativa)</td><td class="n">${reais(legAnt.liquidado)}</td></tr>
+    </tbody></table>` : ''}
+
+    <h3>Para entender os termos</h3>
+    <div class="caixa"><dl class="glossario">
+      <dt>Previsto e autorizado</dt><dd>O que a lei do orçamento estima arrecadar e permite gastar no ano.</dd>
+      <dt>Arrecadado</dt><dd>O que de fato entrou nos cofres, já descontada a parte que vai para o fundo da educação básica (Fundeb).</dd>
+      <dt>Empenhado</dt><dd>Dinheiro reservado para uma compra ou contrato. Ainda não foi pago.</dd>
+      <dt>Liquidado</dt><dd>O serviço foi prestado ou o produto foi entregue, e a conta foi conferida.</dd>
+      <dt>Pago</dt><dd>O dinheiro saiu do caixa.</dd>
+      <dt>Receita corrente líquida</dt><dd>A receita do município usada pela Lei de Responsabilidade Fiscal para calcular os limites de gasto com pessoal.</dd>
+    </dl></div>
+    <p class="meta">Fontes oficiais: relatórios enviados pelo município ao Tesouro Nacional (Siconfi) — <a href="${esc(m.fonte)}" rel="noopener" target="_blank">execução do orçamento ${m.ano}</a>${ant ? `, <a href="${esc(ant.fonte)}" rel="noopener" target="_blank">${ant.ano}</a>` : ''}${cp ? `, <a href="${esc(cp.fonte)}" rel="noopener" target="_blank">pessoal da Câmara</a>` : ''}${pp ? `, <a href="${esc(pp.fonte)}" rel="noopener" target="_blank">pessoal da Prefeitura</a>` : ''}. Os links abrem os dados brutos. Os detalhes de cada gasto, como contratos e fornecedores, ficam nos portais de transparência da <a href="https://ilai.memory.com.br/#/entidades/login/9BP6DY/2/" rel="noopener" target="_blank">Câmara</a> e da <a href="https://www.moradanova.mg.gov.br/" rel="noopener" target="_blank">Prefeitura</a>.</p>`;
 }
 
 function presencaView(){
@@ -456,6 +537,7 @@ function rota(){
   else if (h === 'sobre') sobre();
   else if (h === 'vereadores') vereadoresView();
   else if (h === 'presenca') presencaView();
+  else if (h === 'contas') contasView();
   else inicio();
   window.scrollTo(0,0);
 }

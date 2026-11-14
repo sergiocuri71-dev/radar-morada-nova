@@ -1,0 +1,303 @@
+{
+ "coletado_em": "2026-11-14T05:32:37+00:00",
+ "municipio": {
+  "atual": {
+   "ano": 2026,
+   "bimestre": 4,
+   "meses": "jan–ago",
+   "fonte": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO+Simplificado&id_ente=3143500",
+   "receita_prevista": 129420120.09,
+   "receita_realizada": 69829242.67,
+   "despesa_autorizada": 130956782.49,
+   "despesa_empenhada": 65261914.89,
+   "despesa_liquidada": 53567599.52,
+   "despesa_paga": 52968269.06,
+   "funcoes": [
+    {
+     "funcao": "Educação",
+     "dotacao": 28901582.42,
+     "empenhado": 18484628.4,
+     "liquidado": 13698485.63
+    },
+    {
+     "funcao": "Saúde",
+     "dotacao": 25048812.09,
+     "empenhado": 12277657.82,
+     "liquidado": 11383863.88
+    },
+    {
+     "funcao": "Administração",
+     "dotacao": 17832520.42,
+     "empenhado": 10231083.31,
+     "liquidado": 8955824.08
+    },
+    {
+     "funcao": "Previdência Social",
+     "dotacao": 12250226.83,
+     "empenhado": 7777162.24,
+     "liquidado": 7777162.24
+    },
+    {
+     "funcao": "Urbanismo",
+     "dotacao": 12790327.21,
+     "empenhado": 4691722.45,
+     "liquidado": 2512440.86
+    },
+    {
+     "funcao": "Transporte",
+     "dotacao": 13214623.99,
+     "empenhado": 2609841.71,
+     "liquidado": 1802349.33
+    },
+    {
+     "funcao": "Assistência Social",
+     "dotacao": 5375587.65,
+     "empenhado": 1672689.51,
+     "liquidado": 1374454.86
+    },
+    {
+     "funcao": "Legislativa",
+     "dotacao": 3016000,
+     "empenhado": 1636488.16,
+     "liquidado": 1308335.71
+    },
+    {
+     "funcao": "Segurança Pública",
+     "dotacao": 1748764.6,
+     "empenhado": 1059356.97,
+     "liquidado": 1009561.67
+    },
+    {
+     "funcao": "Energia",
+     "dotacao": 1634318.41,
+     "empenhado": 1160283.55,
+     "liquidado": 689281.67
+    },
+    {
+     "funcao": "Encargos Especiais",
+     "dotacao": 1312400.73,
+     "empenhado": 674507.7,
+     "liquidado": 644773.4
+    },
+    {
+     "funcao": "Desporto e Lazer",
+     "dotacao": 1441365.63,
+     "empenhado": 492432.19,
+     "liquidado": 412723.51
+    },
+    {
+     "funcao": "Trabalho",
+     "dotacao": 610000,
+     "empenhado": 379811.72,
+     "liquidado": 374983.02
+    },
+    {
+     "funcao": "Habitação",
+     "dotacao": 1251483.73,
+     "empenhado": 538716.43,
+     "liquidado": 305565.17
+    },
+    {
+     "funcao": "Comércio e Serviços",
+     "dotacao": 908779.29,
+     "empenhado": 376050.68,
+     "liquidado": 304005.32
+    },
+    {
+     "funcao": "Judiciária",
+     "dotacao": 927717.65,
+     "empenhado": 368495.6,
+     "liquidado": 302798.6
+    },
+    {
+     "funcao": "Agricultura",
+     "dotacao": 402817.55,
+     "empenhado": 301055.1,
+     "liquidado": 246939.17
+    },
+    {
+     "funcao": "Cultura",
+     "dotacao": 586005.94,
+     "empenhado": 241710.3,
+     "liquidado": 189818.01
+    },
+    {
+     "funcao": "Gestão Ambiental",
+     "dotacao": 258045,
+     "empenhado": 150651.75,
+     "liquidado": 137301.97
+    },
+    {
+     "funcao": "Saneamento",
+     "dotacao": 393071.35,
+     "empenhado": 101749.3,
+     "liquidado": 101111.42
+    },
+    {
+     "funcao": "Comunicações",
+     "dotacao": 71820,
+     "empenhado": 35820,
+     "liquidado": 35820
+    }
+   ]
+  },
+  "ano_anterior": {
+   "ano": 2025,
+   "fonte": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo+I-C&id_ente=3143500",
+   "receita_bruta": 92346744.19,
+   "receita_realizada": 84732270.48,
+   "despesa_empenhada": 89783762.97,
+   "despesa_liquidada": 80316764.1,
+   "despesa_paga": 79927706.62,
+   "funcoes": [
+    {
+     "funcao": "Educação",
+     "empenhado": 21072340.39,
+     "liquidado": 20269927.19,
+     "pago": 20216203.78
+    },
+    {
+     "funcao": "Saúde",
+     "empenhado": 15463751.57,
+     "liquidado": 15137117.03,
+     "pago": 15072137.33
+    },
+    {
+     "funcao": "Administração",
+     "empenhado": 12209745.38,
+     "liquidado": 12142200.92,
+     "pago": 12078711.84
+    },
+    {
+     "funcao": "Transporte",
+     "empenhado": 11275771.75,
+     "liquidado": 7122717.4,
+     "pago": 7114387.36
+    },
+    {
+     "funcao": "Urbanismo",
+     "empenhado": 6071260.5,
+     "liquidado": 6056811.5,
+     "pago": 6047600.7
+    },
+    {
+     "funcao": "Assistência Social",
+     "empenhado": 2833125.28,
+     "liquidado": 2822488.2,
+     "pago": 2820230.16
+    },
+    {
+     "funcao": "Legislativa",
+     "empenhado": 2773256.53,
+     "liquidado": 2372816.58,
+     "pago": 2372816.58
+    },
+    {
+     "funcao": "Energia",
+     "empenhado": 1757959.36,
+     "liquidado": 1747268.61,
+     "pago": 1695980.09
+    },
+    {
+     "funcao": "Segurança Pública",
+     "empenhado": 1524474.99,
+     "liquidado": 1524474.99,
+     "pago": 1524474.99
+    },
+    {
+     "funcao": "Encargos Especiais",
+     "empenhado": 1109737.18,
+     "liquidado": 1109737.18,
+     "pago": 1032725.77
+    },
+    {
+     "funcao": "Desporto e Lazer",
+     "empenhado": 1179017.56,
+     "liquidado": 1014875.22,
+     "pago": 1012075.22
+    },
+    {
+     "funcao": "Previdência Social",
+     "empenhado": 742279.79,
+     "liquidado": 742279.78,
+     "pago": 686313.3
+    },
+    {
+     "funcao": "Judiciária",
+     "empenhado": 946438.63,
+     "liquidado": 602307.46,
+     "pago": 602307.46
+    },
+    {
+     "funcao": "Comércio e Serviços",
+     "empenhado": 559712.35,
+     "liquidado": 559712.35,
+     "pago": 559712.35
+    },
+    {
+     "funcao": "Trabalho",
+     "empenhado": 536091.79,
+     "liquidado": 536091.79,
+     "pago": 536091.79
+    },
+    {
+     "funcao": "Habitação",
+     "empenhado": 3452372.26,
+     "liquidado": 383951.96,
+     "pago": 383951.96
+    },
+    {
+     "funcao": "Agricultura",
+     "empenhado": 277787.15,
+     "liquidado": 264015.43,
+     "pago": 264015.43
+    },
+    {
+     "funcao": "Gestão Ambiental",
+     "empenhado": 221120.09,
+     "liquidado": 221120.09,
+     "pago": 221120.09
+    },
+    {
+     "funcao": "Saneamento",
+     "empenhado": 292656.18,
+     "liquidado": 201986.18,
+     "pago": 201986.18
+    },
+    {
+     "funcao": "Cultura",
+     "empenhado": 83612.9,
+     "liquidado": 83612.9,
+     "pago": 83612.9
+    },
+    {
+     "funcao": "Comunicações",
+     "empenhado": 1401.15,
+     "liquidado": 1401.15,
+     "pago": 1401.15
+    }
+   ],
+   "tipo": "balanço anual"
+  }
+ },
+ "camara_pessoal": {
+  "ano": 2026,
+  "semestre": 1,
+  "fonte": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=S&nr_periodo=1&co_tipo_demonstrativo=RGF+Simplificado&co_poder=L&id_ente=3143500",
+  "pessoal_12m": 1799760.4,
+  "pessoal_pct": 1.97,
+  "limite_pct": 6,
+  "limite_valor": 5484827.27,
+  "rcl": 93106584.66
+ },
+ "prefeitura_pessoal": {
+  "ano": 2026,
+  "semestre": 1,
+  "fonte": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=S&nr_periodo=1&co_tipo_demonstrativo=RGF+Simplificado&co_poder=E&id_ente=3143500",
+  "pessoal_12m": 34966169.11,
+  "pessoal_pct": 38.25,
+  "limite_pct": 54,
+  "limite_valor": 49363445.43,
+  "rcl": 93106584.66
+ }
+}

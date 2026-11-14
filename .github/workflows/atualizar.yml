@@ -43,6 +43,10 @@ jobs:
           python3 coletor/verificar.py dados/data.json novo/data.json
           mv novo/data.json dados/data.json
 
+      - name: Coletar receitas e despesas (Tesouro Nacional / Siconfi)
+        if: github.event_name != 'push'
+        run: python3 coletor/financas.py dados/financas.json
+
       - name: Ler as atas (OCR só das atas novas)
         run: python3 coletor/atas.py dados/atas dados/ausencias.json
 
