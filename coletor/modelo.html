@@ -22,12 +22,15 @@
   a{color:var(--acento)}
   h1,h2,h3{font-family:var(--titulo);letter-spacing:-.01em}
   .wrap{max-width:820px;margin:0 auto;padding:0 18px}
-  header.topo{background:var(--azul);color:#fff;position:sticky;top:0;z-index:5}
-  .marca{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0 6px}
-  .marca a{color:#fff;text-decoration:none;font-family:var(--titulo);font-weight:700;font-size:1rem;letter-spacing:.03em;white-space:nowrap}
+  header.topo{background:var(--azul);color:#fff}
+  .marca{display:flex;flex-direction:column;align-items:center;gap:4px;padding:18px 0 4px;text-align:center}
+  .marca a{display:block;width:100%;color:#fff;text-decoration:none;font-family:var(--titulo);font-weight:700;font-size:clamp(1.15rem, 5.4vw, 2.3rem);letter-spacing:.02em;line-height:1.1;white-space:nowrap}
   .marca a span{color:var(--amarelo)}
-  .atualizado{font-size:.75rem;color:#C7D2E3;text-align:right;line-height:1.2}
+  .atualizado{font-size:.8rem;color:#C7D2E3;text-align:center;line-height:1.2}
+  .barra-abas{background:var(--azul);position:sticky;top:0;z-index:5}
   nav.abas{display:flex;gap:6px;padding:8px 0 12px;overflow-x:auto;scrollbar-width:none}
+  nav.abas a.destaque-aba{border-color:var(--amarelo);color:var(--amarelo)}
+  nav.abas a.destaque-aba[aria-current="page"]{color:var(--texto)}
   nav.abas::-webkit-scrollbar{display:none}
   nav.abas a{padding:9px 14px;text-decoration:none;color:#fff;font-weight:600;font-size:.92rem;border:1px solid var(--azul-borda);border-radius:999px;white-space:nowrap}
   nav.abas a[aria-current="page"]{background:var(--amarelo);border-color:var(--amarelo);color:var(--texto)}
@@ -39,7 +42,7 @@
   .caixa{background:var(--branco);border:1px solid var(--linha);border-radius:18px;padding:14px 16px;font-size:.93rem;color:var(--suave);margin:16px 0}
   .caixa strong{color:var(--texto)}
   .heroi{background:var(--azul);color:#fff;margin:-22px calc(50% - 50vw) 0;padding:8px calc(50vw - 50%) 30px}
-  .heroi h1{margin:0 0 6px;font-size:1.9rem;line-height:1.12}
+  .heroi h1{margin:0 0 6px;font-size:clamp(1.55rem, 6.6vw, 2.1rem);line-height:1.13}
   .heroi p{margin:0;color:#C7D2E3}
   .blocos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:-4px;position:relative;top:-14px}
   .bloco{display:flex;flex-direction:column;justify-content:flex-start;gap:14px;min-height:136px;background:var(--branco);border-radius:22px;padding:16px;text-decoration:none;color:var(--texto);box-shadow:0 1px 3px rgba(17,24,39,.10)}
@@ -53,7 +56,7 @@
   .noticia ul{margin:8px 0 10px;padding-left:18px}.noticia li{margin:6px 0}
   .notas{display:flex;flex-direction:column;gap:10px}
   .nota{display:flex;gap:14px;align-items:flex-start;background:var(--branco);border-radius:18px;padding:14px 16px;text-decoration:none;color:var(--texto)}
-  .nota b{font-family:var(--titulo);font-size:1.9rem;line-height:1;min-width:48px;color:var(--azul)}
+  .nota b{font-family:var(--titulo);font-size:1.9rem;line-height:1;min-width:72px;flex-shrink:0;color:var(--azul)}
   .nota span{font-size:.95rem;line-height:1.45}
   .grade-ver{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
   .mini{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;background:var(--branco);border-radius:18px;padding:14px 8px;text-decoration:none;color:var(--texto)}
@@ -109,6 +112,10 @@
   dl.glossario dt{font-weight:700;color:var(--texto);margin-top:8px}
   dl.glossario dd{margin:0}
   .bloco.largo{grid-column:1 / -1;min-height:0;flex-direction:row;align-items:center}
+  .bloco.contas{background:var(--amarelo);box-shadow:0 2px 8px rgba(17,24,39,.18)}
+  .bloco.contas .ic{background:var(--azul);color:var(--amarelo)}
+  .bloco.contas b{font-size:1.25rem}
+  .bloco.contas span{color:#3b2a00}
   .barra.grossa{height:14px;margin:10px 0 2px}
   b.grande{font-family:var(--titulo);font-size:1.5rem}
   .area{margin:10px 0}.area-topo{display:flex;justify-content:space-between;gap:10px;font-size:.92rem}.area.destaque span{font-weight:700}
@@ -119,17 +126,21 @@
 <header class="topo">
   <div class="wrap">
     <div class="marca"><a href="#inicio">RADAR <span>-</span> MORADA NOVA DE MINAS</a><div class="atualizado" id="atualizado"></div></div>
+  </div>
+</header>
+<div class="barra-abas">
+  <div class="wrap">
     <nav class="abas" aria-label="Seções">
       <a href="#inicio" data-aba="inicio">Início</a>
+      <a href="#contas" data-aba="contas" class="destaque-aba">Contas</a>
       <a href="#vereadores" data-aba="vereadores">Vereadores</a>
       <a href="#lugares" data-aba="lugares">Meu bairro</a>
       <a href="#votacoes" data-aba="votacoes">Votações</a>
       <a href="#presenca" data-aba="presenca">Presença</a>
-      <a href="#contas" data-aba="contas">Contas</a>
       <a href="#sobre" data-aba="sobre">Sobre</a>
     </nav>
   </div>
-</header>
+</div>
 <main class="wrap" id="conteudo"></main>
 <footer>
   <div class="wrap">
@@ -140,7 +151,7 @@
 <script>
 const D = /*DADOS*/null;
 const $c = document.getElementById('conteudo');
-document.getElementById('atualizado').textContent = 'Atualizado ' + D.atualizado.split(' ')[0].slice(0,5);
+document.getElementById('atualizado').textContent = 'Atualizado em ' + D.atualizado.split(' ')[0];
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const porId = Object.fromEntries(D.vereadores.map(v => [v.id, v]));
@@ -225,15 +236,15 @@ function inicio(){
   const nLugares = new Set(D.props.flatMap(p => p.lugares || [])).size;
   $c.innerHTML = `
     <section class="heroi">
-      <h1>Acompanhe os vereadores de Morada Nova de Minas</h1>
-      <p>Propostas, votos e presença, só com dados oficiais da Câmara. Escolha por onde começar.</p>
+      <h1>Acompanhe o trabalho dos vereadores e as contas da Prefeitura e da Câmara Municipal</h1>
+      <p>Propostas, votos, presença, receitas e despesas, só com dados oficiais. Escolha por onde começar.</p>
     </section>
     <nav class="blocos" aria-label="Atalhos">
+      ${D.fin ? `<a class="bloco largo contas" href="#contas"><div class="ic">${icone('r')}</div><div><b>Contas da Prefeitura e da Câmara</b><span>quanto entrou, quanto saiu e para onde foi o dinheiro</span></div></a>` : ''}
       <a class="bloco" href="#vereadores"><div class="ic">${icone('v')}</div><div><b>Vereadores</b><span>9 pessoas, ${D.props.length} propostas</span></div></a>
       <a class="bloco" href="#lugares"><div class="ic">${icone('b')}</div><div><b>Meu bairro</b><span>${nLugares} lugares citados</span></div></a>
       <a class="bloco" href="#votacoes"><div class="ic">${icone('o')}</div><div><b>Votações</b><span>${validas} com o voto de cada um</span></div></a>
       <a class="bloco" href="#presenca"><div class="ic">${icone('a')}</div><div><b>Presença</b><span>lida em ${D.totalAtas} atas</span></div></a>
-      ${D.fin ? `<a class="bloco largo" href="#contas"><div class="ic">${icone('r')}</div><div><b>Contas da Prefeitura e da Câmara</b><span>quanto entrou, quanto saiu e para onde foi</span></div></a>` : ''}
     </nav>
     ${noticias()}
     <h3>Vereadores</h3>
