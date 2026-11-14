@@ -75,4 +75,11 @@ def main(cache, saida):
     print("ok", len(reunioes), "atas de reuniões")
 
 if __name__ == "__main__":
-    main(sys.argv[1], sys.argv[2])
+    try:
+        main(sys.argv[1], sys.argv[2])
+    except Exception as e:
+        # Se a Câmara estiver fora do ar, mantém a última leitura boa das atas em vez de travar a publicação.
+        if os.path.exists(sys.argv[2]):
+            print(f"AVISO: não foi possível atualizar as atas ({e}). Mantida a última leitura boa.")
+        else:
+            raise

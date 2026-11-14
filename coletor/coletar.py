@@ -8,7 +8,7 @@ HEADERS = {"Origin": SITE, "Referer": SITE + "/",
            "User-Agent": "RadarMoradaNova/0.1 (projeto civico, coleta lenta)"}
 PAUSA = 0.7  # segundos entre chamadas, para não pesar no servidor
 
-def api(caminho, tentativas=3):
+def api(caminho, tentativas=5):
     for i in range(tentativas):
         try:
             req = urllib.request.Request(BASE + caminho, headers=HEADERS)
@@ -21,7 +21,7 @@ def api(caminho, tentativas=3):
         except Exception as e:
             if i == tentativas - 1:
                 raise
-            time.sleep(3 * (i + 1))
+            time.sleep(10 * (i + 1))
 
 def paginado(caminho_fmt):
     itens, pg = [], 1
