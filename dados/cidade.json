@@ -1,0 +1,420 @@
+{
+ "coletado_em": "2026-11-14T12:08:17+00:00",
+ "numeros": {
+  "populacao_2022": 9067.0,
+  "area_km2": 2084.275,
+  "densidade": 4.35,
+  "fonte_censo": "https://apisidra.ibge.gov.br/values/t/4714/n6/3143500/v/93,6318,614/p/2022",
+  "populacao_estimada": 9462.0,
+  "ano_estimativa": "2026",
+  "fonte_estimativa": "https://apisidra.ibge.gov.br/values/t/6579/n6/3143500/v/9324/p/last",
+  "pib_mil_reais": 570683.0,
+  "ano_pib": "2023",
+  "fonte_pib": "https://apisidra.ibge.gov.br/values/t/5938/n6/3143500/v/37/p/last",
+  "tilapia_kg": 32400000.0,
+  "ano_tilapia": "2025",
+  "fonte_tilapia": "https://apisidra.ibge.gov.br/values/t/3940/n6/3143500/v/4146/p/last/c654/32877",
+  "tilapia_pos_mg": 1,
+  "tilapia_pos_br": 1,
+  "distritos": [
+   {
+    "nome": "Morada Nova de Minas",
+    "populacao": 7931.0
+   },
+   {
+    "nome": "Frei Orlando",
+    "populacao": 1136.0
+   }
+  ],
+  "fonte_distritos": "https://apisidra.ibge.gov.br/values/t/9923/n10/in%20n6%203143500/v/93/p/2022"
+ },
+ "telefones": [
+  {
+   "nome": "Abrigo - Serviços de Acolhimento Institucional de Crianças e Adolescentes",
+   "fone": "(37)3755-1105",
+   "categoria": "Assistência social"
+  },
+  {
+   "nome": "Agência dos Correios",
+   "fone": "(37)3755-1131",
+   "categoria": "Serviços públicos"
+  },
+  {
+   "nome": "APAE",
+   "fone": "(37)3755-1948",
+   "categoria": "Saúde"
+  },
+  {
+   "nome": "Associação Comercial - ACE",
+   "fone": "(38)98845-8185",
+   "categoria": "Outros"
+  },
+  {
+   "nome": "Banco do Brasil",
+   "fone": "(37)3755-1366",
+   "categoria": "Outros"
+  },
+  {
+   "nome": "BMG Agropecuária",
+   "fone": "(37)3755-1351",
+   "categoria": "Outros"
+  },
+  {
+   "nome": "Cadastro Único",
+   "fone": "(37)99949-6566",
+   "categoria": "Assistência social"
+  },
+  {
+   "nome": "Cadastro Único e PAIF(Serviço de Proteção e Atendimento Integral à Família)",
+   "fone": "(37)99949-6566",
+   "categoria": "Assistência social"
+  },
+  {
+   "nome": "Câmara Municipal",
+   "fone": "(37)3755-1514 ou 2425",
+   "categoria": "Prefeitura e Câmara"
+  },
+  {
+   "nome": "CAPS",
+   "fone": "(37)3755-2012",
+   "categoria": "Saúde"
+  },
+  {
+   "nome": "Cartório de Notas",
+   "fone": "(37)3755-1865",
+   "categoria": "Justiça e cartórios"
+  },
+  {
+   "nome": "Cartório de Registro Civil e de Protestos",
+   "fone": "(37)3755-1732",
+   "categoria": "Justiça e cartórios"
+  },
+  {
+   "nome": "Cartório de Registro de Imóveis",
+   "fone": "(37)99859-0977",
+   "categoria": "Justiça e cartórios"
+  },
+  {
+   "nome": "Casa da Cultura - Artesanato",
+   "fone": "(37)3755-2055",
+   "categoria": "Outros"
+  },
+  {
+   "nome": "Casa Lotérica",
+   "fone": "(37)3755-1140",
+   "categoria": "Outros"
+  },
+  {
+   "nome": "CEMEI Tia Otília",
+   "fone": "(37)99814-7067",
+   "categoria": "Educação"
+  },
+  {
+   "nome": "Centro de Educação Infantil - CEMEI Tia Otília",
+   "fone": "3755-1283",
+   "categoria": "Educação"
+  },
+  {
+   "nome": "Centro Odontológico",
+   "fone": "(37)3755-1242",
+   "categoria": "Saúde"
+  },
+  {
+   "nome": "Codevasf - Escritório",
+   "fone": "(37)99831-5857 (37)99947-9106",
+   "categoria": "Serviços públicos"
+  },
+  {
+   "nome": "Conselho Tutelar",
+   "fone": "(37)99949-7682",
+   "categoria": "Segurança e emergência"
+  },
+  {
+   "nome": "Copasa",
+   "fone": "(37)3755-1238",
+   "categoria": "Serviços públicos"
+  },
+  {
+   "nome": "Corporação Musical Santa Cecília",
+   "fone": "(37)3755-2234",
+   "categoria": "Outros"
+  },
+  {
+   "nome": "CRAS - Centro de Referência de Assistência Social",
+   "fone": "(37)99949-7081",
+   "categoria": "Assistência social"
+  },
+  {
+   "nome": "CREAS -Centro de Referência Especializado da Assistência Social",
+   "fone": "(37)99949-5903",
+   "categoria": "Assistência social"
+  },
+  {
+   "nome": "Creche Professor João Gomes",
+   "fone": "(37)99948-6185",
+   "categoria": "Educação"
+  },
+  {
+   "nome": "CRESOL - Agência Morada Nova de Minas",
+   "fone": "(37)2101-7996",
+   "categoria": "Outros"
+  },
+  {
+   "nome": "Delegacia de Polícia",
+   "fone": "(37)3755-1282",
+   "categoria": "Segurança e emergência"
+  },
+  {
+   "nome": "Emater",
+   "fone": "(37)3755-1198",
+   "categoria": "Serviços públicos"
+  },
+  {
+   "nome": "Epidemiologia",
+   "fone": "(37)99835-5264",
+   "categoria": "Saúde"
+  },
+  {
+   "nome": "Escola Estadual Frei Orlando",
+   "fone": "(37)3755-1170",
+   "categoria": "Educação"
+  },
+  {
+   "nome": "Escola M. Alzira Dayrell - Pov. Traçadal",
+   "fone": "(37)3755-1258 / 2188",
+   "categoria": "Educação"
+  },
+  {
+   "nome": "Escola M. Dª. Maria do Carmo Álvares da Silva - EMCAS",
+   "fone": "(37)99925-7083",
+   "categoria": "Educação"
+  },
+  {
+   "nome": "Escola M. Heloísa de Campos Santos",
+   "fone": "(37)99803-8269",
+   "categoria": "Educação"
+  },
+  {
+   "nome": "Escola M. Prof. Antônio Ribeiro - Pov. Vau das Flores",
+   "fone": "(37)99936-1765",
+   "categoria": "Educação"
+  },
+  {
+   "nome": "Escola M. Waldemar A. Rod. de Souza - Dist. Frei Orlando",
+   "fone": "(37) 99805-3446",
+   "categoria": "Educação"
+  },
+  {
+   "nome": "Farmacinha",
+   "fone": "(37)99835-5791",
+   "categoria": "Saúde"
+  },
+  {
+   "nome": "Fiscais de Postura",
+   "fone": "(37)99947-9687",
+   "categoria": "Prefeitura e Câmara"
+  },
+  {
+   "nome": "Fórum",
+   "fone": "(37)3755-1286",
+   "categoria": "Justiça e cartórios"
+  },
+  {
+   "nome": "Gabinete do Prefeito",
+   "fone": "(37)99991-1227",
+   "categoria": "Prefeitura e Câmara"
+  },
+  {
+   "nome": "Ginásio Poliesportivo",
+   "fone": "(37)3755-2234",
+   "categoria": "Outros"
+  },
+  {
+   "nome": "Grupo Esperança - Terceira Idade",
+   "fone": "(37)3755-2112",
+   "categoria": "Assistência social"
+  },
+  {
+   "nome": "Guarda Municipal",
+   "fone": "(37)99965-9110",
+   "categoria": "Segurança e emergência"
+  },
+  {
+   "nome": "Hospital Casa de Caridade São Sebastião",
+   "fone": "(37)3755-1231",
+   "categoria": "Saúde"
+  },
+  {
+   "nome": "Iluminação Pública",
+   "fone": "(37)99805-1353",
+   "categoria": "Prefeitura e Câmara"
+  },
+  {
+   "nome": "IMPAS",
+   "fone": "3755-1591 / (38)99862-2560",
+   "categoria": "Prefeitura e Câmara"
+  },
+  {
+   "nome": "Paróquia Nossa Senhora do Loreto",
+   "fone": "(37)3755-1285",
+   "categoria": "Outros"
+  },
+  {
+   "nome": "PAV - Receiota Federal",
+   "fone": "(37)99955-2861",
+   "categoria": "Serviços públicos"
+  },
+  {
+   "nome": "Plantar",
+   "fone": "(37)3755-2107",
+   "categoria": "Outros"
+  },
+  {
+   "nome": "Polícia Ambiental",
+   "fone": "(37)3755-1186",
+   "categoria": "Segurança e emergência"
+  },
+  {
+   "nome": "Polícia Civil",
+   "fone": "(37)3755-1282",
+   "categoria": "Segurança e emergência"
+  },
+  {
+   "nome": "Polícia Militar",
+   "fone": "(37)3755-1596",
+   "categoria": "Segurança e emergência"
+  },
+  {
+   "nome": "Ponto de Táxi - Rodoviária",
+   "fone": "(37)3755-1406",
+   "categoria": "Serviços públicos"
+  },
+  {
+   "nome": "Prefeitura - Compras e Licitações",
+   "fone": "(37)99955-1324",
+   "categoria": "Prefeitura e Câmara"
+  },
+  {
+   "nome": "Prefeitura - Departamento de Arrecadação",
+   "fone": "(37)99947-9341",
+   "categoria": "Prefeitura e Câmara"
+  },
+  {
+   "nome": "Prefeitura - Departamento de Patrimônio",
+   "fone": "(37)99805-2472",
+   "categoria": "Prefeitura e Câmara"
+  },
+  {
+   "nome": "Prefeitura - Departamento de Recursos Humanos",
+   "fone": "(37)99949-5181",
+   "categoria": "Prefeitura e Câmara"
+  },
+  {
+   "nome": "Prefeitura - Departamento Financeiro",
+   "fone": "(37)99817-6271",
+   "categoria": "Prefeitura e Câmara"
+  },
+  {
+   "nome": "Prefeitura - Departamento Jurídico",
+   "fone": "(37)99955-2381",
+   "categoria": "Prefeitura e Câmara"
+  },
+  {
+   "nome": "Prefeitura Municipal",
+   "fone": "(37)3755-1100/ 1101/ 1102",
+   "categoria": "Prefeitura e Câmara"
+  },
+  {
+   "nome": "PSF Alvim Álvares da Silva - Centro",
+   "fone": "(37)3755-1810",
+   "categoria": "Saúde"
+  },
+  {
+   "nome": "PSF Manoel Jacy Torquato - São Geraldo",
+   "fone": "(37)3755-2240",
+   "categoria": "Saúde"
+  },
+  {
+   "nome": "PSF Tito José Álvares da Silva - Varginha",
+   "fone": "(37)3755-2056",
+   "categoria": "Saúde"
+  },
+  {
+   "nome": "Rodoviária",
+   "fone": "(37)3755-1122",
+   "categoria": "Serviços públicos"
+  },
+  {
+   "nome": "Sala Mineira - SEBRAE",
+   "fone": "(37)99948-0764",
+   "categoria": "Serviços públicos"
+  },
+  {
+   "nome": "SCFV - Serviço de Conveniência e Fortalecimento de Vínculos",
+   "fone": "(37)99949-7081",
+   "categoria": "Assistência social"
+  },
+  {
+   "nome": "Secretaria de Assistência Social",
+   "fone": "(37)99955-3749",
+   "categoria": "Assistência social"
+  },
+  {
+   "nome": "Secretaria de Educação",
+   "fone": "(37)99995-9094",
+   "categoria": "Educação"
+  },
+  {
+   "nome": "Secretaria de Esporte, Turismo e Cultura",
+   "fone": "(37)99955-7330",
+   "categoria": "Prefeitura e Câmara"
+  },
+  {
+   "nome": "Secretaria de Infraestrutura - Galpão - CODEVASF / Transportes",
+   "fone": "(37)3755-1745 / 2044 (37) 99857-9951",
+   "categoria": "Prefeitura e Câmara"
+  },
+  {
+   "nome": "Secretaria de Meio Ambiente",
+   "fone": "(37)99948-2227",
+   "categoria": "Prefeitura e Câmara"
+  },
+  {
+   "nome": "Sicoob Aracoop - Agência Morada Nova de Minas",
+   "fone": "(38)99924-3289",
+   "categoria": "Outros"
+  },
+  {
+   "nome": "Siderúrgica Alterosa",
+   "fone": "(37)3755-1311",
+   "categoria": "Outros"
+  },
+  {
+   "nome": "Sindicato Rural",
+   "fone": "(37)3755-1272",
+   "categoria": "Serviços públicos"
+  },
+  {
+   "nome": "TFD",
+   "fone": "(37)99835-9268",
+   "categoria": "Saúde"
+  },
+  {
+   "nome": "UBS Antônio Pedro de Oliveira (Varginha)",
+   "fone": "(37)99939-9351",
+   "categoria": "Saúde"
+  },
+  {
+   "nome": "UBS Vau das Flores",
+   "fone": "(37)99835-5396",
+   "categoria": "Saúde"
+  },
+  {
+   "nome": "Vila Vicentina",
+   "fone": "(37)3755-1914",
+   "categoria": "Assistência social"
+  }
+ ],
+ "fonte_telefones": "https://camaramoradanova.mg.gov.br/transparencia/1330857165",
+ "balsas": "https://www.moradanova.mg.gov.br/detalhe-da-materia/info/atencao-confira-aqui-os-horarios-de-travessia-das-balsas-atualizados/46834"
+}

@@ -47,6 +47,10 @@ jobs:
         if: github.event_name != 'push'
         run: python3 coletor/financas.py dados/financas.json
 
+      - name: Coletar informações da cidade (IBGE e telefones úteis)
+        if: github.event_name != 'push'
+        run: python3 coletor/cidade.py dados/cidade.json
+
       - name: Ler as atas (OCR só das atas novas)
         run: python3 coletor/atas.py dados/atas dados/ausencias.json
 

@@ -112,10 +112,13 @@ for x in votacoes:
 financas = None
 if os.path.exists(f"{raiz}/financas.json"):
     financas = json.load(open(f"{raiz}/financas.json", encoding="utf-8"))
+cidade = None
+if os.path.exists(f"{raiz}/cidade.json"):
+    cidade = json.load(open(f"{raiz}/cidade.json", encoding="utf-8"))
 coletado = datetime.datetime.fromisoformat(d["coletado_em"]).astimezone(datetime.timezone(datetime.timedelta(hours=-3)))
 repo = os.environ.get("GITHUB_REPOSITORY", "")
 dados = {"repo": repo, "atualizado": coletado.strftime("%d/%m/%Y às %H:%M"), "site": SITE,
-         "vereadores": vereadores, "props": props, "votacoes": votacoes, "totalAtas": len(atas), "fin": financas,
+         "vereadores": vereadores, "props": props, "votacoes": votacoes, "totalAtas": len(atas), "fin": financas, "cidade": cidade,
          "lugares": lugares_saida, "repetidos": repetidos,
          "grupos": [{"id": k, "nome": GRUPOS[k], "explica": EXPLICA[k]} for k in GRUPOS]}
 tpl = open(os.path.join(os.path.dirname(__file__), "modelo.html"), encoding="utf-8").read()

@@ -12,8 +12,9 @@ Todo dia de madrugada, um robô (GitHub Actions, arquivo `.github/workflows/atua
 1. coleta os dados no site da Câmara (`coletor/coletar.py`), devagar, para não pesar no servidor;
 2. confere se a coleta veio completa (`coletor/verificar.py`). Se vier incompleta ou estranha, **não publica** e o site fica com a última versão boa;
 3. coleta receitas e despesas no Tesouro Nacional (`coletor/financas.py`): relatório bimestral do ano corrente, balanço anual do ano anterior e gasto com pessoal da Prefeitura e da Câmara;
-4. lê as atas das reuniões, que são PDFs escaneados, com OCR (`coletor/atas.py`), para registrar ausências;
-5. monta a página (`coletor/montar.py` + `coletor/modelo.html`) e publica no GitHub Pages.
+4. coleta números da cidade no IBGE (população, área, PIB, produção de tilápia, distritos) e os telefones úteis publicados pela Câmara (`coletor/cidade.py`);
+5. lê as atas das reuniões, que são PDFs escaneados, com OCR (`coletor/atas.py`), para registrar ausências;
+6. monta a página (`coletor/montar.py` + `coletor/modelo.html`) e publica no GitHub Pages.
 
 Os dados de cada dia ficam guardados na pasta `dados/`, com histórico.
 
