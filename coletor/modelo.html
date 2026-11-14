@@ -106,6 +106,8 @@
   .conflito{background:#fbe3e6;border-color:#f3c3ca;color:#7a1f2b;margin:0 0 8px}.conflito strong{color:#7a1f2b}
   ul.ausencias{padding-left:18px;margin:6px 0;font-size:.93rem}ul.ausencias li{margin:4px 0}
   .nota-autor{font-size:.85rem;color:var(--suave);margin:2px 0 6px}
+  .email-card{font-size:.85rem;color:var(--acento);margin-top:3px;overflow-wrap:anywhere}
+  .contato{margin:8px 0 0;font-size:.95rem;overflow-wrap:anywhere}
   .vazio{color:var(--suave);font-style:italic;padding:12px 0}
   .tabela{width:100%;border-collapse:collapse;background:var(--branco);border-radius:18px;overflow:hidden;font-size:.93rem}
   .tabela th,.tabela td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--linha)}
@@ -186,6 +188,7 @@ const VOTO = {
 };
 const badge = voto => { const [t,c] = VOTO[voto] || [voto,'v-outro']; return `<span class="voto ${c}">${esc(t)}</span>`; };
 
+const SINGULAR = {melhoria:'pedido de melhoria', cobranca:'pergunta ou cobrança', homenagem:'homenagem', lei:'proposta de lei', outros:'outro'};
 const GRUPO = Object.fromEntries(D.grupos.map(g => [g.id, g]));
 const resumoGrupos = ps => D.grupos.map(g => [g, ps.filter(p => p.grupo === g.id).length]).filter(([,n]) => n);
 const propsDe = v => D.props.filter(p => p.autores.includes(v.nome)).sort(ordemData);
@@ -410,13 +413,13 @@ function vereadoresView(){
       return `<a class="card" href="#vereador-${v.id}">
         <div class="topo-card"><div class="avatar" aria-hidden="true">${iniciais(v.nome)}</div><div>
         <div class="nome">${nomeCurto(v)}<span class="sigla">${esc(v.sigla)}</span></div>
-        <div class="sub">${esc(v.cargo)}</div></div></div>
+        <div class="sub">${esc(v.cargo)}</div>${v.email ? `<div class="email-card"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:5px"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>${esc(v.email)}</div>` : ''}</div></div>
         <div class="nums">
           <div class="num"><b>${n}</b><span>propostas desde 2025</span></div>
           <div class="num"><b>${v.ausencias.length}</b><span>${v.ausencias.length === 1 ? 'ausência' : 'ausências'} nas atas (${D.totalAtas} reuniões)</span></div>
           <div class="num"><b>${vt}<small style="font-size:.8rem;color:var(--suave)">/${totalVot}</small></b><span>votações com voto registrado</span></div>
         </div>
-        <div class="grupos-linha">${resumoGrupos(propsDe(v)).map(([g,n]) => `<span><b>${n}</b> ${esc(g.nome.toLowerCase())}</span>`).join('')}</div></a>`;}).join('')}
+        <div class="grupos-linha">${resumoGrupos(propsDe(v)).map(([g,n]) => `<span><b>${n}</b> ${esc(n === 1 ? (SINGULAR[g.id] || g.nome.toLowerCase()) : g.nome.toLowerCase())}</span>`).join('')}</div></a>`;}).join('')}
     </div>
     <div class="caixa"><strong>Como as propostas são agrupadas</strong>
       <dl class="glossario">${D.grupos.map(g => `<dt>${esc(g.nome)}</dt><dd>${esc(g.explica)}</dd>`).join('')}</dl>
@@ -434,6 +437,7 @@ function vereador(id){
     <a class="voltar" href="#vereadores">← Todos os vereadores</a>
     <h2>${nomeCurto(v)}</h2>
     <div class="sub">${esc(v.partido)} · ${esc(v.cargo)} · ${fonte(v.url,'ficha oficial')}</div>
+    ${v.email ? `<p class="contato"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px;margin-right:5px"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:${esc(v.email)}">${esc(v.email)}</a> <span class="sub">(e-mail publicado pela Câmara)</span></p>` : ''}
     <div class="nums">
       <div class="num"><b>${ps.length}</b><span>propostas desde 2025</span></div>
       <div class="num"><b>${v.ausencias.length}</b><span>${v.ausencias.length === 1 ? 'ausência' : 'ausências'} nas atas</span></div>

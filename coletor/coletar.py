@@ -37,6 +37,8 @@ def main(saida):
     for v in vereadores:
         perfil = api(f"/portal/vereadores/recuperar/{v['id']}")
         v["apelido"] = perfil.get("parlamentar")
+        v["email"] = (perfil.get("email") or "").strip()  # contato publicado pela Câmara na ficha oficial
+        v["telefone_gabinete"] = (perfil.get("telefone_gabinete") or "").strip()
         v["estatisticas"] = api(f"/portal/vereadores/estatisticas/{v['id']}")
     props = paginado("/portal/proposicoes/listar/100/{pg}/")
     for p in props:

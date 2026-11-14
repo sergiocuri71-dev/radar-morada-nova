@@ -20,6 +20,7 @@ for v in d["vereadores"]:
     sigla = v["partido"].split(" - ")[-1].strip() if " - " in v["partido"] else v["partido"].strip()
     vereadores.append({
         "id": v["id"], "nome": v["nome"], "apelido": (v.get("apelido") or "").strip(),
+        "email": (v.get("email") or "").strip(),
         "cargo": re.sub(r'\s+', ' ', v["cargo"]).strip(), "partido": v["partido"].strip(), "sigla": sigla,
         "presenca": v["estatisticas"].get("presenca"),
         "oficialProp": sum(x["quantia"] for x in v["estatisticas"].get("proposicoes", [])),
