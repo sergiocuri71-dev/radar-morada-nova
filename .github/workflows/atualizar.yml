@@ -1,0 +1,76 @@
+name: Atualizar o Radar
+
+on:
+  schedule:
+    - cron: "17 6 * * *"   # todo dia às 06:17 UTC (03:17 em Brasília)
+  workflow_dispatch:        # botão "Run workflow" para rodar na hora
+  push:
+    branches: [main]
+    paths: ["coletor/**", ".github/workflows/**"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: radar
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar leitor de PDF e OCR
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils tesseract-ocr tesseract-ocr-por
+
+      - name: Coletar dados na Câmara
+        if: github.event_name != 'push'
+        run: |
+          mkdir -p novo
+          python3 coletor/coletar.py novo/data.json
+
+      - name: Conferir a coleta (se vier estranha, para aqui e não publica)
+        if: github.event_name != 'push'
+        run: |
+          python3 coletor/verificar.py dados/data.json novo/data.json
+          mv novo/data.json dados/data.json
+
+      - name: Ler as atas (OCR só das atas novas)
+        run: python3 coletor/atas.py dados/atas dados/ausencias.json
+
+      - name: Montar a página
+        run: python3 coletor/montar.py dados _site/index.html
+
+      - name: Guardar os dados no repositório
+        run: |
+          git config user.name "radar-robo"
+          git config user.email "radar-robo@users.noreply.github.com"
+          git add dados
+          if git diff --cached --quiet; then
+            echo "Nada mudou."
+          else
+            git commit -m "Dados atualizados em $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  publicar:
+    needs: atualizar
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

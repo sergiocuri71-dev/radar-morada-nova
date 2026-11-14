@@ -1,0 +1,78 @@
+"""Baixa as atas (PDF escaneado), faz OCR e extrai as ausências de vereadores.
+Uso: python3 atas.py pasta_cache saida/ausencias.json
+Precisa de: pdftoppm (poppler-utils) e tesseract com o idioma 'por'."""
+import json, os, re, subprocess, sys, unicodedata, urllib.request
+sys.path.insert(0, os.path.dirname(__file__))
+from coletar import api, HEADERS
+
+CDN = "https://cdn.syssolution.com.br/2433/Sessoes/"
+
+def sa(t):
+    return ''.join(c for c in unicodedata.normalize('NFD', t) if unicodedata.category(c) != 'Mn').lower()
+
+def ocr(link, cache):
+    txt = os.path.join(cache, link[:-4] + ".txt")
+    if os.path.exists(txt) and os.path.getsize(txt) > 0:
+        return open(txt, encoding="utf-8").read()
+    pdf = os.path.join(cache, link)
+    req = urllib.request.Request(CDN + link, headers=HEADERS)
+    with urllib.request.urlopen(req, timeout=60) as r, open(pdf, "wb") as f:
+        f.write(r.read())
+    base = os.path.join(cache, link[:-4])
+    subprocess.run(["pdftoppm", "-r", "200", "-gray", "-png", pdf, base], check=True)
+    paginas = sorted(p for p in os.listdir(cache) if p.startswith(os.path.basename(base) + "-") and p.endswith(".png"))
+    texto = ""
+    for p in paginas:
+        texto += subprocess.run(["tesseract", os.path.join(cache, p), "-", "-l", "por"],
+                                capture_output=True, text=True).stdout + "\n"
+        os.remove(os.path.join(cache, p))
+    open(txt, "w", encoding="utf-8").write(texto)
+    return texto
+
+# como cada vereador costuma aparecer escrito nas atas
+APELIDOS = {
+    "Carlos Antônio Ribeiro": ["carlos antonio", "kitute"],
+    "Diney Francisco da Silva": ["diney"],
+    "Douglas Miguel Gomes de Moura Batista": ["douglas", "guel"],
+    "Luiz Carlos de Oliveira": ["luiz carlos"],
+    "Lyncoln Bryan Silva Teixeira": ["lyncoln"],
+    "Munique Priscila da Silva": ["munique"],
+    "Onezio Ferreira Maia": ["onezio"],
+    "Osvaldo Alvares da Silva Neto": ["osvaldo", "netinho"],
+    "Washington Rogerio Guimaraes": ["washington"],
+}
+PLENARIO = re.compile(r'reuni[aã]o (ordin|extraord|audi)|^ata da ?\d|audi[eê]ncia', re.I)
+
+def ausencias(texto):
+    """Só frases do tipo "Ausente(s) o(s) vereador(es) X..." ou "ausência do vereador X".
+    Os nomes têm de vir logo depois, na mesma frase."""
+    t = sa(re.sub(r'\s+', ' ', texto))
+    achados = {}
+    rx = re.compile(r'(ausentes?\s+(?:(?:o|a|os|as)\s+)?(?:[^a-z\s]{1,4}\s*)?(?:senhor(?:es)?\s+|senhora\s+)?vereador\w*|ausencia\s+d[oa]s?\s+vereador\w*)')
+    for m in rx.finditer(t):
+        fim = t.find('. ', m.end())
+        nomes = t[m.end(): fim if fim > 0 else m.end() + 200]
+        antes = t[max(0, t.rfind('. ', 0, m.start()) + 2, m.start() - 120):m.start()]
+        justificada = bool(re.search(r'justific|abonad|motivo de saude|compromisso|comunicou', antes + nomes))
+        for nome, chaves in APELIDOS.items():
+            if any(re.search(r'\b' + c + r'\b', nomes) for c in chaves):
+                achados[nome] = achados.get(nome, False) or justificada
+    return achados
+
+def main(cache, saida):
+    os.makedirs(cache, exist_ok=True)
+    lista = api("/portal/reuniao/Atas")
+    reunioes = []
+    for a in sorted(lista, key=lambda x: x["data"]):
+        if not PLENARIO.search(a["nome"]) or re.search(r'comiss|posse|solene|elei', a["nome"], re.I):
+            continue
+        texto = ocr(a["link"], cache)
+        d = a["data"]
+        reunioes.append({"data": f"{d[8:]}/{d[5:7]}/{d[:4]}", "nome": a["nome"].strip(),
+                         "url": CDN + a["link"], "ausentes": ausencias(texto),
+                         "texto": sa(re.sub(r'\s+', ' ', texto))})
+    json.dump({"reunioes": reunioes}, open(saida, "w", encoding="utf-8"), ensure_ascii=False)
+    print("ok", len(reunioes), "atas de reuniões")
+
+if __name__ == "__main__":
+    main(sys.argv[1], sys.argv[2])

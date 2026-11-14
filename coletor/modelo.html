@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radar da Câmara · Morada Nova de Minas</title>
+<meta name="description" content="O que cada vereador de Morada Nova de Minas faz: propostas e votos, só com dados oficiais da Câmara Municipal.">
+<style>
+  :root{
+    --texto:#1f2933; --suave:#52606d; --linha:#e4e7eb; --fundo:#ffffff; --cinza:#f5f7fa;
+    --acento:#1d4e89; --acento-claro:#e8f0fa;
+    --favor:#1c6b55; --favor-bg:#dff2ea; --contra:#a62c3a; --contra-bg:#fbe3e6; --neutro:#4b5563; --neutro-bg:#eceef1;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--texto);background:var(--fundo);line-height:1.5;font-size:17px}
+  a{color:var(--acento)}
+  .wrap{max-width:760px;margin:0 auto;padding:0 18px}
+  header.topo{border-bottom:1px solid var(--linha);padding:22px 0 0}
+  header.topo h1{font-size:1.45rem;line-height:1.25;margin:0 0 4px}
+  header.topo p{margin:0;color:var(--suave);font-size:.95rem}
+  .atualizado{font-size:.85rem;color:var(--suave);margin-top:6px}
+  nav.abas{display:flex;gap:4px;margin-top:16px;overflow-x:auto}
+  nav.abas a{padding:10px 10px;text-decoration:none;color:var(--suave);font-weight:600;border-bottom:3px solid transparent;white-space:nowrap}
+  nav.abas a[aria-current="page"]{color:var(--acento);border-bottom-color:var(--acento)}
+  main{padding:20px 0 40px}
+  h2{font-size:1.25rem;margin:8px 0 6px}
+  h3{font-size:1.05rem;margin:28px 0 8px}
+  .intro{color:var(--suave);margin:0 0 16px}
+  .caixa{background:var(--cinza);border-radius:12px;padding:14px 16px;font-size:.93rem;color:var(--suave);margin:16px 0}
+  .caixa strong{color:var(--texto)}
+  .lista-ver{display:grid;gap:12px}
+  .card{display:block;border:1px solid var(--linha);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;background:#fff}
+  .card:active{background:var(--cinza)}
+  .card .nome{font-weight:700;font-size:1.05rem}
+  .card .sub{color:var(--suave);font-size:.9rem}
+  .nums{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+  .num{background:var(--cinza);border-radius:10px;padding:8px 10px}
+  .num b{display:block;font-size:1.3rem;line-height:1.2}
+  .num span{font-size:.78rem;color:var(--suave);display:block;line-height:1.25}
+  .sigla{display:inline-block;background:var(--acento-claro);color:var(--acento);font-size:.78rem;font-weight:700;padding:1px 8px;border-radius:999px;margin-left:6px;vertical-align:2px}
+  .voltar{display:inline-block;margin-bottom:10px;text-decoration:none;font-weight:600}
+  .fonte{font-size:.82rem;white-space:nowrap}
+  .tipos{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+  .tipos button{border:1px solid var(--linha);background:#fff;border-radius:999px;padding:6px 12px;font-size:.88rem;color:var(--texto);cursor:pointer}
+  .tipos button[aria-pressed="true"]{background:var(--acento);border-color:var(--acento);color:#fff}
+  input.busca{width:100%;padding:12px 14px;border:1px solid var(--linha);border-radius:10px;font-size:1rem;margin:6px 0 4px}
+  .item{border-top:1px solid var(--linha);padding:14px 0}
+  .item .meta{font-size:.85rem;color:var(--suave)}
+  .item .meta b{color:var(--texto)}
+  .item p{margin:6px 0}
+  .pauta{display:inline-block;background:#fff4dc;color:#7a5410;font-size:.75rem;font-weight:700;padding:1px 8px;border-radius:999px}
+  .voto{display:inline-block;white-space:nowrap;flex-shrink:0;font-size:.8rem;font-weight:700;padding:2px 10px;border-radius:999px}
+  .v-favor{background:var(--favor-bg);color:var(--favor)}
+  .v-contra{background:var(--contra-bg);color:var(--contra)}
+  .v-outro{background:var(--neutro-bg);color:var(--neutro)}
+  .barra{display:flex;height:10px;border-radius:999px;overflow:hidden;background:var(--neutro-bg);margin:8px 0 4px}
+  .barra i{display:block;height:100%}
+  details summary{cursor:pointer;color:var(--acento);font-size:.9rem;font-weight:600;margin-top:4px}
+  details ul{list-style:none;padding:0;margin:8px 0 0}
+  details li{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:4px 0;font-size:.92rem;border-bottom:1px dashed var(--linha)}
+  .mais{display:block;width:100%;margin-top:12px;padding:12px;border:1px solid var(--linha);border-radius:10px;background:#fff;font-size:1rem;color:var(--acento);font-weight:600;cursor:pointer}
+  .grupos-linha{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:10px;font-size:.85rem;color:var(--suave)}
+  .grupos-linha b{color:var(--texto)}
+  .explica-grupo{font-size:.88rem;color:var(--suave);margin:0 0 4px;min-height:0}
+  .grupo{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 8px;border-radius:999px;margin-right:4px;background:var(--neutro-bg);color:var(--neutro)}
+  .g-melhoria{background:#e3f0fb;color:#1d4e89}.g-cobranca{background:#fdf0dc;color:#7a5410}.g-homenagem{background:#f1e8f7;color:#6b3a8a}.g-lei{background:#dff2ea;color:#1c6b55}
+  .conflito{background:#fbe3e6;color:#7a1f2b;margin:0 0 8px}.conflito strong{color:#7a1f2b}
+  ul.ausencias{padding-left:18px;margin:6px 0;font-size:.93rem}ul.ausencias li{margin:4px 0}
+  .vazio{color:var(--suave);font-style:italic;padding:12px 0}
+  footer{border-top:1px solid var(--linha);padding:18px 0 40px;color:var(--suave);font-size:.85rem}
+  dl.glossario dt{font-weight:700;color:var(--texto);margin-top:8px}
+  dl.glossario dd{margin:0}
+</style>
+</head>
+<body>
+<header class="topo">
+  <div class="wrap">
+    <h1>Radar da Câmara de Morada Nova de Minas</h1>
+    <p>O que cada vereador faz, só com dados oficiais da Câmara Municipal.</p>
+    <div class="atualizado" id="atualizado"></div>
+    <nav class="abas" aria-label="Seções">
+      <a href="#inicio" data-aba="inicio">Vereadores</a>
+      <a href="#lugares" data-aba="lugares">Bairros e ruas</a>
+      <a href="#votacoes" data-aba="votacoes">Votações</a>
+      <a href="#sobre" data-aba="sobre">Sobre</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="conteudo"></main>
+<footer>
+  <div class="wrap">
+    Todos os números vêm do <a href="https://camaramoradanova.mg.gov.br" rel="noopener">site oficial da Câmara Municipal</a>. Este site não dá nota nem opinião: só organiza o que a Câmara publica. Projeto independente, sem ligação com a Câmara ou com partidos.
+  </div>
+</footer>
+
+<script>
+const D = /*DADOS*/null;
+const $c = document.getElementById('conteudo');
+document.getElementById('atualizado').textContent = 'Dados coletados em ' + D.atualizado + '.';
+
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const porId = Object.fromEntries(D.vereadores.map(v => [v.id, v]));
+const dataNum = s => { const [d,m,a] = s.split('/'); return +a*10000 + +m*100 + +d; };
+const hoje = (() => { const [d] = D.atualizado.split(' '); return dataNum(d); })();
+const ordemData = (a,b) => dataNum(b.data) - dataNum(a.data) || b.numero - a.numero;
+const fonte = (url, txt='ver na Câmara') => `<a class="fonte" href="${esc(url)}" rel="noopener" target="_blank">${txt} ↗</a>`;
+const nomeCurto = v => v.apelido && v.apelido.toUpperCase() !== v.nome.split(' ')[0].toUpperCase()
+  ? `${v.nome} <span class="sub">(${esc(cap(v.apelido))})</span>` : esc(v.nome);
+function cap(s){ return s.toLowerCase().replace(/(^|\s)\S/g, x => x.toUpperCase()); }
+
+const VOTO = {
+  favor:['A favor','v-favor'], contra:['Contra','v-contra'], abstencao:['Abstenção','v-outro'],
+  impedido:['Impedido','v-outro'], naoExigido:['Presidente, sem voto','v-outro'],
+  naoVotou:['Presente, sem registro de voto','v-outro'], ausente:['Ausente','v-outro']
+};
+const badge = voto => { const [t,c] = VOTO[voto] || [voto,'v-outro']; return `<span class="voto ${c}">${esc(t)}</span>`; };
+
+const GRUPO = Object.fromEntries(D.grupos.map(g => [g.id, g]));
+const resumoGrupos = ps => D.grupos.map(g => [g, ps.filter(p => p.grupo === g.id).length]).filter(([,n]) => n);
+const propsDe = v => D.props.filter(p => p.autor === v.nome).sort(ordemData);
+const votosDe = v => D.votacoes.filter(x => !x.conflito).map(x => ({x, voto:(x.votos.find(y => y.v === v.id) || {}).voto})).filter(o => o.voto);
+
+const TIPO_EXPLICA = {
+  'Requerimento':'pedido formal, quase sempre à Prefeitura, de obra, serviço ou informação',
+  'Indicação':'sugestão ao prefeito para fazer algo',
+  'Moção':'manifestação da Câmara: homenagem, aplauso, pesar ou protesto'
+};
+
+function inicio(){
+  const vs = [...D.vereadores].sort((a,b) => a.nome.localeCompare(b.nome,'pt'));
+  const totalVot = D.votacoes.filter(x => !x.conflito).length;
+  $c.innerHTML = `
+    <h2>Os 9 vereadores (2025–2028)</h2>
+    <p class="intro">Toque em um nome para ver tudo o que a pessoa pediu e como votou. A ordem é alfabética.</p>
+    <div class="lista-ver">${vs.map(v => {
+      const n = propsDe(v).length, vt = votosDe(v).length;
+      return `<a class="card" href="#vereador-${v.id}">
+        <div class="nome">${nomeCurto(v)}<span class="sigla">${esc(v.sigla)}</span></div>
+        <div class="sub">${esc(v.cargo)}</div>
+        <div class="nums">
+          <div class="num"><b>${n}</b><span>propostas desde 2025</span></div>
+          <div class="num"><b>${v.ausencias.length}</b><span>ausências nas atas (${D.totalAtas} reuniões)</span></div>
+          <div class="num"><b>${vt}<small style="font-size:.8rem;color:var(--suave)">/${totalVot}</small></b><span>votações com voto registrado</span></div>
+        </div>
+        <div class="grupos-linha">${resumoGrupos(propsDe(v)).map(([g,n]) => `<span><b>${n}</b> ${esc(g.nome.toLowerCase())}</span>`).join('')}</div></a>`;}).join('')}
+    </div>
+    <div class="caixa"><strong>Como as propostas são agrupadas</strong>
+      <dl class="glossario">${D.grupos.map(g => `<dt>${esc(g.nome)}</dt><dd>${esc(g.explica)}</dd>`).join('')}</dl>
+      <p style="margin-bottom:0"><a href="#sobre">Veja a regra completa</a></p>
+    </div>`;
+}
+
+function vereador(id){
+  const v = porId[id];
+  if (!v){ $c.innerHTML = '<p class="vazio">Vereador não encontrado.</p>'; return; }
+  const ps = propsDe(v), vts = votosDe(v);
+  const cont = k => vts.filter(o => o.voto === k).length;
+  let filtroGrupo = '', busca = '', mostrar = 20;
+  $c.innerHTML = `
+    <a class="voltar" href="#inicio">← Todos os vereadores</a>
+    <h2>${nomeCurto(v)}</h2>
+    <div class="sub">${esc(v.partido)} · ${esc(v.cargo)} · ${fonte(v.url,'ficha oficial')}</div>
+    <div class="nums">
+      <div class="num"><b>${ps.length}</b><span>propostas desde 2025</span></div>
+      <div class="num"><b>${v.ausencias.length}</b><span>ausências nas atas <a href="#presenca">ver</a></span></div>
+      <div class="num"><b>${vts.length}</b><span>votações com voto registrado</span></div>
+    </div>
+    <h3 id="presenca">Presença</h3>
+    <p>A <a href="${esc(v.url)}" rel="noopener" target="_blank">ficha oficial</a> da Câmara mostra <b>${esc(v.presenca ?? '—')}% de presença</b>. As atas das ${D.totalAtas} reuniões publicadas desde 2025 registram <b>${v.ausencias.length === 0 ? 'nenhuma ausência' : v.ausencias.length === 1 ? '1 ausência' : v.ausencias.length + ' ausências'}</b>${v.ausencias.length ? ':' : '.'}</p>
+    ${v.ausencias.length ? `<ul class="ausencias">${v.ausencias.map(a => `<li>${esc(a.data)} · ${esc(a.nome.replace(/^Ata d[ae] ?/i,''))} · ${a.justificada ? 'a ata diz que foi justificada ou abonada' : 'a ata não registra justificativa'} · ${fonte(a.url,'ata')}</li>`).join('')}</ul>
+    <p class="intro">Faltas justificadas ou abonadas podem ser o motivo de a ficha mostrar ${esc(v.presenca ?? '')}%. As atas são documentos escaneados, lidos por reconhecimento de texto, então pode haver erro: confira na ata.</p>` : ''}
+    <h3>O que apresentou</h3>
+    <p class="intro" style="margin-bottom:4px">Toque em um grupo para ler as propostas uma a uma.</p>
+    <div class="tipos" id="tipos">
+      <button aria-pressed="true" data-t="">Todas (${ps.length})</button>
+      ${resumoGrupos(ps).map(([g,n]) => `<button aria-pressed="false" data-t="${g.id}">${esc(g.nome)} (${n})</button>`).join('')}
+    </div>
+    <p class="explica-grupo" id="explica"></p>
+    <input class="busca" id="busca" type="search" placeholder="Buscar por rua, bairro ou assunto" aria-label="Buscar nas propostas">
+    <div id="lista"></div>
+    <h3>Como votou</h3>
+    <p class="intro">${vts.length ? `A favor: <b>${cont('favor')}</b> · Contra: <b>${cont('contra')}</b> · Abstenção: <b>${cont('abstencao')}</b>${cont('naoExigido') ? ` · Como presidente, sem voto exigido: <b>${cont('naoExigido')}</b>` : ''}.` : ''}
+      A Câmara só publica o voto de cada vereador desde agosto de 2026.</p>
+    <div>${vts.sort((a,b)=>dataNum(b.x.data)-dataNum(a.x.data)).map(({x,voto}) => `
+      <div class="item">
+        <div class="meta"><b>${esc(x.titulo)}</b> · ${esc(x.data)}</div>
+        <p>${esc(x.ementa)}</p>
+        <div>${badge(voto)} <span class="meta">Resultado: ${esc(x.resultado || 'não informado')}</span> · ${fonte(x.url)}</div>
+      </div>`).join('') || '<p class="vazio">Nenhuma votação nominal registrada.</p>'}</div>`;
+
+  const desenhar = () => {
+    const q = busca.normalize('NFD').replace(/\p{M}/gu,'').toLowerCase();
+    const lista = ps.filter(p => (!filtroGrupo || p.grupo === filtroGrupo) &&
+      (!q || (p.pedido + ' ' + p.dest).normalize('NFD').replace(/\p{M}/gu,'').toLowerCase().includes(q)));
+    document.getElementById('lista').innerHTML = (lista.slice(0, mostrar).map(p => `
+      <div class="item">
+        <div class="meta"><span class="grupo g-${p.grupo}">${esc(GRUPO[p.grupo].nome)}</span> <b>${esc(p.tipo)} nº ${p.numero}/${p.ano}</b> · ${p.projeto ? 'apresentado em ' + esc(p.data) : dataNum(p.data) > hoje ? `<span class="pauta">pautada para ${esc(p.data)}</span>` : 'reunião de ' + esc(p.data)}${p.dest ? ' · para: ' + esc(p.dest) : ''}</div>
+        <p>${esc(p.pedido)}</p>
+        ${fonte(p.url,'texto completo na Câmara')}
+      </div>`).join('') || '<p class="vazio">Nada encontrado com esse filtro.</p>') +
+      (lista.length > mostrar ? `<button class="mais" id="mais">Mostrar mais (${lista.length - mostrar} restantes)</button>` : '');
+    const m = document.getElementById('mais'); if (m) m.onclick = () => { mostrar += 30; desenhar(); };
+  };
+  document.getElementById('tipos').onclick = e => {
+    const b = e.target.closest('button'); if (!b) return;
+    filtroGrupo = b.dataset.t; mostrar = 20;
+    document.getElementById('explica').textContent = filtroGrupo ? GRUPO[filtroGrupo].explica : '';
+    document.querySelectorAll('#tipos button').forEach(x => x.setAttribute('aria-pressed', x === b));
+    desenhar();
+  };
+  document.getElementById('busca').oninput = e => { busca = e.target.value; mostrar = 20; desenhar(); };
+  desenhar();
+}
+
+function votacoes(){
+  const ord = [...D.votacoes].sort((a,b) => dataNum(b.data) - dataNum(a.data));
+  const cores = {favor:'var(--favor)', contra:'var(--contra)', abstencao:'#c28a1e'};
+  $c.innerHTML = `
+    <h2>Votações no plenário</h2>
+    <p class="intro">${ord.length} votações com o voto de cada vereador. A Câmara só começou a publicar esse detalhe em agosto de 2026; votações mais antigas aparecem apenas nas atas das reuniões.</p>
+    ${ord.map(x => {
+      const t = x.totais, tot = (t.favor||0)+(t.contra||0)+(t.abstencao||0)+(t.impedido||0);
+      const seg = ['favor','contra','abstencao'].map(k => t[k] ? `<i style="width:${100*t[k]/(tot||1)}%;background:${cores[k]}"></i>` : '').join('');
+      return `<div class="item">
+        ${x.conflito ? `<div class="caixa conflito"><strong>Dado em conflito:</strong> ${esc(x.conflito)}. Por isso esta votação não entra na conta de nenhum vereador.</div>` : ''}
+        <div class="meta"><b>${esc(x.titulo)}</b> · ${esc(x.data)} · ${esc(x.resultado || 'resultado não informado')}${x.repeticoes > 1 ? ` · <span class="pauta">aparece ${x.repeticoes} vezes no site da Câmara, com os mesmos votos</span>` : ''}</div>
+        <p>${esc(x.ementa)}</p>
+        <div class="barra" aria-hidden="true">${seg}</div>
+        <div class="meta">A favor ${t.favor||0} · Contra ${t.contra||0} · Abstenção ${t.abstencao||0}${t.ausente ? ' · Ausentes ' + t.ausente : ''} · ${fonte(x.url)}</div>
+        <details><summary>Ver o voto de cada vereador</summary><ul>
+          ${x.votos.map(y => `<li><a href="#vereador-${y.v}">${esc((porId[y.v]||{}).nome || y.v)}</a>${badge(y.voto)}</li>`).join('')}
+        </ul></details>
+      </div>`;}).join('')}`;
+}
+
+const porNome = Object.fromEntries(D.vereadores.map(v => [v.nome, v]));
+const propPorId = Object.fromEntries(D.props.map(p => [p.id, p]));
+const semAcento = t => String(t || '').normalize('NFD').replace(/\p{M}/gu,'').toLowerCase();
+const nomeLugar = k => { const l = D.lugares[k]; return l ? `${l.tipo} ${l.nome}` : k; };
+const autorLink = nome => { const v = porNome[nome]; return v ? `<a href="#vereador-${v.id}">${esc(v.nome)}</a>` : esc(nome); };
+const itemProp = p => `
+      <div class="item">
+        <div class="meta"><span class="grupo g-${p.grupo}">${esc(GRUPO[p.grupo].nome)}</span> <b>${esc(p.tipo)} nº ${p.numero}/${p.ano}</b> · ${dataNum(p.data) > hoje ? `<span class="pauta">pautada para ${esc(p.data)}</span>` : esc(p.data)} · por ${autorLink(p.autor)}</div>
+        <p>${esc(p.pedido)}</p>
+        ${fonte(p.url,'texto completo na Câmara')}
+      </div>`;
+const AVISO_REPETIDO = `<div class="caixa"><strong>Atenção:</strong> pedido repetido não prova que a Prefeitura ignorou. O mesmo assunto pode voltar porque o problema é grande, porque surgiram novos pontos na mesma rua, ou porque foi resolvido e voltou a acontecer. A resposta a cada pedido, quando existe, fica na página dele no site da Câmara.</div>`;
+
+function lugaresView(){
+  const contagem = Object.keys(D.lugares).map(k => [k, D.props.filter(p => (p.lugares||[]).includes(k)).length]).filter(([,n]) => n).sort((a,b) => b[1]-a[1] || nomeLugar(a[0]).localeCompare(nomeLugar(b[0]),'pt'));
+  let q = '', sel = '', mostrar = 20;
+  $c.innerHTML = `
+    <h2>Bairros e ruas</h2>
+    <p class="intro">Digite o nome de um bairro, povoado ou rua para ver tudo o que os vereadores pediram para lá, e quem pediu.</p>
+    <input class="busca" id="buscaLugar" type="search" placeholder="Ex.: São Geraldo, Cacimbas, Rua Frei Orlando" aria-label="Buscar bairro, povoado ou rua">
+    <div id="resLugar"></div>`;
+  const desenhar = () => {
+    const nq = semAcento(q).trim();
+    let html = '';
+    if (!nq && !sel){
+      html += `<h3>Lugares mais citados</h3><div class="tipos">${contagem.slice(0,24).map(([k,n]) => `<button data-l="${esc(k)}">${esc(nomeLugar(k))} (${n})</button>`).join('')}</div>`;
+      html += `<h3 id="voltam">Pedidos que voltam</h3>
+        <p class="intro">Quando o mesmo tipo de pedido aparece mais de uma vez para o mesmo lugar, desde 2025. Toque para ver cada pedido.</p>${AVISO_REPETIDO}
+        ${D.repetidos.map(([k,t,ids]) => { const ps = ids.map(i => propPorId[i]).sort((a,b) => dataNum(a.data)-dataNum(b.data));
+          const autores = [...new Set(ps.map(p => p.autor))];
+          return `<div class="item"><div><b>${esc(t[0].toUpperCase()+t.slice(1))}</b> · ${esc(nomeLugar(k))}</div>
+            <div class="meta"><b>${ps.length} pedidos</b>, de ${esc(ps[0].data)} a ${esc(ps[ps.length-1].data)} · ${autores.length === 1 ? '1 vereador' : autores.length + ' vereadores'}</div>
+            <details><summary>Ver os ${ps.length} pedidos</summary>${ps.map(itemProp).join('')}</details></div>`; }).join('')}`;
+    } else {
+      const lugaresAchados = sel ? [sel] : contagem.map(([k]) => k).filter(k => semAcento(nomeLugar(k)).includes(nq));
+      const lista = D.props.filter(p => !p.projeto && (sel ? (p.lugares||[]).includes(sel)
+          : lugaresAchados.some(k => (p.lugares||[]).includes(k)) || semAcento(p.busca).includes(nq))).sort(ordemData);
+      if (sel) html += `<p><a href="#lugares" id="limpa">← Todos os lugares</a></p><h3>${esc(nomeLugar(sel))}</h3>`;
+      else if (lugaresAchados.length) html += `<div class="tipos">${lugaresAchados.slice(0,12).map(k => `<button data-l="${esc(k)}">${esc(nomeLugar(k))}</button>`).join('')}</div>`;
+      const reps = D.repetidos.filter(([k]) => sel ? k === sel : lugaresAchados.includes(k));
+      if (reps.length) html += `<div class="caixa"><strong>Pedidos que voltam aqui:</strong> ${reps.map(([k,t,ids]) => `${esc(t)} (${ids.length} pedidos${sel ? '' : ', ' + esc(nomeLugar(k))})`).join('; ')}. Pedido repetido não prova que a Prefeitura ignorou.</div>`;
+      const autores = {}; lista.forEach(p => autores[p.autor] = (autores[p.autor]||0) + 1);
+      html += `<p class="intro">${lista.length ? `<b>${lista.length}</b> ${lista.length === 1 ? 'pedido encontrado' : 'pedidos encontrados'}. Quem pediu: ${Object.entries(autores).sort((a,b)=>b[1]-a[1]).map(([n,c]) => `${autorLink(n)} (${c})`).join(', ')}.` : 'Nenhum pedido encontrado. Tente outra grafia ou só parte do nome.'}</p>`;
+      html += lista.slice(0, mostrar).map(itemProp).join('') + (lista.length > mostrar ? `<button class="mais" id="maisL">Mostrar mais (${lista.length - mostrar} restantes)</button>` : '');
+    }
+    const r = document.getElementById('resLugar'); r.innerHTML = html;
+    r.querySelectorAll('button[data-l]').forEach(b => b.onclick = () => { sel = b.dataset.l; q = ''; mostrar = 20; document.getElementById('buscaLugar').value = ''; desenhar(); window.scrollTo(0,0); });
+    const l = document.getElementById('limpa'); if (l) l.onclick = e => { e.preventDefault(); sel = ''; desenhar(); };
+    const m = document.getElementById('maisL'); if (m) m.onclick = () => { mostrar += 30; desenhar(); };
+  };
+  document.getElementById('buscaLugar').oninput = e => { q = e.target.value; sel = ''; mostrar = 20; desenhar(); };
+  desenhar();
+}
+
+function sobre(){
+  $c.innerHTML = `
+    <h2>Como funciona</h2>
+    <p>Este site junta, num lugar só e em linguagem simples, o que a Câmara Municipal de Morada Nova de Minas publica no <a href="${esc(D.site)}" rel="noopener">site oficial</a>. Cada número tem um link para a página da Câmara de onde ele saiu.</p>
+    <h3>As regras</h3>
+    <div class="caixa">
+      <p><strong>Só dado oficial.</strong> Nada de boato, print ou reportagem como fonte de número.</p>
+      <p><strong>Mesma régua para todos.</strong> Os 9 vereadores, de todos os partidos, aparecem com as mesmas regras, em ordem alfabética.</p>
+      <p><strong>Sem nota e sem opinião.</strong> Mais propostas não quer dizer trabalho melhor: o site só mostra o que foi registrado.</p>
+      <p><strong>Dado ausente não é falta.</strong> Se a Câmara não registrou algo, o site não conclui nada.</p>
+    </div>
+    <h3>O que você precisa saber</h3>
+    <div class="caixa">
+      <p><strong>Propostas:</strong> contamos cada requerimento, indicação, moção e projeto apresentado desde 2025, pelo autor que a Câmara registra. Propostas feitas em conjunto aparecem só para o primeiro autor, por isso a ficha oficial de alguns vereadores mostra um número um pouco diferente. Projetos do Prefeito e da Mesa Diretora não entram na conta de nenhum vereador.</p>
+      <p><strong>Presença:</strong> a ficha da Câmara mostra 100% para todos. O site também lê as atas das reuniões (ordinárias, extraordinárias e audiências; não entram comissões, posse e sessões solenes) e lista cada ausência registrada, dizendo se a ata fala em justificativa ou falta abonada. As atas são escaneadas e lidas por reconhecimento de texto, por isso cada ausência tem o link para a ata.</p>
+      <p><strong>Votações em conflito:</strong> quando uma votação publicada não aparece na ata da reunião, ou mostra votando alguém que a ata dá como ausente, o site avisa e não conta essa votação para nenhum vereador.</p>
+      <p><strong>Votos:</strong> a Câmara publica o voto de cada vereador desde agosto de 2026. O presidente só vota em caso de empate ou quando o Regimento exige; nas outras votações aparece como "Presidente, sem voto".</p>
+      <p><strong>Partido:</strong> é o do cadastro atual na Câmara, que pode ser diferente do partido na época de uma votação.</p>
+      <p><strong>Resumo do pedido:</strong> o texto de cada proposta é um trecho do documento oficial, encurtado. Para ler tudo, toque em "texto completo na Câmara".</p>
+    </div>
+    <h3>A regra dos grupos</h3>
+    <p>Todas as propostas, de todos os vereadores, passam pela mesma regra automática, que lê o começo do pedido (a parte que diz o que está sendo pedido) e segue esta ordem:</p>
+    <div class="caixa">
+      <p><strong>1. Homenagens.</strong> Moções de aplauso, parabéns ou pesar; projetos que dão título de cidadão honorário ou de honra ao mérito, dão nome a rua ou prédio, ou criam data comemorativa.</p>
+      <p><strong>2. Propostas de lei.</strong> Os demais projetos de lei, de lei complementar e de resolução.</p>
+      <p><strong>3. Perguntas e cobranças.</strong> Requerimentos e indicações que pedem informação, explicação, previsão, relatório ou resposta.</p>
+      <p><strong>4. Pedidos de melhoria.</strong> Os que pedem obra, conserto, instalação, limpeza, serviço ou compra.</p>
+      <p><strong>5. Outros.</strong> O que não se encaixa em nenhum dos anteriores, como moções de outro tipo.</p>
+      <p style="margin-bottom:0">A regra é automática e pode errar em casos de fronteira. Por isso cada proposta tem o link para o texto completo na Câmara.</p>
+    </div>
+    <h3>Bairros, ruas e pedidos que voltam</h3>
+    <div class="caixa">
+      <p><strong>Lugares:</strong> o site procura nos pedidos nomes que vêm depois de "Rua", "Avenida", "Praça", "Bairro", "Povoado", "Distrito" ou "Comunidade", e junta grafias diferentes do mesmo nome (com ou sem acento, "Cel." e "Coronel"). Bairros e povoados também são achados quando aparecem sem a palavra "bairro" antes. Um pedido pode citar mais de um lugar.</p>
+      <p><strong>Tema:</strong> o começo de cada pedido é lido para saber o assunto: quebra-molas, iluminação, calçamento e buracos, limpeza, água e esgoto, sinalização, estradas, árvores, praças e quadras, saúde ou escolas.</p>
+      <p><strong>Pedidos que voltam:</strong> quando há dois ou mais pedidos com o mesmo tema para o mesmo lugar. Isso não prova que a Prefeitura ignorou: pode ser um problema grande, pontos diferentes da mesma rua, ou algo que foi resolvido e voltou.</p>
+      <p style="margin-bottom:0">A busca por texto também lê o pedido inteiro, então funciona para lugares que a regra não reconheceu.</p>
+    </div>
+    <h3>Achou um erro?</h3>
+    <p>Este site é atualizado a partir dos dados da Câmara. Se algum número estiver errado, avise e ele será corrigido rápido${D.repo ? `: <a href="https://github.com/${esc(D.repo)}/issues/new" rel="noopener" target="_blank">abra um aviso de erro aqui</a> (precisa de uma conta gratuita no GitHub). O código e os dados de cada dia ficam públicos em <a href="https://github.com/${esc(D.repo)}" rel="noopener" target="_blank">github.com/${esc(D.repo)}</a>.` : '. <em>(Canal de contato em breve.)</em>'}</p>`;
+}
+
+function rota(){
+  const h = location.hash.replace('#','') || 'inicio';
+  const aba = h.startsWith('vereador-') ? 'inicio' : h;
+  document.querySelectorAll('nav.abas a').forEach(a => { if (a.dataset.aba === aba) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
+  if (h.startsWith('vereador-')) vereador(+h.slice(9));
+  else if (h === 'votacoes') votacoes();
+  else if (h === 'lugares') lugaresView();
+  else if (h === 'sobre') sobre();
+  else inicio();
+  window.scrollTo(0,0);
+}
+window.addEventListener('hashchange', rota);
+rota();
+</script>
+</body>
+</html>
