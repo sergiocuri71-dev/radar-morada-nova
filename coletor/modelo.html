@@ -266,8 +266,6 @@ function inicio(){
       <a class="bloco" href="#lugares"><div class="ic">${icone('b')}</div><div><b>Meu bairro</b><span>${nLugares} lugares citados</span></div></a>
       <a class="bloco" href="#votacoes"><div class="ic">${icone('o')}</div><div><b>Votações</b><span>${validas} com o voto de cada um</span></div></a>
       <a class="bloco" href="#presenca"><div class="ic">${icone('a')}</div><div><b>Presença</b><span>lida em ${D.totalAtas} atas</span></div></a>
-      ${D.cidade ? `<a class="bloco largo" href="#cidade"><div class="ic">${icone('c')}</div><div><b>A cidade</b><span>números do IBGE, distritos, povoados e telefones úteis</span></div></a>` : ''}
-      <a class="bloco largo" href="https://radarmnm.ironguia.com/" rel="noopener"><div class="ic">${icone('g')}</div><div><b>Guia comercial</b><span>lojas, restaurantes, pousadas e serviços da cidade (site parceiro)</span></div></a>
     </nav>
     ${noticias()}
     <h3>Vereadores</h3>
@@ -359,6 +357,7 @@ function cidadeView(){
   const cats = [...new Set(tels.map(t => t.categoria))].sort((a,b) => (a === 'Outros') - (b === 'Outros') || a.localeCompare(b, 'pt'));
   let q = '';
   $c.innerHTML = `
+    <nav class="blocos" aria-label="Guia comercial"><a class="bloco largo contas" href="https://radarmnm.ironguia.com/" rel="noopener"><div class="ic">${icone('g')}</div><div><b>Guia comercial</b><span>lojas, restaurantes, pousadas e serviços da cidade (site parceiro)</span></div></a></nav>
     <h2>Morada Nova de Minas</h2>
     <p class="intro">Município da região central de Minas Gerais, às margens da represa de Três Marias.</p>
 
