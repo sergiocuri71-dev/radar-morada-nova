@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2244%22%20fill%3D%22%2314213D%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2230%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-opacity%3D%22.35%22%20stroke-width%3D%222.5%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2216%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-opacity%3D%22.35%22%20stroke-width%3D%222.5%22/%3E%3Cpath%20d%3D%22M50%2050L50%206A44%2044%200%200%201%2090%2032z%22%20fill%3D%22%23FCC342%22/%3E%3Cpath%20d%3D%22M14%2064c6-5%2012-5%2018%200s12%205%2018%200%2012-5%2018%200%2012%205%2018%200%22%20fill%3D%22none%22%20stroke%3D%22%23FCC342%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22/%3E%3Cpath%20d%3D%22M22%2077c6-5%2012-5%2018%200s12%205%2018%200%2012-5%2018%200%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%225%22%20fill%3D%22%23ffffff%22/%3E%3C/svg%3E">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Radar - Morada Nova de Minas (MG)</title>
@@ -24,8 +25,10 @@
   .wrap{max-width:820px;margin:0 auto;padding:0 18px}
   header.topo{background:var(--azul);color:#fff}
   .marca{display:flex;flex-direction:column;align-items:center;gap:4px;padding:18px 0 4px;text-align:center}
-  .marca a{display:block;width:100%;color:#fff;text-decoration:none;font-family:var(--titulo);font-weight:700;font-size:clamp(.95rem, 5.4vw, 2.3rem);letter-spacing:.02em;line-height:1.1;white-space:nowrap}
+  .marca a{display:flex;align-items:center;justify-content:center;gap:.35em;width:100%;color:#fff;text-decoration:none;font-family:var(--titulo);font-weight:700;font-size:clamp(.85rem, 4.5vw, 2.3rem);letter-spacing:.02em;line-height:1.1;white-space:nowrap}
   .marca a span{color:var(--amarelo)}
+  .marca a b{font-weight:700}
+  .marca .logo{width:1.6em;height:1.6em;flex:none}
   .atualizado{font-size:.8rem;color:#C7D2E3;text-align:center;line-height:1.2}
   .barra-abas{background:var(--azul);position:sticky;top:0;z-index:5}
   nav.abas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:8px 0 12px}
@@ -139,7 +142,7 @@
 <body>
 <header class="topo">
   <div class="wrap">
-    <div class="marca"><a href="#inicio">RADAR <span>-</span> MORADA NOVA DE MINAS</a><div class="atualizado" id="atualizado"></div></div>
+    <div class="marca"><a href="#inicio"><svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#ffffff"/><circle cx="50" cy="50" r="30" fill="none" stroke="#14213D" stroke-opacity=".35" stroke-width="2.5"/><circle cx="50" cy="50" r="16" fill="none" stroke="#14213D" stroke-opacity=".35" stroke-width="2.5"/><path d="M50 50L50 6A44 44 0 0 1 90 32z" fill="#FCC342"/><path d="M14 64c6-5 12-5 18 0s12 5 18 0 12-5 18 0 12 5 18 0" fill="none" stroke="#FCC342" stroke-width="5" stroke-linecap="round"/><path d="M22 77c6-5 12-5 18 0s12 5 18 0 12-5 18 0" fill="none" stroke="#14213D" stroke-width="5" stroke-linecap="round"/><circle cx="50" cy="50" r="5" fill="#14213D"/></svg><b>RADAR <span>-</span> MORADA NOVA DE MINAS</b></a><div class="atualizado" id="atualizado"></div></div>
   </div>
 </header>
 <div class="barra-abas">
