@@ -24,11 +24,12 @@
   h1,h2,h3{font-family:var(--titulo);letter-spacing:-.01em}
   .wrap{max-width:820px;margin:0 auto;padding:0 18px}
   header.topo{background:var(--azul);color:#fff}
-  .marca{display:flex;flex-direction:column;align-items:center;gap:4px;padding:18px 0 4px;text-align:center}
-  .marca a{display:flex;align-items:center;justify-content:center;gap:.35em;width:100%;color:#fff;text-decoration:none;font-family:var(--titulo);font-weight:700;font-size:clamp(.85rem, 4.5vw, 2.3rem);letter-spacing:.02em;line-height:1.1;white-space:nowrap}
-  .marca a span{color:var(--amarelo)}
-  .marca a b{font-weight:700}
-  .marca .logo{width:1.6em;height:1.6em;flex:none}
+  .marca{display:flex;flex-direction:column;align-items:center;gap:4px;padding:22px 0 6px;text-align:center}
+  .marca .atualizado{margin-top:10px}
+  .marca a{display:flex;flex-direction:column;align-items:center;gap:8px;color:#fff;text-decoration:none;line-height:1}
+  .marca .logo{width:clamp(64px,18vw,96px);height:clamp(64px,18vw,96px);flex:none}
+  .marca .nome{font-family:var(--titulo);font-weight:700;font-size:clamp(2.4rem,11vw,3.6rem);letter-spacing:.14em;color:var(--amarelo);margin-right:-.14em}
+  .marca .cidade{font-weight:700;font-size:clamp(.8rem,3.6vw,1.05rem);letter-spacing:.28em;color:#fff;margin-right:-.28em;white-space:nowrap}
   .atualizado{font-size:.8rem;color:#C7D2E3;text-align:center;line-height:1.2}
   .barra-abas{background:var(--azul);position:sticky;top:0;z-index:5}
   nav.abas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:8px 0 12px}
@@ -142,7 +143,7 @@
 <body>
 <header class="topo">
   <div class="wrap">
-    <div class="marca"><a href="#inicio"><svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#ffffff"/><circle cx="50" cy="50" r="30" fill="none" stroke="#14213D" stroke-opacity=".35" stroke-width="2.5"/><circle cx="50" cy="50" r="16" fill="none" stroke="#14213D" stroke-opacity=".35" stroke-width="2.5"/><path d="M50 50L50 6A44 44 0 0 1 90 32z" fill="#FCC342"/><path d="M14 64c6-5 12-5 18 0s12 5 18 0 12-5 18 0 12 5 18 0" fill="none" stroke="#FCC342" stroke-width="5" stroke-linecap="round"/><path d="M22 77c6-5 12-5 18 0s12 5 18 0 12-5 18 0" fill="none" stroke="#14213D" stroke-width="5" stroke-linecap="round"/><circle cx="50" cy="50" r="5" fill="#14213D"/></svg><b>RADAR <span>-</span> MORADA NOVA DE MINAS</b></a><div class="atualizado" id="atualizado"></div></div>
+    <div class="marca"><a href="#inicio"><svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#ffffff"/><circle cx="50" cy="50" r="30" fill="none" stroke="#14213D" stroke-opacity=".35" stroke-width="2.5"/><circle cx="50" cy="50" r="16" fill="none" stroke="#14213D" stroke-opacity=".35" stroke-width="2.5"/><path d="M50 50L50 6A44 44 0 0 1 90 32z" fill="#FCC342"/><path d="M14 64c6-5 12-5 18 0s12 5 18 0 12-5 18 0 12 5 18 0" fill="none" stroke="#FCC342" stroke-width="5" stroke-linecap="round"/><path d="M22 77c6-5 12-5 18 0s12 5 18 0 12-5 18 0" fill="none" stroke="#14213D" stroke-width="5" stroke-linecap="round"/><circle cx="50" cy="50" r="5" fill="#14213D"/></svg><span class="nome">RADAR</span><span class="cidade">MORADA NOVA DE MINAS</span></a><div class="atualizado" id="atualizado"></div></div>
   </div>
 </header>
 <div class="barra-abas">
