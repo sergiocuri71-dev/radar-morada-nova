@@ -119,6 +119,13 @@
   .tabela td.n{text-align:center;font-family:var(--titulo);font-weight:700;white-space:nowrap}
   footer{background:var(--azul);color:var(--amarelo);font-weight:700;padding:22px 0 40px;font-size:.88rem;line-height:1.55}
   footer a{color:var(--amarelo);text-decoration:underline}
+  .rodape{display:flex;flex-direction:column;gap:12px}
+  .rod-box{border-radius:16px;padding:14px 16px}
+  .rod-destaque{background:var(--amarelo);color:var(--azul)}
+  .rod-destaque a{color:var(--azul)}
+  .rod-centro{border:1.5px solid rgba(252,195,66,.55);text-align:center}
+  .rod-indep{margin:4px 0;text-align:center;font-weight:800;font-size:1rem;color:#fff}
+  .rod-direitos{margin:6px 0 0;text-align:center;font-weight:500;font-size:.78rem;color:rgba(255,255,255,.7)}
   dl.glossario dt{font-weight:700;color:var(--texto);margin-top:8px}
   dl.glossario dd{margin:0}
   .bloco.largo{grid-column:1 / -1;min-height:0;flex-direction:row;align-items:center}
@@ -163,13 +170,18 @@
 </div>
 <main class="wrap" id="conteudo"></main>
 <footer>
-  <div class="wrap">
-    Todos os números vêm de fontes oficiais: o <a href="https://camaramoradanova.mg.gov.br" rel="noopener">site da Câmara Municipal</a> e os relatórios fiscais que o município entrega ao <a href="https://siconfi.tesouro.gov.br" rel="noopener">Tesouro Nacional</a>. Este site não dá nota nem opinião: só organiza o que é publicado. Projeto independente, sem ligação com a Câmara, a Prefeitura ou partidos. <a href="#sobre">Como funciona o site e como avisar de um erro</a>.<br>Contato: <a href="mailto:radarmnm@gmail.com">radarmnm@gmail.com</a> · <a href="https://radarmnm.ironguia.com/" rel="noopener">Guia comercial da cidade</a>
+  <div class="wrap rodape">
+    <div class="rod-box rod-destaque">Todos os números vêm de fontes oficiais: o <a href="https://camaramoradanova.mg.gov.br" rel="noopener">site da Câmara Municipal</a> e os relatórios fiscais que o município entrega ao <a href="https://siconfi.tesouro.gov.br" rel="noopener">Tesouro Nacional</a>.</div>
+    <div class="rod-box rod-centro">Este site não dá nota nem opinião: só organiza o que é publicado.</div>
+    <p class="rod-indep">Projeto independente, sem ligação com a Câmara, a Prefeitura ou partidos.</p>
+    <div class="rod-box rod-centro"><a href="#sobre">Como funciona o site e como avisar de um erro</a>.<br>Contato: <a href="mailto:radarmnm@gmail.com">radarmnm@gmail.com</a></div>
+    <p class="rod-direitos">© <span id="ano-rodape"></span> Radar – Morada Nova de Minas. Todos os direitos reservados.</p>
   </div>
 </footer>
 
 <script>
 const D = /*DADOS*/null;
+try { document.getElementById('ano-rodape').textContent = new Date().getFullYear(); } catch(e) {}
 const $c = document.getElementById('conteudo');
 document.getElementById('atualizado').textContent = 'Atualizado em ' + D.atualizado.split(' ')[0];
 
