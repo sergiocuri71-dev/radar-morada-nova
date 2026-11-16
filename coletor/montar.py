@@ -49,6 +49,22 @@ for x in d.get("projetos", []):
         "dest": "", "pedido": assunto[:1].upper() + assunto[1:].lower() if assunto.isupper() else assunto,
         "url": f"{SITE}/Projeto/{x['cod']}", "projeto": True,
     })
+# Texto na íntegra só das propostas que ainda vão para a pauta (as próximas reuniões),
+# para a página "Próxima reunião" mostrar o documento inteiro sem pesar o site.
+def _limpa(t):
+    t = (t or "").replace("\r", "").replace("\t", " ")
+    t = re.sub(r"[ \u00a0]+", " ", t)
+    t = re.sub(r" *\n *", "\n", t)
+    return re.sub(r"\n{3,}", "\n\n", t).strip()
+def _dnum(s):
+    try: dd, mm, aa = s.split("/"); return int(aa) * 10000 + int(mm) * 100 + int(dd)
+    except Exception: return 0
+_hoje = int(datetime.date.today().strftime("%Y%m%d"))
+_orig = {p["id"]: p for p in d["proposicoes"]}
+for p in props:
+    if not p.get("projeto") and _dnum(p["data"]) > _hoje:
+        o = _orig.get(p["id"], {})
+        p["integra"] = _limpa(o.get("texto_completo") or o.get("texto"))[:12000]
 # Passo 4: lugares citados e tema de cada pedido (só requerimentos, indicações e moções)
 textos = {p["id"]: pedido(p.get("texto_completo") or p.get("texto") or "", 5000) for p in d["proposicoes"]}
 mapa_lugares, por_item = indexar(list(textos.items()))
