@@ -148,6 +148,13 @@
   .bloco.contas span{color:#3b2a00}
   .barra.grossa{height:14px;margin:10px 0 2px}
   b.grande{font-family:var(--titulo);font-size:1.5rem}
+  .area-link{display:block;color:inherit;text-decoration:none;border-radius:10px;padding:6px 8px;margin:4px -8px}
+  .area-link:hover,.area-link:focus-visible{background:var(--cinza)}
+  .area .seta{color:var(--suave);font-weight:700;margin-left:2px}
+  .area small{color:var(--suave);font-weight:600}
+  .area-topo b{white-space:nowrap;flex:none}
+  .ver-detalhe{display:inline-block;margin-top:10px;font-weight:700;color:var(--azul)}
+  .voltar{display:inline-block;margin:6px 0 2px;font-weight:700;color:var(--azul);text-decoration:none}
   .area{margin:10px 0}.area-topo{display:flex;justify-content:space-between;gap:10px;font-size:.92rem}.area.destaque span{font-weight:700}
   @media (min-width:700px){ .blocos{grid-template-columns:repeat(4,minmax(0,1fr))} .grade-ver{grid-template-columns:repeat(5,minmax(0,1fr))} }
 </style>
@@ -296,6 +303,30 @@ const pct = (a, b) => b ? Math.round(100 * a / b) : 0;
 const barraValor = (v, total, cor='var(--azul)') => `<div class="barra grossa" aria-hidden="true"><i style="width:${Math.min(100, 100*(v||0)/(total||1))}%;background:${cor}"></i></div>`;
 const NOMES_AREA = {'Legislativa':'Legislativa (Câmara)','Encargos Especiais':'Encargos especiais (dívidas, precatórios)','Previdência Social':'Previdência dos servidores'};
 
+const reaisD = v => v >= 1e6 ? reais(v) : 'R$ ' + Math.round(v).toLocaleString('pt-BR');
+const slugArea = n => semAcento(n).replace(/[^a-z0-9]+/g, '-');
+function gastoView(slug){
+  const m = D.fin && D.fin.municipio.atual, det = m && m.detalhe;
+  if (!det){ location.hash = 'contas'; return; }
+  const camara = slug === 'camara';
+  const nome = camara ? null : Object.keys(det.areas).find(n => slugArea(n) === slug);
+  const A = camara ? det.poderes.camara : det.areas[nome];
+  if (!A){ location.hash = 'contas'; return; }
+  const titulo = camara ? 'Gastos da Câmara Municipal' : (NOMES_AREA[nome] || nome);
+  const lista = (itens, cor) => { const mx = Math.max(...itens.map(i => i.valor)); return `<div class="item">${itens.map(i => `
+      <div class="area"><div class="area-topo"><span>${esc(i.nome)}</span><b>${reaisD(i.valor)} <small>${pct(i.valor, A.total)}%</small></b></div>${barraValor(i.valor, mx, cor)}</div>`).join('')}</div>`; };
+  $c.innerHTML = `
+    <a class="voltar" href="#contas">← Contas</a>
+    <h2>${esc(titulo)}</h2>
+    <div class="item"><div class="meta">Gasto de janeiro a ${esc(det.ate)} de ${det.ano} (despesa liquidada)</div>
+      <p style="margin:4px 0"><b class="grande">${reais(A.total)}</b></p></div>
+    <h3>Em que o dinheiro foi gasto</h3>
+    ${lista(A.tipos, camara ? 'var(--amarelo)' : 'var(--azul)')}
+    ${!camara && A.setores.length > 1 ? `<h3>Por setor</h3>${lista(A.setores, 'var(--amarelo)')}` : ''}
+    <div class="caixa">${camara ? 'Inclui o subsídio dos vereadores e o salário dos servidores da Câmara. ' : ''}Os valores vêm do relatório contábil mensal que o município envia ao Tesouro Nacional, sem os repasses entre órgãos do próprio município. A lista de cada pagamento, com o nome da empresa ou pessoa que recebeu, fica no Portal da Transparência da ${camara ? 'Câmara' : 'Prefeitura'}.</div>
+    <p class="meta">Fonte oficial: <a href="${esc(det.fonte)}" rel="noopener" target="_blank">Matriz de Saldos Contábeis de ${esc(det.ate)}/${det.ano} (Siconfi)</a>.</p>`;
+}
+
 function contasView(){
   const F = D.fin;
   if (!F || !F.municipio.atual){ $c.innerHTML = '<p class="vazio">Dados de contas ainda não disponíveis.</p>'; return; }
@@ -304,6 +335,7 @@ function contasView(){
   const legAnt = ant ? (ant.funcoes.find(f => f.funcao === 'Legislativa') || {}) : {};
   const maxF = Math.max(...m.funcoes.map(f => f.liquidado || 0));
   const periodo = `${m.meses.replace('–', ' a ')} de ${m.ano}`;
+  const det = m.detalhe;
   $c.innerHTML = `
     <h2>Contas da Prefeitura e da Câmara</h2>
     <p class="intro">Quanto o município arrecadou e gastou, segundo os relatórios oficiais que a Prefeitura e a Câmara enviam ao Tesouro Nacional. Os números de ${m.ano} vão de ${periodo}: são do relatório bimestral mais recente e ainda podem ser revisados no balanço anual.</p>
@@ -322,8 +354,12 @@ function contasView(){
 
     <h3>Para onde foi o dinheiro</h3>
     <p class="intro">Gasto por área em ${periodo}, considerando o que já foi entregue ou prestado (despesa liquidada).</p>
-    <div class="item">${m.funcoes.filter(f => f.liquidado).map(f => `
-      <div class="area${f.funcao === 'Legislativa' ? ' destaque' : ''}"><div class="area-topo"><span>${esc(NOMES_AREA[f.funcao] || f.funcao)}</span><b>${reais(f.liquidado)}</b></div>${barraValor(f.liquidado, maxF, f.funcao === 'Legislativa' ? 'var(--amarelo)' : 'var(--azul)')}</div>`).join('')}
+    ${det ? '<p class="meta">Toque numa área para ver em que o dinheiro foi gasto.</p>' : ''}
+    <div class="item">${m.funcoes.filter(f => f.liquidado).map(f => {
+      const temDet = det && det.areas[f.funcao];
+      const corpo = `<div class="area-topo"><span>${esc(NOMES_AREA[f.funcao] || f.funcao)}</span><b>${reais(f.liquidado)}${temDet ? ' <span class="seta" aria-hidden="true">›</span>' : ''}</b></div>${barraValor(f.liquidado, maxF, f.funcao === 'Legislativa' ? 'var(--amarelo)' : 'var(--azul)')}`;
+      return temDet ? `<a class="area area-link${f.funcao === 'Legislativa' ? ' destaque' : ''}" href="#gasto-${slugArea(f.funcao)}">${corpo}</a>` : `<div class="area${f.funcao === 'Legislativa' ? ' destaque' : ''}">${corpo}</div>`;
+    }).join('')}
     </div>
     ${pp ? `<div class="item"><div class="meta">Gasto da Prefeitura com pessoal (12 meses até ${pp.semestre === 1 ? 'junho' : 'dezembro'} de ${pp.ano})</div>
       <p style="margin:4px 0"><b class="grande">${String(pp.pessoal_pct).replace('.', ',')}%</b> da receita corrente líquida. O limite da Lei de Responsabilidade Fiscal é ${pp.limite_pct}%.</p>
@@ -335,6 +371,7 @@ function contasView(){
       <div class="meta">Gastos da Câmara em ${m.ano} (área Legislativa)</div>
       <p style="margin:4px 0"><b class="grande">${reais(leg.liquidado)}</b> já gastos de ${reais(leg.dotacao)} autorizados para o ano. Reservados (empenhados): ${reais(leg.empenhado)}.</p>
       ${barraValor(leg.liquidado, leg.dotacao, 'var(--amarelo)')}
+      ${det && det.poderes.camara ? `<a class="ver-detalhe" href="#gasto-camara">Ver em que a Câmara gastou →</a>` : ''}
       ${legAnt.liquidado ? `<p class="meta" style="margin-top:8px">Em ${ant.ano} inteiro, a Câmara gastou ${reais(legAnt.liquidado)} (${esc(ant.tipo || 'balanço')}).</p>` : ''}
     </div>
     ${cp ? `<div class="item"><div class="meta">Gasto da Câmara com pessoal (12 meses até ${cp.semestre === 1 ? 'junho' : 'dezembro'} de ${cp.ano})</div>
@@ -652,7 +689,7 @@ function sobre(){
 
 function rota(){
   const h = location.hash.replace('#','') || 'inicio';
-  const aba = h.startsWith('vereador-') ? 'vereadores' : h.startsWith('lugar-') ? 'lugares' : h;
+  const aba = h.startsWith('vereador-') ? 'vereadores' : h.startsWith('lugar-') ? 'lugares' : h.startsWith('gasto-') ? 'contas' : h;
   const SECAO_VEREADORES = ['vereadores', 'lugares', 'votacoes', 'presenca', 'pauta'];
   const principal = SECAO_VEREADORES.includes(aba) ? 'vereadores' : aba;
   document.querySelectorAll('nav.abas a').forEach(a => { if (a.dataset.aba === principal) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
@@ -668,6 +705,7 @@ function rota(){
   else if (h === 'contas') contasView();
   else if (h === 'cidade') cidadeView();
   else if (h === 'pauta') pautaView();
+  else if (h.startsWith('gasto-')) gastoView(h.slice(6));
   else if (h.startsWith('lugar-')) lugaresView(lugarDoSlug(h));
   else inicio();
   window.scrollTo(0,0);

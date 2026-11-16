@@ -1,7 +1,9 @@
 """Receitas e despesas da Prefeitura (município) e da Câmara, a partir dos relatórios fiscais oficiais
 que o município entrega ao Tesouro Nacional (Siconfi). API pública, sem cadastro.
 Uso: python3 financas.py dados/financas.json"""
-import datetime, json, re, sys, time, urllib.parse, urllib.request
+import datetime, json, os, re, sys, time, urllib.parse, urllib.request
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from detalhe_gastos import montar as montar_detalhe
 
 SICONFI = "https://apidatalake.tesouro.gov.br/ords/siconfi/tt"
 IBGE = 3143500  # Morada Nova de Minas
@@ -98,6 +100,18 @@ def rgf(ano, sem, poder):
             "limite_valor": valor(itens, a, "LIMITE MÁXIMO", "Valor"),
             "rcl": valor(itens, a, "RECEITA CORRENTE LIQUIDA", "Valor")}
 
+MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
+
+def detalhe(ano, mes):
+    """Gasto por área, setor e tipo de despesa até o fim do mês (Matriz de Saldos Contábeis)."""
+    itens, url = get("msc_orcamentaria", id_ente=IBGE, an_referencia=ano, me_referencia=mes,
+                     co_tipo_matriz="MSCC", classe_conta=6, id_tv="ending_balance")
+    if not itens:
+        return None
+    d = montar_detalhe(itens)
+    d.update({"ano": ano, "mes": mes, "ate": MESES[mes - 1], "fonte": url})
+    return d
+
 def mais_recente(fn, entregavel):
     ano = datetime.date.today().year
     for a in (ano, ano - 1):
@@ -120,6 +134,12 @@ def main(saida):
             anterior = rreo(atual["ano"] - 1, 6)
             if anterior:
                 anterior["tipo"] = "relatório do 6º bimestre"
+    # detalhe por área no mesmo período do relatório bimestral (fim do bimestre), para os totais baterem
+    if atual:
+        try:
+            atual["detalhe"] = detalhe(atual["ano"], atual["bimestre"] * 2)
+        except Exception as e:
+            print(f"AVISO: detalhe dos gastos indisponível ({e})")
     dados = {
         "coletado_em": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
         "municipio": {"atual": atual, "ano_anterior": anterior},
