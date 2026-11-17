@@ -58,7 +58,11 @@ EMPRESA = re.compile(r"\b(LTDA|ME|EPP|EIRELI|S/?A|SA|CIA|COMPANHIA|ASSOC\w*|INST
     r"PROVEDOR|CENTRO|SA[UÚ]DE|CONSELHO|CONFEDERA\w*|SINDICATO|MINIST[EÉ]RIO|MARINHA|ESCOLA|COL[EÉ]GIO|UNIVERSIDADE|FACULDADE|TJMG|CREA|"
     r"TRIBUNAL|ESTADO|UNI[AÃ]O|RECEITA|LOJA|BAR|RESTAURANTE|HOTEL|POUSADA|ACADEMIA|TECNOLOGIA|SOLU[CÇ][OÕ]ES|M[OÓ]VEIS|VE[IÍ]CULOS|"
     r"COMBUST\w*|PNEUS|ELETRO\w*|IMPORTS?|ATACAD\w*|DEP[OÓ]SITO|MADEIREIRA|GAS|[OÓ]TICA|ODONTO\w*|MEDIC\w*|PRODU[CÇ][OÕ]ES|EVENTOS|"
-    r"INST|PREV\w*|ASSIST\w*|SOCIAL|MUN|IMPAS|TELEMAR|TELEF\w*|ENERGIA|[AÁ]GUA|SANEAMENTO|COMPANY|SECURITY|"
+    r"INST|PREV\w*|RECUPERA\w*|JUDICIAL|FUNER\w*|SEGURADORA|VIA[CÇ][AÃ]O|BOMBAS|DIESEL|MEC[AÂ]NICA|RET[IÍ]FICA|REFRIGERA\w*|PORTAS|JANELAS|EMBALAGENS|"
+    r"CAL[CÇ]ADOS|MARMORARIA|CART[OÓ]RIO|CORPORA\w*|LAR|ESCOLINHA|MOLDADOS|DENTAL|HIDR[AÁ]ULICA|M[AÁ]QUINAS|RADIODIFUS\w*|TURISMO|"
+    r"F[AÁ]BRICA|PLACAS|NUTRI\w*|DIFUSORES|A[CÇ]OUGUE|VARANDA|RODEIO|SHOW|INTERVEN\w*|TERAP\w*|CONVERSORES|REL[OÓ]GIO|ESPORTES|"
+    r"COMPRAS|GOVERNAMENTAIS|HOSPITALAR|SEGURAN[CÇ]A|ENGENHEIR\w*|ESPA[CÇ]O|MEM[OÓ]RIA|CULTUR\w*|LIMPEZA|URBAN\w*|CONSULTORIA|ASSESSORIA|EMPRESA\w*|INFORMA\w*|JUR[IÍ]DIC\w*|"
+    r"PROMO[CÇ]\w*|ART[IÍ]STIC\w*|INTERMEDIA\w*|NEG[OÓ]CIOS|TRADE|LOCA[CÇ]\w*|PRODUTOS|REPRESENTA\w*|ASSIST\w*|ASSIST\w*|SOCIAL|MUN|IMPAS|TELEMAR|TELEF\w*|ENERGIA|[AÁ]GUA|SANEAMENTO|COMPANY|SECURITY|"
     r"S[OÓ]M|BIKE|CENTRAL|NACIONAL|BRASIL|MINAS|OI|VIVO|TIM|CLARO|CORREIOS|PREFEITURA|GOVERNO|DEPARTAMENTO|AG[EÊ]NCIA|EXPRESS\w*)\b", re.I)
 
 def eh_compra(e, nome):
@@ -66,15 +70,39 @@ def eh_compra(e, nome):
     nat = (e.get("dotacao_orcamentaria") or "").split(".")
     return not eh_pessoa(e, nome) and not (len(nat) >= 2 and nat[-5:-3] == ["3", "1"]) and "FOLHA" not in (e.get("fornecedor_nome") or "").upper()
 
+NOMES_COMUNS = set("""ADRIANA ALINE ALEX ALEXANDRE ALINE AMANDA ANA ANDERSON ANDRE ANDREIA ANGELA ANTONIO APARECIDA ARTHUR BARBARA BEATRIZ
+BRENDA BRUNA BRUNO CAMILA CARLA CARLOS CAROLINA CLAUDIA CLAUDIO CLEITON CRISTIANE CRISTIANO DANIEL DANIELA DANIELE DAVI DAVID DEBORA
+DIEGO DOUGLAS EDSON EDUARDO ELAINE ELIANE ERICA FABIANA FABIO FELIPE FERNANDA FERNANDO FLAVIA FRANCISCO GABRIEL GABRIELA GELCIMAR
+GERALDO GILBERTO GISELE GUILHERME GUSTAVO HELENA HELIO HENRIQUE IGOR ISABELA JAQUELINE JESSICA JOANA JOAO JOÃO JOAQUIM JORGE JOSE JOSÉ
+JULIA JULIANA JULIO KARINA KELLY LARISSA LAURA LEANDRO LEONARDO LETICIA LORENA LUANA LUCAS LUCIANA LUCIANO LUIZ LUIS MARCELO MARCIA
+MARCIO MARCOS MARIA MARIANA MARINA MATHEUS MAURICIO MICHAEL MICHELE MIGUEL MONICA NATALIA PATRICIA PAULO PEDRO PRISCILA RAFAEL RAFAELA
+RAQUEL REGINA RENATA RENATO RICARDO ROBERTO RODRIGO ROGERIO ROSA ROSANA ROSEMARIE SABRINA SANDRA SANDRO SEBASTIAO SERGIO SILVIA SIMONE
+SONIA ANGELO RUBIA TAMIRES TATIANE THAIS THIAGO TIAGO VALDIR VANESSA VERA VINICIUS VITOR VIVIANE WAGNER WALTER WESLEY WILLIAM""".split())
+PRIMEIROS = set()   # primeiros nomes de pessoas físicas vistas no próprio portal (preenchido em coletar)
+
 def eh_pessoa(e, nome_entidade):
-    """Pessoa física ou microempreendedor registrado com o próprio nome: mostramos só o serviço."""
+    """Pessoa física ou empresa individual registrada com o nome do dono: mostramos só o serviço, nunca o nome."""
     if pessoa_fisica(e.get("fornecedor_cpf_cnpj")):
         return True
-    n = conserta(e.get("fornecedor_nome"))
-    if re.search(r"\d{2}\.?\d{3}\.?\d{3}|\d{11}", n):     # MEI: nome com o CNPJ ou CPF junto
+    n = conserta(e.get("fornecedor_nome")).upper()
+    if re.search(r"\d{2}\.?\d{3}\.?\d{3}|\d{11}|\bCPF\b", n):     # MEI: nome com o CNPJ ou CPF junto
         return True
-    palavras = re.findall(r"[A-Za-zÀ-ÿ]+", n)
-    return 3 <= len(palavras) <= 7 and not EMPRESA.search(n)
+    if re.search(r"SOCIEDADE INDIV", n):          # sociedade individual de advocacia = um(a) advogado(a)
+        return True
+    w = re.findall(r"[A-ZÀ-Ý]+", n)
+    if len(w) >= 2 and (w[0] in PRIMEIROS or w[0] in NOMES_COMUNS) and not EMPRESA.search(" ".join(w[:2])):
+        return True   # começa por nome + sobrenome: "AMANDA ... SERVIÇOS MÉDICOS", "LORENA SILVA ENGENHARIA LTDA"
+    for parte in re.split(r"\s[-–]\s", n):
+        sufixo = re.search(r"\b(ME|MEI|EPP|EIRELI|SLU|LTDA|S/?A)\b", parte)
+        limpa = re.sub(r"\b(ME|MEI|EPP|EIRELI|SLU|LTDA|S/?A)\b\.?|[&.,']", " ", parte)
+        palavras = re.findall(r"[A-ZÀ-Ý]+", limpa)
+        if not (2 <= len(palavras) <= 7) or EMPRESA.search(limpa):
+            continue
+        primeiro_conhecido = palavras[0] in PRIMEIROS or palavras[0] in NOMES_COMUNS
+        # nome completo sem sufixo; empresa individual "NOME SOBRENOME LTDA/ME"; ou começa por um nome de pessoa
+        if primeiro_conhecido or (not sufixo and len(palavras) >= 3):
+            return True
+    return False
 
 def normaliza_cargo(r):
     """Junta variações (Psicologa/Psicóloga, Técnica/Técnico de enfermagem) num rótulo neutro."""
@@ -142,6 +170,11 @@ def cargo(desc, tipo):
 def coletar(nome, ano, cache):
     tenant, ent = ENTIDADES[nome]
     empenhos = {e["id_empenho"]: e for e in todos("/lai/contabilidade/despesa/empenho", tenant, ent, ano)}
+    for e in empenhos.values():
+        if pessoa_fisica(e.get("fornecedor_cpf_cnpj")):
+            w = re.findall(r"[A-ZÀ-Ý]+", conserta(e.get("fornecedor_nome")).upper())
+            if w and len(w[0]) > 2:
+                PRIMEIROS.add(w[0])
     brutos = todos("/lai/contabilidade/despesa/pagamento", tenant, ent, ano, 500)
     # o portal repete um mesmo pagamento em uma linha por documento bancário
     pagamentos = {(p["id_empenho"], p["nro_liquidacao"], p["numero_pagamento"]): p for p in brutos}.values()
@@ -162,13 +195,15 @@ def coletar(nome, ano, cache):
         precisa |= {e["id_empenho"] for e in sorted(pj, key=lambda e: -(e.get("valor_empenho") or 0))[:TOP_COMPRAS]}
     precisa |= {i for i, e in empenhos.items() if eh_pessoa(e, nome)}
     chave = lambda i: f"{nome}:{ano}:{i}"
-    faltam = [i for i in precisa if chave(i) not in cache]
+    faltam = [i for i in precisa if chave(i) not in cache or (eh_pessoa(empenhos[i], nome) and "pf" not in cache[chave(i)])]
     def busca(i):
         d = (chamar("/lai/contabilidade/despesa/detalhe/empenho", tenant, ent, ano, {"id_empenho": str(i)}).get("data") or [{}])[0]
         e = empenhos[i]
         if eh_pessoa(e, nome):
             r = normaliza_cargo(cargo(d.get("descricao_empenho"), d.get("descricao_despesa") or ""))
-            if not pessoa_fisica(e.get("fornecedor_cpf_cnpj")) and r.startswith("Prestador"):
+            if re.search(r"SOCIEDADE INDIV", conserta(e.get("fornecedor_nome")).upper()):
+                r = "Advogado(a) (sociedade individual)"
+            elif not pessoa_fisica(e.get("fornecedor_cpf_cnpj")) and r.startswith("Prestador"):
                 t = conserta(d.get("descricao_despesa")).lower()
                 tipo = ("obras" if "obra" in t else "móveis e equipamentos" if re.search(r"mobili|equipam|permanente", t)
                         else "materiais" if re.search(r"materia|consumo|aliment|combust", t) else "serviços")
