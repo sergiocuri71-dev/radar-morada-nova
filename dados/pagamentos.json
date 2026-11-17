@@ -1,11 +1,11 @@
 {
- "coletado_em": "2026-11-17T00:40:30+00:00",
+ "coletado_em": "2026-11-17T16:21:37+00:00",
  "ano": 2026,
  "fonte": "https://publico.memory.com.br/openknowledge",
  "prefeitura": {
   "areas": {
    "Saúde": {
-    "pago": 13648278.46,
+    "pago": 13705275.48,
     "por_mes": {
      "1": 409979.6,
      "2": 1401646.15,
@@ -17,7 +17,7 @@
      "8": 1319276.61,
      "9": 1341951.96,
      "10": 1331221.9,
-     "11": 605352.68
+     "11": 662349.7
     },
     "recebedores": [
      {
@@ -41,8 +41,8 @@
      {
       "nome": "PRIME CONSULTORIA E ASSESSORIA EMPRESARIAL LTDA",
       "pf": false,
-      "valor": 415508.68,
-      "n": 141
+      "valor": 461353.84,
+      "n": 151
      },
      {
       "nome": "INSS MINISTERIO DA PREVIDENCIA E ASSISTENCIA SOCIAL",
@@ -63,6 +63,12 @@
       "n": 10
      },
      {
+      "nome": "Microempreendedor(a) individual (serviços)",
+      "pf": true,
+      "valor": 237801.26,
+      "n": 70
+     },
+     {
       "nome": "LC SERVIÇOS DE SAÚDE LTDA",
       "pf": false,
       "valor": 232386.12,
@@ -73,12 +79,6 @@
       "pf": false,
       "valor": 185966.96,
       "n": 10
-     },
-     {
-      "nome": "Microempreendedor(a) individual (serviços)",
-      "pf": true,
-      "valor": 183624.42,
-      "n": 72
      },
      {
       "nome": "GNC AUTOMOTORES LTDA",
@@ -99,20 +99,20 @@
       "n": 39
      },
      {
+      "nome": "Médico(a) pediatra",
+      "pf": true,
+      "valor": 123830.0,
+      "n": 13
+     },
+     {
       "nome": "GRAFMOR",
       "pf": false,
       "valor": 112854.63,
       "n": 34
-     },
-     {
-      "nome": "DRA VANILDA ODONTOLOGIA",
-      "pf": false,
-      "valor": 111600.0,
-      "n": 10
      }
     ],
-    "outros": 2419817.93,
-    "n_outros": 193,
+    "outros": 2364562.95,
+    "n_outros": 191,
     "compras": [
      {
       "n": "610/2026",
@@ -321,7 +321,7 @@
     ]
    },
    "Educação": {
-    "pago": 18983836.02,
+    "pago": 19011432.45,
     "por_mes": {
      "1": 654208.63,
      "2": 1364056.8,
@@ -333,7 +333,7 @@
      "8": 1631968.51,
      "9": 2167063.21,
      "10": 1934452.54,
-     "11": 610115.35
+     "11": 637711.78
     },
     "recebedores": [
      {
@@ -357,8 +357,8 @@
      {
       "nome": "Transporte escolar",
       "pf": true,
-      "valor": 525056.16,
-      "n": 27
+      "valor": 784250.0,
+      "n": 42
      },
      {
       "nome": "MUNICIPIO DE MORADA NOVA DE MINAS",
@@ -379,12 +379,6 @@
       "n": 9
      },
      {
-      "nome": "Microempreendedor(a) individual (serviços)",
-      "pf": true,
-      "valor": 259193.84,
-      "n": 15
-     },
-     {
       "nome": "POSTO SAO JOAO BOSCO LTDA",
       "pf": false,
       "valor": 252187.47,
@@ -403,12 +397,6 @@
       "n": 10
      },
      {
-      "nome": "Produtor(a) rural (alimentos)",
-      "pf": true,
-      "valor": 238218.0,
-      "n": 34
-     },
-     {
       "nome": "GRUPO SANTOS",
       "pf": false,
       "valor": 216874.98,
@@ -417,18 +405,30 @@
      {
       "nome": "PRIME CONSULTORIA E ASSESSORIA EMPRESARIAL LTDA",
       "pf": false,
-      "valor": 184995.44,
-      "n": 44
+      "valor": 205185.28,
+      "n": 48
      },
      {
       "nome": "CONSÓRCIO INTERFEDERATIVO MINAS GERAIS - CIMINAS",
       "pf": false,
       "valor": 183341.38,
       "n": 2
+     },
+     {
+      "nome": "COELHO TRANSPORTES",
+      "pf": false,
+      "valor": 169145.13,
+      "n": 9
+     },
+     {
+      "nome": "Produtor(a) rural (alimentos)",
+      "pf": true,
+      "valor": 163114.0,
+      "n": 23
      }
     ],
-    "outros": 2416880.2,
-    "n_outros": 125,
+    "outros": 2330245.66,
+    "n_outros": 129,
     "compras": [
      {
       "n": "3532/2026",
@@ -684,7 +684,7 @@
     ]
    },
    "Segurança Pública": {
-    "pago": 1287967.11,
+    "pago": 1288267.11,
     "por_mes": {
      "1": 108170.42,
      "2": 114520.02,
@@ -696,7 +696,7 @@
      "8": 120540.8,
      "9": 136832.14,
      "10": 132080.81,
-     "11": 11402.1
+     "11": 11702.1
     },
     "recebedores": [
      {
@@ -720,8 +720,8 @@
      {
       "nome": "PRIME CONSULTORIA E ASSESSORIA EMPRESARIAL LTDA",
       "pf": false,
-      "valor": 38338.0,
-      "n": 25
+      "valor": 38638.0,
+      "n": 28
      },
      {
       "nome": "AIRSTEP - FORHONOR",
@@ -760,16 +760,22 @@
       "n": 5
      },
      {
-      "nome": "Microempreendedor(a) individual (serviços)",
-      "pf": true,
-      "valor": 1003.7,
-      "n": 7
-     },
-     {
       "nome": "GRAFMOR",
       "pf": false,
       "valor": 1002.8,
       "n": 1
+     },
+     {
+      "nome": "GENTE SEGURADORA S.A",
+      "pf": false,
+      "valor": 566.7,
+      "n": 5
+     },
+     {
+      "nome": "Microempreendedor(a) individual (serviços)",
+      "pf": true,
+      "valor": 437.0,
+      "n": 2
      },
      {
       "nome": "Microempreendedor(a) individual (materiais)",
@@ -782,16 +788,10 @@
       "pf": false,
       "valor": 227.15,
       "n": 1
-     },
-     {
-      "nome": "JVW ESTRUTURAL",
-      "pf": false,
-      "valor": 156.8,
-      "n": 1
      }
     ],
-    "outros": 34.1,
-    "n_outros": 2,
+    "outros": 190.9,
+    "n_outros": 3,
     "compras": [
      {
       "n": "4281/2026",
@@ -1002,7 +1002,7 @@
     ]
    },
    "Transporte": {
-    "pago": 2898467.73,
+    "pago": 2913372.43,
     "por_mes": {
      "1": 137431.62,
      "2": 62182.69,
@@ -1014,7 +1014,7 @@
      "8": 405969.45,
      "9": 138248.05,
      "10": 767891.38,
-     "11": 208100.67
+     "11": 223005.37
     },
     "recebedores": [
      {
@@ -1026,8 +1026,8 @@
      {
       "nome": "Microempreendedor(a) individual (obras)",
       "pf": true,
-      "valor": 365966.0,
-      "n": 28
+      "valor": 371132.0,
+      "n": 29
      },
      {
       "nome": "Contra mestre",
@@ -1038,8 +1038,8 @@
      {
       "nome": "Microempreendedor(a) individual (serviços)",
       "pf": true,
-      "valor": 284086.66,
-      "n": 89
+      "valor": 278686.66,
+      "n": 86
      },
      {
       "nome": "NAVY ENGENHARIA & CONSTRUÇÃO NAVAL LTDA",
@@ -1080,8 +1080,8 @@
      {
       "nome": "PRIME CONSULTORIA E ASSESSORIA EMPRESARIAL LTDA",
       "pf": false,
-      "valor": 79693.13,
-      "n": 14
+      "valor": 81050.13,
+      "n": 16
      },
      {
       "nome": "Operador de maquinas pesadas",
@@ -1108,8 +1108,8 @@
       "n": 10
      }
     ],
-    "outros": 262243.84,
-    "n_outros": 48,
+    "outros": 276025.54,
+    "n_outros": 49,
     "compras": [
      {
       "n": "4591/2026",
@@ -1324,7 +1324,7 @@
     ]
    },
    "Administração": {
-    "pago": 11088489.06,
+    "pago": 11152077.85,
     "por_mes": {
      "1": 637798.41,
      "2": 951067.54,
@@ -1336,7 +1336,7 @@
      "8": 1440978.37,
      "9": 913714.4,
      "10": 955844.74,
-     "11": 205289.69
+     "11": 268878.48
     },
     "recebedores": [
      {
@@ -1358,22 +1358,22 @@
       "n": 146
      },
      {
-      "nome": "Microempreendedor(a) individual (serviços)",
-      "pf": true,
-      "valor": 639143.35,
-      "n": 157
-     },
-     {
       "nome": "PRIME CONSULTORIA E ASSESSORIA EMPRESARIAL LTDA",
       "pf": false,
-      "valor": 638848.04,
-      "n": 40
+      "valor": 694074.22,
+      "n": 45
      },
      {
       "nome": "PRODOESTE VEÍCULOS E SERVIÇOS LTDA",
       "pf": false,
       "valor": 634900.0,
       "n": 1
+     },
+     {
+      "nome": "Microempreendedor(a) individual (serviços)",
+      "pf": true,
+      "valor": 579357.05,
+      "n": 125
      },
      {
       "nome": "Fundo de Assist. Saúde Servidores Públicos Municipais de Mor",
@@ -1422,10 +1422,16 @@
       "pf": false,
       "valor": 72800.0,
       "n": 1
+     },
+     {
+      "nome": "AMPCAR - ASSOCIACAO DOS MORADORES E PRODUTORES DE CACIMBAS",
+      "pf": false,
+      "valor": 70000.0,
+      "n": 1
      }
     ],
-    "outros": 1445238.14,
-    "n_outros": 145,
+    "outros": 1443387.05,
+    "n_outros": 143,
     "compras": [
      {
       "n": "1392/2026",
@@ -1568,7 +1574,7 @@
       "data": "27/02/2026",
       "quem": "PRIME CONSULTORIA E ASSESSORIA EMPRESARIAL LTDA",
       "valor": 200000.0,
-      "pago": 94156.89,
+      "pago": 105173.09,
       "desc": "EMPENHO REFERENTE A PRESTAÇÃO DE SERVIÇOS DE MANUTENÇÃO E REPAROS NOS VEÍCULOS DA SECRETARIA MUNICIPAL DE INFRAESTRUTURA, DESTE MUNICÍPIO.",
       "acao": "ATIVID. SECRET. DE INFRA-ESTRUTURA",
       "lic": "Pregão 2021/49",
@@ -1605,6 +1611,10 @@
        [
         "14/10/2026",
         6455.0
+       ],
+       [
+        "16/11/2026",
+        11016.2
        ]
       ]
      },
@@ -1613,7 +1623,7 @@
       "data": "22/06/2026",
       "quem": "PRIME CONSULTORIA E ASSESSORIA EMPRESARIAL LTDA",
       "valor": 200000.0,
-      "pago": 29968.09,
+      "pago": 69070.38,
       "desc": "EMPENHO REFERENTE A AQUISIÇÃO DE PEÇAS E ACESSÓRIOS PARA USO NOS VEÍCULOS DA SECRETARIA MUNICIPAL DE INFRAESTRUTURA, DESTE MUNICÍPIO. C/C: 24.712-X.",
       "acao": "ATIVID. SECRET. DE INFRA-ESTRUTURA",
       "lic": "Pregão 2021/49",
@@ -1622,6 +1632,10 @@
        [
         "14/10/2026",
         29968.09
+       ],
+       [
+        "16/11/2026",
+        39102.29
        ]
       ]
      },
@@ -1901,6 +1915,23 @@
         20915.44
        ]
       ]
+     },
+     {
+      "n": "4359/2026",
+      "data": "07/08/2026",
+      "quem": "GTL COMÉRCIO DE VEÍCULOS - EPP",
+      "valor": 72800.0,
+      "pago": 72800.0,
+      "desc": "AQUISIÇÃO DE VEÍCULO NOVO, ZERO KM, TIPO PASSEIO PARA ATENDER AS DEMANDAS DA SECRETARIA MUNICIPAL DE INFRAESTRUTURA. RECURSO SEGOV/MG. TRANSFERÊNCIA ESPECIAL EMENDA PARLAMENTAR 643/2026. INDICAÇÃO 203484 DEPUTADO CEL. HENRIQUE. SIGCON. 001709/2026.",
+      "acao": "AQUIS. DE VEÍCULOS, MÓVEIS E EQUIPAMENTO",
+      "lic": "Pregão Eletrônico 2026/29",
+      "unidade": "Secretaria Municipal de Infra-estrutura",
+      "pagamentos": [
+       [
+        "24/08/2026",
+        72800.0
+       ]
+      ]
      }
     ]
    },
@@ -1933,10 +1964,10 @@
       "n": 12
      },
      {
-      "nome": "Microempreendedor(a) individual (obras)",
-      "pf": true,
-      "valor": 17521.0,
-      "n": 3
+      "nome": "PRENOVA - PRE-MOLDADOS NOVA SERRANA",
+      "pf": false,
+      "valor": 15000.0,
+      "n": 1
      },
      {
       "nome": "TRIAR ENGENHARIA E LOCAÇÕES LTDA - ME",
@@ -1981,6 +2012,12 @@
       "n": 1
      },
      {
+      "nome": "PRE MOLDADOS MWE",
+      "pf": false,
+      "valor": 2728.5,
+      "n": 3
+     },
+     {
       "nome": "EMPRESA BRASILEIRA DO QUARTZO LTDA",
       "pf": false,
       "valor": 2524.44,
@@ -2003,17 +2040,23 @@
       "pf": false,
       "valor": 726.0,
       "n": 1
-     },
-     {
-      "nome": "CASA MAIS M. DE CONSTRUÇÃO E PRODUTOS AGROPECUARIOS EIRELI",
-      "pf": false,
-      "valor": 319.28,
-      "n": 3
      }
     ],
-    "outros": 623.5,
+    "outros": 735.28,
     "n_outros": 4,
     "compras": [
+     {
+      "n": "6501/2026",
+      "data": "03/11/2026",
+      "quem": "FRAGA MARQUES ENGENHARIA LTDA - ME",
+      "valor": 75603.02,
+      "pago": 0.0,
+      "desc": "PRESTAÇÃO DE SERVIÇO PARA ELABORAÇÃO DE PROJETOS E LEVANTAMENTO TOPÓGRAFO PARA OBRA DE DRENAGEM PLUVIAL DO MUNICÍPIO E SEUS POVOADOS. RECURSO PROGRAMA PARAOPEBA SANEAMENTO NÃO REEMBONSÁVEL. 1º BOLETIM DE MEDIÇÃO.",
+      "acao": "ABASTEC. ÁGUAS, ESGOTO E GALERIA PLUVIAL",
+      "lic": "Artigo 75 Lei 14133 / 2021",
+      "unidade": "Secretaria Municipal de Infra-estrutura",
+      "pagamentos": []
+     },
      {
       "n": "6409/2026",
       "data": "26/10/2026",
@@ -2025,6 +2068,23 @@
       "lic": "Artigo 75 Lei 14133 / 2021",
       "unidade": "Secretaria Municipal de Infra-estrutura",
       "pagamentos": []
+     },
+     {
+      "n": "499/2026",
+      "data": "12/01/2026",
+      "quem": "PRENOVA - PRE-MOLDADOS NOVA SERRANA",
+      "valor": 15000.0,
+      "pago": 15000.0,
+      "desc": "",
+      "acao": "",
+      "lic": "",
+      "unidade": "Secretaria Municipal de Infra-estrutura",
+      "pagamentos": [
+       [
+        "12/03/2026",
+        15000.0
+       ]
+      ]
      },
      {
       "n": "2393/2026",
@@ -2126,11 +2186,83 @@
         3733.3
        ]
       ]
+     },
+     {
+      "n": "5799/2026",
+      "data": "28/09/2026",
+      "quem": "TRIAR ENGENHARIA E LOCAÇÕES LTDA - ME",
+      "valor": 3432.0,
+      "pago": 3432.0,
+      "desc": "EMPENHO REFERENTE A PRESTAÇAO DE SERVIÇO DE ALVANEL NO ASSENTAMENTO DE MANILHA NA RUA JOSE PEDRO DE OLIVEIRA NO MES DE SETEMBRO DE 2026. REFERENTE A 104 HORAS TRABALHADAS A R$33,00 A HORA.",
+      "acao": "ABASTEC. ÁGUAS, ESGOTO E GALERIA PLUVIAL",
+      "lic": "Inexigibilidade 2026/6",
+      "unidade": "Secretaria Municipal de Infra-estrutura",
+      "pagamentos": [
+       [
+        "22/10/2026",
+        3432.0
+       ]
+      ]
+     },
+     {
+      "n": "4211/2026",
+      "data": "17/07/2026",
+      "quem": "SECRETARIA DE ESTADO DA FAZENDA DE MINAS GERAIS",
+      "valor": 2833.69,
+      "pago": 2833.69,
+      "desc": "EMPENHO REFERENTE A TAXA DE COBRANÇA PELO USO DOS RECURSOS HIDRICOS DOS POÇOS ARTESIANOS DESTE MUNICIPIO.",
+      "acao": "ABASTEC. ÁGUAS, ESGOTO E GALERIA PLUVIAL",
+      "lic": "Não se Aplica",
+      "unidade": "Secretaria Municipal de Infra-estrutura",
+      "pagamentos": [
+       [
+        "31/07/2026",
+        2833.69
+       ]
+      ]
+     },
+     {
+      "n": "5691/2026",
+      "data": "22/09/2026",
+      "quem": "EMPRESA BRASILEIRA DO QUARTZO LTDA",
+      "valor": 2524.44,
+      "pago": 2524.44,
+      "desc": "AQUISIÇÃO DE MATERIAIS PARA USO NA EXECUÇÃO DA DRENAGEM NA RUA JOSÉ PEDRO DE OLIVEIRA.",
+      "acao": "ABASTEC. ÁGUAS, ESGOTO E GALERIA PLUVIAL",
+      "lic": "Pregão Eletrônico 2024/49",
+      "unidade": "Secretaria Municipal de Infra-estrutura",
+      "pagamentos": [
+       [
+        "13/10/2026",
+        2524.44
+       ]
+      ]
+     },
+     {
+      "n": "4190/2026",
+      "data": "13/07/2026",
+      "quem": "PRE MOLDADOS MWE",
+      "valor": 2521.0,
+      "pago": 2521.0,
+      "desc": "",
+      "acao": "",
+      "lic": "",
+      "unidade": "Secretaria Municipal de Infra-estrutura",
+      "pagamentos": [
+       [
+        "05/08/2026",
+        29.0
+       ],
+       [
+        "05/08/2026",
+        2492.0
+       ]
+      ]
      }
     ]
    },
    "Assistência Social": {
-    "pago": 1804145.41,
+    "pago": 1804882.41,
     "por_mes": {
      "1": 107392.69,
      "2": 132423.41,
@@ -2142,7 +2274,7 @@
      "8": 144110.57,
      "9": 283802.11,
      "10": 178326.52,
-     "11": 28424.87
+     "11": 29161.87
     },
     "recebedores": [
      {
@@ -2150,12 +2282,6 @@
       "pf": false,
       "valor": 751027.02,
       "n": 107
-     },
-     {
-      "nome": "Microempreendedor(a) individual (serviços)",
-      "pf": true,
-      "valor": 187785.31,
-      "n": 36
      },
      {
       "nome": "NOSSO LAR MORADIA ASSISTIDA LTDA",
@@ -2176,6 +2302,12 @@
       "n": 2
      },
      {
+      "nome": "MAP MOVIMENTO ARTISTICO PRO CIDADANIA",
+      "pf": false,
+      "valor": 81750.0,
+      "n": 5
+     },
+     {
       "nome": "LOGO ALI SUPERMERCADO LTDA",
       "pf": false,
       "valor": 67581.98,
@@ -2186,6 +2318,18 @@
       "pf": true,
       "valor": 55050.03,
       "n": 17
+     },
+     {
+      "nome": "Microempreendedor(a) individual (serviços)",
+      "pf": true,
+      "valor": 54565.75,
+      "n": 22
+     },
+     {
+      "nome": "ESCOLINHA LAERCIO LUCAS DE SOUZA",
+      "pf": false,
+      "valor": 49876.56,
+      "n": 1
      },
      {
       "nome": "GRUPO ESPERANCA",
@@ -2222,23 +2366,44 @@
       "pf": false,
       "valor": 20794.18,
       "n": 2
-     },
-     {
-      "nome": "Auxiliar de cuidador",
-      "pf": true,
-      "valor": 20368.0,
-      "n": 7
-     },
-     {
-      "nome": "CLÍNICA ESPECIALIZADA MINAS GERAIS LTDA - ME",
-      "pf": false,
-      "valor": 17857.12,
-      "n": 7
      }
     ],
-    "outros": 136549.27,
-    "n_outros": 62,
+    "outros": 177104.39,
+    "n_outros": 65,
     "compras": [
+     {
+      "n": "1345/2026",
+      "data": "05/03/2026",
+      "quem": "MAP MOVIMENTO ARTISTICO PRO CIDADANIA",
+      "valor": 150000.0,
+      "pago": 81750.0,
+      "desc": "",
+      "acao": "",
+      "lic": "",
+      "unidade": "Secretaria Municipal de Desenvolvimento",
+      "pagamentos": [
+       [
+        "27/03/2026",
+        18750.0
+       ],
+       [
+        "24/04/2026",
+        18750.0
+       ],
+       [
+        "26/05/2026",
+        18750.0
+       ],
+       [
+        "25/09/2026",
+        6750.0
+       ],
+       [
+        "29/10/2026",
+        18750.0
+       ]
+      ]
+     },
      {
       "n": "70/2026",
       "data": "02/01/2026",
@@ -2360,6 +2525,23 @@
        [
         "10/07/2026",
         49914.0
+       ]
+      ]
+     },
+     {
+      "n": "4318/2026",
+      "data": "20/07/2026",
+      "quem": "ESCOLINHA LAERCIO LUCAS DE SOUZA",
+      "valor": 49876.56,
+      "pago": 49876.56,
+      "desc": "",
+      "acao": "",
+      "lic": "",
+      "unidade": "Secretaria Municipal de Desenvolvimento",
+      "pagamentos": [
+       [
+        "08/09/2026",
+        49876.56
        ]
       ]
      },
@@ -2504,119 +2686,16 @@
       "pagamentos": []
      },
      {
-      "n": "1056/2026",
-      "data": "02/02/2026",
-      "quem": "CLÍNICA ESPECIALIZADA MINAS GERAIS LTDA - ME",
-      "valor": 18800.0,
-      "pago": 17857.12,
-      "desc": "EMPENHO REFERENTE A PRESTAÇÃO DE SERVIÇOS PARA INTERNAÇÃO EM CLINICA TERAPEUTICA EM CUMPRIMENTO A DECLARAÇÃO DE INTERNAÇÃO EM ANEXO DO PACIENTE LEANDRO GERALDO DA SILVA COSTA. ORDEM JUDICIAL DO MINISTÉRIO PÚBLICO DO ESTADO DE MINAS GERAIS PROCESSO",
-      "acao": "Proteç. Soc. Especial Méd. e Alta Comple",
-      "lic": "Dispensa 2025/8",
+      "n": "6434/2026",
+      "data": "03/11/2026",
+      "quem": "ESCOLINHA LAERCIO LUCAS DE SOUZA",
+      "valor": 21000.0,
+      "pago": 0.0,
+      "desc": "",
+      "acao": "",
+      "lic": "",
       "unidade": "Secretaria Municipal de Desenvolvimento",
-      "pagamentos": [
-       [
-        "09/03/2026",
-        857.12
-       ],
-       [
-        "30/03/2026",
-        3000.0
-       ],
-       [
-        "27/04/2026",
-        3000.0
-       ],
-       [
-        "27/05/2026",
-        3000.0
-       ],
-       [
-        "26/06/2026",
-        3000.0
-       ],
-       [
-        "29/07/2026",
-        3000.0
-       ],
-       [
-        "26/08/2026",
-        2000.0
-       ]
-      ]
-     },
-     {
-      "n": "2635/2026",
-      "data": "04/05/2026",
-      "quem": "CLÍNICA E EM DEPENDÊNCIA QUÍMICA E SAÚDE MENTAL DE PARACATU",
-      "valor": 16837.0,
-      "pago": 12917.0,
-      "desc": "PRESTAÇÃO DE SERVIÇOS PARA INTERNAÇÃO EM CLINICA TERAPEUTICA EM CUMPRIMENTO A DECLARAÇÃO DE INTERNAÇÃO DE ROBERTO VINÍCIUS DE JESUS NO EXERCÍCIO DE 2026.",
-      "acao": "Proteç. Soc. Especial Méd. e Alta Comple",
-      "lic": "Pregão Eletrônico 2024/43",
-      "unidade": "Secretaria Municipal de Desenvolvimento",
-      "pagamentos": [
-       [
-        "28/05/2026",
-        1742.0
-       ],
-       [
-        "25/06/2026",
-        2235.0
-       ],
-       [
-        "29/07/2026",
-        2235.0
-       ],
-       [
-        "26/08/2026",
-        2235.0
-       ],
-       [
-        "28/09/2026",
-        2235.0
-       ],
-       [
-        "29/10/2026",
-        2235.0
-       ]
-      ]
-     },
-     {
-      "n": "2895/2026",
-      "data": "04/05/2026",
-      "quem": "CLÍNICA E EM DEPENDÊNCIA QUÍMICA E SAÚDE MENTAL DE PARACATU",
-      "valor": 16390.0,
-      "pago": 11920.0,
-      "desc": "EMPENHO REFERENTE A PRESTAÇÃO DE SERVIÇOS PARA INTERNAÇÃO EM CLINICA TERAPEUTICA EM CUMPRIMENTO A DECLARAÇÃO DE INTERNAÇÃO DE MARIA IZABEL CORRÊA DA SILVA NO EXERCÍCIO DE 2026.",
-      "acao": "Proteç. Soc. Especial Méd. e Alta Comple",
-      "lic": "Pregão Eletrônico 2024/43",
-      "unidade": "Secretaria Municipal de Desenvolvimento",
-      "pagamentos": [
-       [
-        "28/05/2026",
-        745.0
-       ],
-       [
-        "25/06/2026",
-        2235.0
-       ],
-       [
-        "29/07/2026",
-        2235.0
-       ],
-       [
-        "26/08/2026",
-        2235.0
-       ],
-       [
-        "28/09/2026",
-        2235.0
-       ],
-       [
-        "29/10/2026",
-        2235.0
-       ]
-      ]
+      "pagamentos": []
      }
     ]
    },
@@ -2901,7 +2980,7 @@
     ]
    },
    "Agricultura": {
-    "pago": 307096.5,
+    "pago": 308176.5,
     "por_mes": {
      "1": 8357.16,
      "2": 7918.66,
@@ -2913,7 +2992,7 @@
      "8": 21421.06,
      "9": 13959.09,
      "10": 35059.29,
-     "11": 11138.95
+     "11": 12218.95
     },
     "recebedores": [
      {
@@ -3001,13 +3080,13 @@
       "n": 1
      },
      {
-      "nome": "Microempreendedor(a) individual (materiais)",
-      "pf": true,
-      "valor": 900.0,
-      "n": 1
+      "nome": "JVW ESTRUTURAL",
+      "pf": false,
+      "valor": 1472.0,
+      "n": 2
      }
     ],
-    "outros": 1425.2,
+    "outros": 1933.2,
     "n_outros": 3,
     "compras": [
      {
@@ -3230,12 +3309,17 @@
       "data": "26/10/2026",
       "quem": "JVW ESTRUTURAL",
       "valor": 1080.0,
-      "pago": 0.0,
+      "pago": 1080.0,
       "desc": "PRESTAÇAO DE SERVIÇO DE LOCAÇAO DE CAMINHAO MUNK PARA TRANSPORTE DE MAQUINA DE COURO PARA O FRIGORIFICO SABOR DO RIO EM OUTUBRO DE 2026. REFERENTE A 4 HORAS E 25 MINUTOS TRABALHADOS A R$245,00 A HORA.",
       "acao": "PROGRAMA DE APOIO À PSICULTURA",
       "lic": "Artigo 75 Lei 14133 / 2021",
       "unidade": "Secretaria Municipal de Infra-estrutura",
-      "pagamentos": []
+      "pagamentos": [
+       [
+        "16/11/2026",
+        1080.0
+       ]
+      ]
      },
      {
       "n": "6159/2026",
@@ -3311,8 +3395,8 @@
      {
       "nome": "Microempreendedor(a) individual (serviços)",
       "pf": true,
-      "valor": 189860.06,
-      "n": 84
+      "valor": 162860.06,
+      "n": 75
      },
      {
       "nome": "Folha de pagamento (salários, em bloco)",
@@ -3325,6 +3409,12 @@
       "pf": false,
       "valor": 53800.0,
       "n": 4
+     },
+     {
+      "nome": "ESCOLINHA LAERCIO LUCAS DE SOUZA",
+      "pf": false,
+      "valor": 27000.0,
+      "n": 9
      },
      {
       "nome": "Monitor de esportes",
@@ -3396,6 +3486,55 @@
     "outros": 31451.0,
     "n_outros": 34,
     "compras": [
+     {
+      "n": "613/2026",
+      "data": "02/02/2026",
+      "quem": "ESCOLINHA LAERCIO LUCAS DE SOUZA",
+      "valor": 48000.0,
+      "pago": 27000.0,
+      "desc": "",
+      "acao": "",
+      "lic": "",
+      "unidade": "Secretaria de Esporte, Turismo e Cultura",
+      "pagamentos": [
+       [
+        "19/03/2026",
+        3000.0
+       ],
+       [
+        "19/03/2026",
+        3000.0
+       ],
+       [
+        "11/05/2026",
+        3000.0
+       ],
+       [
+        "11/05/2026",
+        3000.0
+       ],
+       [
+        "06/07/2026",
+        3000.0
+       ],
+       [
+        "06/07/2026",
+        3000.0
+       ],
+       [
+        "08/09/2026",
+        3000.0
+       ],
+       [
+        "15/09/2026",
+        3000.0
+       ],
+       [
+        "15/09/2026",
+        3000.0
+       ]
+      ]
+     },
      {
       "n": "2569/2026",
       "data": "06/05/2026",
@@ -3555,11 +3694,28 @@
       "lic": "Artigo 75 Lei 14133 / 2021",
       "unidade": "Secretaria de Esporte, Turismo e Cultura",
       "pagamentos": []
+     },
+     {
+      "n": "3913/2026",
+      "data": "06/07/2026",
+      "quem": "CASA MAIS M. DE CONSTRUÇÃO E PRODUTOS AGROPECUARIOS EIRELI",
+      "valor": 2789.85,
+      "pago": 2789.85,
+      "desc": "AQUISIÇÃO DE AREIA GROSSA PARA USO NA MANUTENÇÃO DO \"CAMPO ARENA FREI ORLANDO\" NO DISTRITO DE FREI ORLANDO. C/C: 10.200-8.",
+      "acao": "ATIVID. ADMINISTRAT. DO ESPORTE E LAZER",
+      "lic": "Pregão Eletrônico 2025/15",
+      "unidade": "Secretaria de Esporte, Turismo e Cultura",
+      "pagamentos": [
+       [
+        "22/07/2026",
+        2789.85
+       ]
+      ]
      }
     ]
    },
    "Urbanismo": {
-    "pago": 3802046.08,
+    "pago": 3808898.68,
     "por_mes": {
      "1": 280335.82,
      "2": 235175.1,
@@ -3571,7 +3727,7 @@
      "8": 162341.08,
      "9": 317741.63,
      "10": 810120.07,
-     "11": 174701.72
+     "11": 181554.32
     },
     "recebedores": [
      {
@@ -3589,8 +3745,8 @@
      {
       "nome": "Microempreendedor(a) individual (serviços)",
       "pf": true,
-      "valor": 457687.23,
-      "n": 165
+      "valor": 457863.23,
+      "n": 166
      },
      {
       "nome": "PAESAN - PAVIMENTAÇÃO ENGENHARIA E SANEAMENTO LTDA",
@@ -3611,12 +3767,6 @@
       "n": 52
      },
      {
-      "nome": "Microempreendedor(a) individual (obras)",
-      "pf": true,
-      "valor": 82195.24,
-      "n": 23
-     },
-     {
       "nome": "CAP TERRAPLANAGEM LTDA",
       "pf": false,
       "valor": 67742.32,
@@ -3625,8 +3775,14 @@
      {
       "nome": "CASA MAIS M. DE CONSTRUÇÃO E PRODUTOS AGROPECUARIOS EIRELI",
       "pf": false,
-      "valor": 54900.58,
-      "n": 39
+      "valor": 61753.18,
+      "n": 40
+     },
+     {
+      "nome": "Microempreendedor(a) individual (obras)",
+      "pf": true,
+      "valor": 58856.7,
+      "n": 13
      },
      {
       "nome": "Calceteiro",
@@ -3657,10 +3813,16 @@
       "pf": false,
       "valor": 22544.0,
       "n": 2
+     },
+     {
+      "nome": "Ajudante de serviços",
+      "pf": true,
+      "valor": 19276.2,
+      "n": 11
      }
     ],
-    "outros": 212517.66,
-    "n_outros": 39,
+    "outros": 216404.0,
+    "n_outros": 38,
     "compras": [
      {
       "n": "3049/2026",
@@ -4031,6 +4193,30 @@
       "desc": "EMPENHO REFERENTE A AQUISIÇÃO DE NOTEBOOK PARA USO DO DEPARTAMENTO DE MEIO AMBIENTE DESTE MUNICIPIO. RECURSO MEIO AMBIENTE. C/C: 14.521-1.",
       "acao": "AQUIS. VEÍCULOS, MÁQUINAS E EQUIPAMENTOS",
       "lic": "Pregão Eletrônico 2025/40",
+      "unidade": "Secretaria Municipal de Infra-estrutura",
+      "pagamentos": []
+     },
+     {
+      "n": "6488/2026",
+      "data": "03/11/2026",
+      "quem": "CLINICA VETERINARIA MORADA DOS PETS",
+      "valor": 2550.0,
+      "pago": 0.0,
+      "desc": "PRESTAÇAO DE SERVIÇO DE CASTRAÇOES E CONSULTAS EM ANIMAIS DE RUA NESSE MUNICIPIO EM 2026. REFERENTE A 2 CASTRAÇOES EM CADELA FEMEA A R$600,00 CADA, 3 CASTRAÇOES EM CÃO MACHO A R$400,00 CADA E 1 CONSULTA MEDICA VETERINARIA",
+      "acao": "MANUTENÇÃO DO MEIO AMBIENTE",
+      "lic": "Artigo 75 Lei 14133 / 2021",
+      "unidade": "Secretaria Municipal de Infra-estrutura",
+      "pagamentos": []
+     },
+     {
+      "n": "6489/2026",
+      "data": "03/11/2026",
+      "quem": "CLINICA VETERINARIA MORADA DOS PETS",
+      "valor": 900.0,
+      "pago": 0.0,
+      "desc": "PRESTAÇAO DE SERVIÇO DE EXAMES BIOQUIMICOS E CONSULTA EM ANIMAIS DE RUA NESSE MUNICIPIO EM 2026. REFERENTE A 1 CONSULTA MEDICA VETERINARIA A R$150,00 CADA E 3 EXAMES BIOQUIMICOS A R$250,00 CADA.",
+      "acao": "MANUTENÇÃO DO MEIO AMBIENTE",
+      "lic": "Artigo 75 Lei 14133 / 2021",
       "unidade": "Secretaria Municipal de Infra-estrutura",
       "pagamentos": []
      },
@@ -4587,8 +4773,8 @@
      {
       "nome": "Microempreendedor(a) individual (serviços)",
       "pf": true,
-      "valor": 207028.31,
-      "n": 27
+      "valor": 197728.31,
+      "n": 29
      },
      {
       "nome": "SANTOS PROMOÇÕES ARTÍSTICAS LTDA",
@@ -4607,6 +4793,12 @@
       "pf": false,
       "valor": 26865.38,
       "n": 9
+     },
+     {
+      "nome": "DOLLARE DE PRATA RODEIO SHOW",
+      "pf": false,
+      "valor": 26800.0,
+      "n": 1
      },
      {
       "nome": "SERVIÇO DE APOIO AS M E P EMPRESAS DE MINAS GERAIS - SEBRAE",
@@ -4651,14 +4843,26 @@
       "n": 1
      },
      {
-      "nome": "Show artístico",
+      "nome": "Hospedagem",
       "pf": true,
-      "valor": 10000.0,
+      "valor": 9800.0,
+      "n": 3
+     },
+     {
+      "nome": "M&M EVENTOS LTDA - EPP",
+      "pf": false,
+      "valor": 9500.0,
+      "n": 1
+     },
+     {
+      "nome": "Locação de som com iluminação",
+      "pf": true,
+      "valor": 7350.0,
       "n": 2
      }
     ],
-    "outros": 86528.42,
-    "n_outros": 31,
+    "outros": 52378.42,
+    "n_outros": 27,
     "compras": [
      {
       "n": "2999/2026",
@@ -4708,6 +4912,23 @@
        [
         "06/10/2026",
         30000.0
+       ]
+      ]
+     },
+     {
+      "n": "5210/2026",
+      "data": "08/09/2026",
+      "quem": "DOLLARE DE PRATA RODEIO SHOW",
+      "valor": 26800.0,
+      "pago": 26800.0,
+      "desc": "",
+      "acao": "",
+      "lic": "",
+      "unidade": "Secretaria de Esporte, Turismo e Cultura",
+      "pagamentos": [
+       [
+        "25/09/2026",
+        26800.0
        ]
       ]
      },
@@ -4844,6 +5065,40 @@
         10000.0
        ]
       ]
+     },
+     {
+      "n": "4780/2026",
+      "data": "27/08/2026",
+      "quem": "M&M EVENTOS LTDA - EPP",
+      "valor": 9500.0,
+      "pago": 9500.0,
+      "desc": "CONTRATAÇÃO DE EMPRESA PATA REALIZAÇÃO DE SHOW PIROTÉCNICO DE BAIXO RUÍDO PARA REALIZAÇÃO DO EVENTO DE COMEMORAÇÃO AOS 174 ANOS DE MORADA NOVA DE MINAS/MG. RECURSO FUNDO MUNICIPAL DE TURISMO.",
+      "acao": "PROMOÇÃO AO TURISMO, FESTAS TRADICIONAIS",
+      "lic": "Dispensa 2026/231",
+      "unidade": "Secretaria de Esporte, Turismo e Cultura",
+      "pagamentos": [
+       [
+        "29/09/2026",
+        9500.0
+       ]
+      ]
+     },
+     {
+      "n": "5800/2026",
+      "data": "28/09/2026",
+      "quem": "CEMIG D",
+      "valor": 8757.91,
+      "pago": 8757.91,
+      "desc": "EMPENHO REFERENTE LIGAÇÃO PROVISÓRIA DE CONSUMO DE ENERGIA ELÉTRICA PARA REALIZAÇÃO DE EVENTOS NA PRAÇA DR. AGENOR SOARES DOS SANTOS. RECURSO FUNDO MUNICIPAL TURISMO. C/C: 24.713-8.",
+      "acao": "PROMOÇÃO AO TURISMO, FESTAS TRADICIONAIS",
+      "lic": "Não se Aplica",
+      "unidade": "Secretaria de Esporte, Turismo e Cultura",
+      "pagamentos": [
+       [
+        "19/10/2026",
+        8757.91
+       ]
+      ]
      }
     ]
    },
@@ -4886,7 +5141,7 @@
     "compras": []
    },
    "Cultura": {
-    "pago": 262666.14,
+    "pago": 335728.14,
     "por_mes": {
      "1": 4351.21,
      "2": 8502.37,
@@ -4898,20 +5153,32 @@
      "8": 43574.18,
      "9": 49950.69,
      "10": 24438.44,
-     "11": 240.0
+     "11": 73302.0
     },
     "recebedores": [
-     {
-      "nome": "Microempreendedor(a) individual (serviços)",
-      "pf": true,
-      "valor": 105883.21,
-      "n": 23
-     },
      {
       "nome": "Folha de pagamento (salários, em bloco)",
       "pf": false,
       "valor": 72108.85,
       "n": 30
+     },
+     {
+      "nome": "MAP MOVIMENTO ARTISTICO PRO CIDADANIA",
+      "pf": false,
+      "valor": 68250.0,
+      "n": 4
+     },
+     {
+      "nome": "Prêmio cultural ou esportivo",
+      "pf": true,
+      "valor": 55062.0,
+      "n": 27
+     },
+     {
+      "nome": "Microempreendedor(a) individual (serviços)",
+      "pf": true,
+      "valor": 37791.21,
+      "n": 20
      },
      {
       "nome": "ESPACO E MEMORIA CULTURAL EIRELI",
@@ -4930,6 +5197,12 @@
       "pf": true,
       "valor": 19392.0,
       "n": 10
+     },
+     {
+      "nome": "CORPORACAO MUSICAL SANTA CECILIA",
+      "pf": false,
+      "valor": 18000.0,
+      "n": 1
      },
      {
       "nome": "MUNICIPIO DE MORADA NOVA DE MINAS",
@@ -4972,23 +5245,40 @@
       "pf": false,
       "valor": 545.28,
       "n": 2
-     },
-     {
-      "nome": "Servidor(a) (diárias de viagem)",
-      "pf": true,
-      "valor": 496.0,
-      "n": 1
-     },
-     {
-      "nome": "WTRADE DE INTERMEDIAÇÃO DE NEGOCIOS LTDA",
-      "pf": false,
-      "valor": 323.37,
-      "n": 4
      }
     ],
-    "outros": 1162.97,
-    "n_outros": 8,
+    "outros": 1824.34,
+    "n_outros": 10,
     "compras": [
+     {
+      "n": "3603/2026",
+      "data": "22/06/2026",
+      "quem": "MAP MOVIMENTO ARTISTICO PRO CIDADANIA",
+      "valor": 68250.0,
+      "pago": 68250.0,
+      "desc": "",
+      "acao": "",
+      "lic": "",
+      "unidade": "Secretaria de Esporte, Turismo e Cultura",
+      "pagamentos": [
+       [
+        "07/07/2026",
+        18750.0
+       ],
+       [
+        "30/07/2026",
+        18750.0
+       ],
+       [
+        "26/08/2026",
+        18750.0
+       ],
+       [
+        "25/09/2026",
+        12000.0
+       ]
+      ]
+     },
      {
       "n": "1346/2026",
       "data": "17/03/2026",
@@ -5048,6 +5338,23 @@
        [
         "25/09/2026",
         21150.0
+       ]
+      ]
+     },
+     {
+      "n": "6270/2026",
+      "data": "30/10/2026",
+      "quem": "CORPORACAO MUSICAL SANTA CECILIA",
+      "valor": 18000.0,
+      "pago": 18000.0,
+      "desc": "",
+      "acao": "",
+      "lic": "",
+      "unidade": "Secretaria de Esporte, Turismo e Cultura",
+      "pagamentos": [
+       [
+        "16/11/2026",
+        18000.0
        ]
       ]
      },
@@ -5171,28 +5478,11 @@
       "lic": "Artigo 75 Lei 14133 / 2021",
       "unidade": "Secretaria de Esporte, Turismo e Cultura",
       "pagamentos": []
-     },
-     {
-      "n": "5067/2026",
-      "data": "31/08/2026",
-      "quem": "CASA MAIS M. DE CONSTRUÇÃO E PRODUTOS AGROPECUARIOS EIRELI",
-      "valor": 427.78,
-      "pago": 427.78,
-      "desc": "AQUISIÇÃO DE MATERIAIS PARA REFORMA DO PARQUE DE EXPOSIÇÃO DO DISTRITO DE FREI ORLANDO.",
-      "acao": "ATIVIDADES DA SECRETARIA DE CULTURA",
-      "lic": "Pregão Eletrônico 2026/15",
-      "unidade": "Secretaria de Esporte, Turismo e Cultura",
-      "pagamentos": [
-       [
-        "18/09/2026",
-        427.78
-       ]
-      ]
      }
     ]
    },
    "Energia": {
-    "pago": 839269.4,
+    "pago": 919299.46,
     "por_mes": {
      "2": 59226.96,
      "3": 65917.25,
@@ -5202,14 +5492,15 @@
      "7": 84085.06,
      "8": 80683.61,
      "9": 68773.29,
-     "10": 81214.44
+     "10": 81214.44,
+     "11": 80030.06
     },
     "recebedores": [
      {
       "nome": "CEMIG D",
       "pf": false,
-      "valor": 612495.17,
-      "n": 18
+      "valor": 692525.23,
+      "n": 20
      },
      {
       "nome": "CONSTRUTORA REMO LTDA",
@@ -5332,12 +5623,17 @@
       "data": "29/10/2026",
       "quem": "CEMIG D",
       "valor": 45298.35,
-      "pago": 0.0,
+      "pago": 45298.35,
       "desc": "EMPENHO REFERENTE A TAXA DE ILUMINAÇÃO PUBLICA DESCONTADO NA FATURA DE CONSUMO DE ENERGIA ELETRICA DESTE MUNICIPIO DO MES DE OUTUBRO/2026.",
       "acao": "MANUT. E CUSTEIO DA ILUMINAÇÃO PÚBLICA",
       "lic": "Não se Aplica",
       "unidade": "Secretaria Municipal de Infra-estrutura",
-      "pagamentos": []
+      "pagamentos": [
+       [
+        "16/11/2026",
+        45298.35
+       ]
+      ]
      },
      {
       "n": "2031/2026",
@@ -5783,7 +6079,7 @@
     ]
    }
   },
-  "ultima": "2026-11-13",
+  "ultima": "2026-11-16",
   "portal": "https://ilai.memory.com.br/#/entidades/login/9BP6DH/1/"
  },
  "camara": {
@@ -5852,16 +6148,16 @@
       "n": 24
      },
      {
+      "nome": "Microempreendedor(a) individual (serviços)",
+      "pf": true,
+      "valor": 24968.61,
+      "n": 24
+     },
+     {
       "nome": "MEMORY PROJETOS E DESENVOLVIMENTO DE SISTEMAS LTDA.",
       "pf": false,
       "valor": 23642.1,
       "n": 10
-     },
-     {
-      "nome": "Microempreendedor(a) individual (serviços)",
-      "pf": true,
-      "valor": 22678.61,
-      "n": 23
      },
      {
       "nome": "CEMIG DISTRIBUIÇÃO S/A",
@@ -5886,10 +6182,16 @@
       "pf": false,
       "valor": 17344.65,
       "n": 8
+     },
+     {
+      "nome": "FUNDO DE ASSIST. SAUDE SERV. PUBLICOS MUNIC. MORADA NOVA-FAS",
+      "pf": false,
+      "valor": 17000.59,
+      "n": 10
      }
     ],
-    "outros": 101943.54,
-    "n_outros": 23,
+    "outros": 82652.95,
+    "n_outros": 20,
     "compras": [
      {
       "n": "19/2026",
@@ -6255,6 +6557,47 @@
         2346.05
        ]
       ]
+     },
+     {
+      "n": "90/2026",
+      "data": "29/05/2026",
+      "quem": "BR SUPER",
+      "valor": 12000.0,
+      "pago": 1579.5,
+      "desc": "VALOR QUE SE EMPENHA REFERE-SE À CONTRATAÇÃO DE PESSOA JURÍDICA PARA PRESTAÇÃO DE SERVIÇOS DE INFORMÁTICA (MANUTENÇÃO COMPUTADORES, IMPRESSORAS, INTERNET E TELEFONIA FIXA).",
+      "acao": "MANUT. ATIVIDADES SECRETARIA DA CÂMARA",
+      "lic": "Dispensa 2026/17",
+      "unidade": "Corpo Legislativo",
+      "pagamentos": [
+       [
+        "08/06/2026",
+        749.5
+       ],
+       [
+        "13/07/2026",
+        110.0
+       ],
+       [
+        "09/09/2026",
+        600.0
+       ],
+       [
+        "07/10/2026",
+        120.0
+       ]
+      ]
+     },
+     {
+      "n": "146/2026",
+      "data": "23/09/2026",
+      "quem": "REGULARIZE ENGENHARIA",
+      "valor": 12000.0,
+      "pago": 0.0,
+      "desc": "VALOR QUE SE EMPENHA REFERE-SE À CONTRATAÇÃO DE EMPRESA OU PROFISSIONAL ESPECIALIZADO PARA ELABORAÇÃO DE PROJETO DE REQUALIFICAÇÃO E DESIGN DE INTERIORES DO ANTIGO PLENÁRIO DA CÂMARA MUNICIPAL DE MORADA NOVA DE MINAS/MG",
+      "acao": "MANUT. ATIVIDADES SECRETARIA DA CÂMARA",
+      "lic": "Dispensa 2026/29",
+      "unidade": "Corpo Legislativo",
+      "pagamentos": []
      }
     ]
    }

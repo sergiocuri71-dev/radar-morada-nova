@@ -6,10 +6,7 @@
 "tipo": "Serviços de Energia Elétrica"
 },
 "camara:2026:2202610": {
-"acao": "MANUT. ATIVIDADES SECRETARIA DA CÂMARA",
-"desc": "VALOR REFERE-SE A CONTRATAÇÃO DE PESSOA JURÍDICA PARA PRESTAÇÃO DE SERVIÇOS TÉCNICOS ESPECIALIZADOS, COM CONSULTORIA E ASSESSORIA AO LEGISLATIVO MUNICIPAL, NO MÊS DE",
-"lic": "Inexigibilidade 2026/1",
-"tipo": "Consultoria e Assessoria Jurídica"
+"pf": "Advogado(a) (sociedade individual)"
 },
 "camara:2026:22026100": {
 "pf": "Servidor(a) (acerto ou indenização)"
@@ -27,10 +24,7 @@
 "tipo": "Subsídio Vereador"
 },
 "camara:2026:2202611": {
-"acao": "MANUT. ATIVIDADES SECRETARIA DA CÂMARA",
-"desc": "VALOR REFERE-SE A PREST. SERV. TÉCNICO ESPECIALIZADO DE ASSESSORIA E CONSULTORIA JURÍDICA EM DIREITO PÚBLICO CONSISTENTE NO CONTROLE DE LEGALIDADE E CONSTITUCIONALIDADE DE PROJETOS DE LEI E DEMAIS PROPOSIÇOES, NO MÊS DE",
-"lic": "Inexigibilidade 2026/2",
-"tipo": "Consultoria e Assessoria Jurídica"
+"pf": "Advogado(a) (sociedade individual)"
 },
 "camara:2026:22026114": {
 "pf": "Servidor(a) (acerto ou indenização)"
@@ -38,8 +32,14 @@
 "camara:2026:22026115": {
 "pf": "Servidor(a) (acerto ou indenização)"
 },
+"camara:2026:22026116": {
+"pf": "Produtor(a) rural (alimentos)"
+},
 "camara:2026:22026118": {
 "pf": "Produtor(a) rural (alimentos)"
+},
+"camara:2026:22026119": {
+"pf": "Microempreendedor(a) individual (materiais)"
 },
 "camara:2026:2202612": {
 "pf": "Microempreendedor(a) individual (serviços)"
@@ -71,6 +71,12 @@
 "camara:2026:22026145": {
 "pf": "Servidor(a) (acerto ou indenização)"
 },
+"camara:2026:22026146": {
+"acao": "MANUT. ATIVIDADES SECRETARIA DA CÂMARA",
+"desc": "VALOR QUE SE EMPENHA REFERE-SE À CONTRATAÇÃO DE EMPRESA OU PROFISSIONAL ESPECIALIZADO PARA ELABORAÇÃO DE PROJETO DE REQUALIFICAÇÃO E DESIGN DE INTERIORES DO ANTIGO PLENÁRIO DA CÂMARA MUNICIPAL DE MORADA NOVA DE MINAS/MG",
+"lic": "Dispensa 2026/29",
+"tipo": "Serviços Técnicos Profissionais"
+},
 "camara:2026:22026154": {
 "pf": "Microempreendedor(a) individual (serviços)"
 },
@@ -95,6 +101,12 @@
 "lic": "Inexigibilidade 2025/2",
 "tipo": "Consultoria e Assessoria Contábil"
 },
+"camara:2026:22026173": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
+"camara:2026:22026174": {
+"pf": "Produtor(a) rural (alimentos)"
+},
 "camara:2026:2202618": {
 "acao": "MANUT. ATIVIDADES SECRETARIA DA CÂMARA",
 "desc": "VALOR REFERE-SE A LOCAÇÃO DE SOFTWARES DE SISTEMA DE CONTABILIDADE, COMPRAS, LICITAÇÃO, RECURSOS HUMANOS E OUTROS À CÂMARA MUNICIPAL DE MORADA NOVA DE MINAS, PARA O EXERCICIO DE 2026.",
@@ -107,8 +119,14 @@
 "lic": "PREGÃO ELETRONICO 2025/1",
 "tipo": "Outros Serv. Terceiros -Pessoa Jurídica"
 },
+"camara:2026:2202628": {
+"pf": "Produtor(a) rural (alimentos)"
+},
 "camara:2026:2202630": {
 "pf": "Produtor(a) rural (alimentos)"
+},
+"camara:2026:2202631": {
+"pf": "Microempreendedor(a) individual (materiais)"
 },
 "camara:2026:2202633": {
 "pf": "Microempreendedor(a) individual (materiais)"
@@ -139,6 +157,9 @@
 },
 "camara:2026:2202652": {
 "pf": "Servidor(a) (acerto ou indenização)"
+},
+"camara:2026:2202653": {
+"pf": "Microempreendedor(a) individual (serviços)"
 },
 "camara:2026:2202654": {
 "acao": "MANUT. ATIVIDADES DO CORPO LEGISLATIVO",
@@ -212,6 +233,12 @@
 "lic": "Dispensa 2026/1",
 "tipo": "Outros Serv. Terceiros -Pessoa Jurídica"
 },
+"camara:2026:2202690": {
+"acao": "MANUT. ATIVIDADES SECRETARIA DA CÂMARA",
+"desc": "VALOR QUE SE EMPENHA REFERE-SE À CONTRATAÇÃO DE PESSOA JURÍDICA PARA PRESTAÇÃO DE SERVIÇOS DE INFORMÁTICA (MANUTENÇÃO COMPUTADORES, IMPRESSORAS, INTERNET E TELEFONIA FIXA).",
+"lic": "Dispensa 2026/17",
+"tipo": "Serviços Técnicos Profissionais"
+},
 "camara:2026:2202699": {
 "pf": "Servidor(a) (acerto ou indenização)"
 },
@@ -251,6 +278,18 @@
 "prefeitura:2026:120261033": {
 "pf": "Microempreendedor(a) individual (materiais)"
 },
+"prefeitura:2026:120261036": {
+"pf": "Microempreendedor(a) individual (móveis e equipamentos)"
+},
+"prefeitura:2026:120261038": {
+"pf": "Microempreendedor(a) individual (móveis e equipamentos)"
+},
+"prefeitura:2026:120261039": {
+"pf": "Microempreendedor(a) individual (móveis e equipamentos)"
+},
+"prefeitura:2026:120261040": {
+"pf": "Microempreendedor(a) individual (móveis e equipamentos)"
+},
 "prefeitura:2026:120261044": {
 "pf": "Transporte escolar"
 },
@@ -258,6 +297,12 @@
 "pf": "Transporte escolar"
 },
 "prefeitura:2026:120261049": {
+"pf": "Transporte escolar"
+},
+"prefeitura:2026:120261050": {
+"pf": "Transporte escolar"
+},
+"prefeitura:2026:120261051": {
 "pf": "Transporte escolar"
 },
 "prefeitura:2026:120261056": {
@@ -283,6 +328,12 @@
 "desc": "EMPENHO REFERENTE A PRESTAÇÃO DE SERVIÇOS PROFISSIONAIS NA ORGANIZAÇÃO E EXECUÇÃO DE SERVIÇOS DE CONTABILIDADE EM GERAL EM ATENDIMENTO À NBCASP DURANTE O EXERCICIO 2026.",
 "lic": "Inexigibilidade 2025/22",
 "tipo": "Outros Serv. Terceiros -Pessoa Jurídica"
+},
+"prefeitura:2026:120261069": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
+"prefeitura:2026:120261095": {
+"pf": "Microempreendedor(a) individual (materiais)"
 },
 "prefeitura:2026:120261097": {
 "pf": "Microempreendedor(a) individual (serviços)"
@@ -316,6 +367,9 @@
 "desc": "EMPENHO REFERENTE A AQUISIÇÃO DE PEÇAS E ACESSÓRIOS PARA USO NOS VEÍCULOS DA SECRETARIA MUNICIPAL DE INFRAESTRUTURA, DESTE MUNICÍPIO.",
 "lic": "Pregão 2021/49",
 "tipo": "Material para Manutenção de Veículos"
+},
+"prefeitura:2026:12026113": {
+"pf": "Microempreendedor(a) individual (móveis e equipamentos)"
 },
 "prefeitura:2026:120261130": {
 "acao": "ATIVID. SECRET. DE INFRA-ESTRUTURA",
@@ -812,6 +866,9 @@
 "prefeitura:2026:120261494": {
 "pf": "Auxiliar fluvial de conves"
 },
+"prefeitura:2026:120261495": {
+"pf": "Microempreendedor(a) individual (serviços)"
+},
 "prefeitura:2026:12026150": {
 "acao": "CONVÊNIO COM A CODEVASF",
 "desc": "EMPENHO REFERENTE A PRESTAÇÃO DE SERVIÇO DE TRANSPORTE EXECUTIVO NESTE MUNICIPIO NO EXERCICIO DE 2026. CONFORME PROCESSO JUDICIAL Nº 100000-87-2018.4.01.3812, PREFEITURA MUNICIPAL DE MORADA NOVA DE MINAS/MG-CODEVASF.",
@@ -1001,6 +1058,9 @@
 "lic": "Pregão Eletrônico 2025/38",
 "tipo": "Outros Materiais de Consumo"
 },
+"prefeitura:2026:12026170": {
+"pf": "Microempreendedor(a) individual (serviços)"
+},
 "prefeitura:2026:12026172": {
 "pf": "Fisioterapeuta"
 },
@@ -1095,6 +1155,12 @@
 "pf": "Transporte escolar"
 },
 "prefeitura:2026:120261864": {
+"pf": "Transporte escolar"
+},
+"prefeitura:2026:120261865": {
+"pf": "Transporte escolar"
+},
+"prefeitura:2026:120261866": {
 "pf": "Transporte escolar"
 },
 "prefeitura:2026:12026187": {
@@ -1460,6 +1526,9 @@
 "prefeitura:2026:120262111": {
 "pf": "Produtor(a) rural (alimentos)"
 },
+"prefeitura:2026:120262112": {
+"pf": "Microempreendedor(a) individual (serviços)"
+},
 "prefeitura:2026:120262113": {
 "pf": "Produtor(a) rural (alimentos)"
 },
@@ -1565,6 +1634,9 @@
 "prefeitura:2026:120262148": {
 "pf": "Quitandeira"
 },
+"prefeitura:2026:12026215": {
+"pf": "Engenheiro civil junior"
+},
 "prefeitura:2026:120262152": {
 "pf": "Microempreendedor(a) individual (obras)"
 },
@@ -1591,6 +1663,12 @@
 "desc": "EMPENHO REFERENTE A AQUISIÇÃO DE COMBUSTÍVEIS PARA USO NOS VEÍCULOS DAS POLÍCIAS AMBIENTAL E MILITAR, DESTE MUNICÍPIO. PLACAS: QMV-1326 A / TDV-6G55 A / OQM-9092 M / QXW-4J88 M. C/C: 24.712-X.",
 "lic": "Pregão Eletrônico 2025/37",
 "tipo": "Contribuições"
+},
+"prefeitura:2026:120262193": {
+"pf": "Microempreendedor(a) individual (móveis e equipamentos)"
+},
+"prefeitura:2026:120262194": {
+"pf": "Microempreendedor(a) individual (materiais)"
 },
 "prefeitura:2026:120262198": {
 "pf": "Contra mestre"
@@ -1708,6 +1786,9 @@
 "desc": "EMPENHO REFERENTE FOLHA DE PAGAMENTO DOS SERVIDORES NO RESPECTIVO MES.",
 "lic": "Não se Aplica",
 "tipo": "Vencimentos e Salarios"
+},
+"prefeitura:2026:12026228": {
+"pf": "Microempreendedor(a) individual (serviços)"
 },
 "prefeitura:2026:120262285": {
 "acao": "INATIVOS E PENSIONISTAS",
@@ -1958,6 +2039,12 @@
 "prefeitura:2026:120262453": {
 "pf": "Transporte escolar"
 },
+"prefeitura:2026:120262454": {
+"pf": "Transporte escolar"
+},
+"prefeitura:2026:120262455": {
+"pf": "Transporte escolar"
+},
 "prefeitura:2026:12026246": {
 "pf": "Auxiliar fluvial de conves"
 },
@@ -2162,6 +2249,9 @@
 "prefeitura:2026:120262609": {
 "pf": "Produtor(a) rural (alimentos)"
 },
+"prefeitura:2026:120262610": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
 "prefeitura:2026:120262612": {
 "pf": "Assistente de limpeza"
 },
@@ -2179,6 +2269,9 @@
 "desc": "CONTRATAÇÃO DE SHOW PARA O 3º FESTIVAL GASTRONÔMICO E CULTURAL DA TILÁPIA QUE SERÁ REALIZADO NOS DIAS 15 E 16 DE MAIO NA PRAÇA DR AGENOR SOARES DOS SANTOS. RECURSO FUNDO MUNICIPAL DE TURISMO. C/C: 24.713-8.",
 "lic": "Inexigibilidade 2025/16",
 "tipo": "Outros Serv. Terceiros -Pessoa Jurídica"
+},
+"prefeitura:2026:120262619": {
+"pf": "Microempreendedor(a) individual (serviços)"
 },
 "prefeitura:2026:12026262": {
 "acao": "MANUTENÇÃO DO CISICOM",
@@ -2236,6 +2329,9 @@
 },
 "prefeitura:2026:12026265": {
 "pf": "Microempreendedor(a) individual (serviços)"
+},
+"prefeitura:2026:120262655": {
+"pf": "Microempreendedor(a) individual (materiais)"
 },
 "prefeitura:2026:12026266": {
 "pf": "Psicólogo(a)"
@@ -2450,6 +2546,9 @@
 "lic": "Não se Aplica",
 "tipo": "Principal da Dívida por Contrato-Interna"
 },
+"prefeitura:2026:12026279": {
+"pf": "Manutenção dos extintores"
+},
 "prefeitura:2026:120262794": {
 "acao": "ATIVIDADE DA GUARDA MUNICIPAL",
 "desc": "EMPENHO REFERENTE FOLHA DE PAGAMENTO DOS SERVIDORES NO RESPECTIVO MES.",
@@ -2462,17 +2561,35 @@
 "lic": "Dispensa 2023/2",
 "tipo": "Locação de Imóveis"
 },
+"prefeitura:2026:12026280": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
 "prefeitura:2026:120262800": {
 "acao": "INATIVOS E PENSIONISTAS",
 "desc": "EMPENHO REFERENTE FOLHA DE PAGAMENTO DOS SERVIDORES NO RESPECTIVO MES.",
 "lic": "Não se Aplica",
 "tipo": "Proventos  Pessoal Civil"
 },
+"prefeitura:2026:12026281": {
+"pf": "Manutenção dos extintores"
+},
+"prefeitura:2026:12026282": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
+"prefeitura:2026:12026283": {
+"pf": "Manutenção dos extintores"
+},
 "prefeitura:2026:120262837": {
 "acao": "MANUTENÇÃO ATIVIDADE ENSINO FUNDAMENTAL",
 "desc": "EMPENHO REFERENTE FOLHA DE PAGAMENTO DOS SERVIDORES NO RESPECTIVO MES.",
 "lic": "Não se Aplica",
 "tipo": "Vencimentos e Salarios"
+},
+"prefeitura:2026:12026284": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
+"prefeitura:2026:12026285": {
+"pf": "Manutenção dos extintores"
 },
 "prefeitura:2026:120262850": {
 "acao": "MANUTENÇÃO DO MEIO AMBIENTE",
@@ -2492,11 +2609,17 @@
 "lic": "Não se Aplica",
 "tipo": "Vencimentos e Salarios"
 },
+"prefeitura:2026:12026286": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
 "prefeitura:2026:120262865": {
 "acao": "ATIVIDADES DA PROCURADORIA GERAL",
 "desc": "EMPENHO REFERENTE FOLHA DE PAGAMENTO DOS SERVIDORES NO RESPECTIVO MES.",
 "lic": "Não se Aplica",
 "tipo": "Vencimentos e Salarios"
+},
+"prefeitura:2026:120262891": {
+"pf": "Microempreendedor(a) individual (materiais)"
 },
 "prefeitura:2026:120262895": {
 "acao": "Proteç. Soc. Especial Méd. e Alta Comple",
@@ -2706,6 +2829,12 @@
 "pf": "Transporte escolar"
 },
 "prefeitura:2026:120263013": {
+"pf": "Transporte escolar"
+},
+"prefeitura:2026:120263014": {
+"pf": "Transporte escolar"
+},
+"prefeitura:2026:120263015": {
 "pf": "Transporte escolar"
 },
 "prefeitura:2026:120263021": {
@@ -2942,11 +3071,17 @@
 "prefeitura:2026:12026317": {
 "pf": "Assistente de limpeza"
 },
+"prefeitura:2026:120263173": {
+"pf": "Microempreendedor(a) individual (serviços)"
+},
 "prefeitura:2026:120263174": {
 "acao": "ATIVIDADES DA PROCURADORIA GERAL",
 "desc": "CONTRATAÇÃO DE EMPRESA PARA ACOMPANHAMENTO DAS COMUNICAÇÕES DISPONIBILIZADAS NO DOMICÍLIO JUDICIAL ELETRÔNICO DESTE MUNICIPIO. C/C: 10.200-8.",
 "lic": "Dispensa 2026/150",
 "tipo": "Outros Serv. Terceiros -Pessoa Jurídica"
+},
+"prefeitura:2026:120263176": {
+"pf": "Microempreendedor(a) individual (móveis e equipamentos)"
 },
 "prefeitura:2026:12026318": {
 "pf": "Assistente de limpeza"
@@ -3353,6 +3488,12 @@
 "prefeitura:2026:12026347": {
 "pf": "Operador de maquina pesada"
 },
+"prefeitura:2026:120263476": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
+"prefeitura:2026:120263478": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
 "prefeitura:2026:12026348": {
 "pf": "Microempreendedor(a) individual (serviços)"
 },
@@ -3494,6 +3635,9 @@
 "lic": "Concorrência Eletrônica 2025/5",
 "tipo": "Obras e Instalações de Domínio Público"
 },
+"prefeitura:2026:120263542": {
+"pf": "Médico(a) pediatra"
+},
 "prefeitura:2026:120263544": {
 "pf": "Produtor(a) rural (alimentos)"
 },
@@ -3519,6 +3663,12 @@
 "pf": "Transporte escolar"
 },
 "prefeitura:2026:120263565": {
+"pf": "Transporte escolar"
+},
+"prefeitura:2026:120263566": {
+"pf": "Transporte escolar"
+},
+"prefeitura:2026:120263567": {
 "pf": "Transporte escolar"
 },
 "prefeitura:2026:12026357": {
@@ -3752,6 +3902,9 @@
 "prefeitura:2026:120263810": {
 "pf": "Microempreendedor(a) individual (materiais)"
 },
+"prefeitura:2026:120263815": {
+"pf": "Consultoria tributaria"
+},
 "prefeitura:2026:120263824": {
 "pf": "Prefeito (diárias de viagem)"
 },
@@ -3806,6 +3959,12 @@
 "prefeitura:2026:120263893": {
 "pf": "Transporte escolar"
 },
+"prefeitura:2026:120263894": {
+"pf": "Transporte escolar"
+},
+"prefeitura:2026:120263895": {
+"pf": "Transporte escolar"
+},
 "prefeitura:2026:120263901": {
 "pf": "Produtor(a) rural (alimentos)"
 },
@@ -3829,6 +3988,12 @@
 },
 "prefeitura:2026:120263911": {
 "pf": "Auxílio a paciente em tratamento"
+},
+"prefeitura:2026:120263913": {
+"acao": "ATIVID. ADMINISTRAT. DO ESPORTE E LAZER",
+"desc": "AQUISIÇÃO DE AREIA GROSSA PARA USO NA MANUTENÇÃO DO \"CAMPO ARENA FREI ORLANDO\" NO DISTRITO DE FREI ORLANDO. C/C: 10.200-8.",
+"lic": "Pregão Eletrônico 2025/15",
+"tipo": "Outros Materiais de Consumo"
 },
 "prefeitura:2026:120263935": {
 "pf": "Eletricista"
@@ -4175,6 +4340,9 @@
 "prefeitura:2026:120264198": {
 "pf": "Hospedagem"
 },
+"prefeitura:2026:120264199": {
+"pf": "Médico(a) pediatra"
+},
 "prefeitura:2026:120264201": {
 "pf": "Microempreendedor(a) individual (serviços)"
 },
@@ -4186,6 +4354,12 @@
 },
 "prefeitura:2026:120264209": {
 "pf": "Microempreendedor(a) individual (serviços)"
+},
+"prefeitura:2026:120264211": {
+"acao": "ABASTEC. ÁGUAS, ESGOTO E GALERIA PLUVIAL",
+"desc": "EMPENHO REFERENTE A TAXA DE COBRANÇA PELO USO DOS RECURSOS HIDRICOS DOS POÇOS ARTESIANOS DESTE MUNICIPIO.",
+"lic": "Não se Aplica",
+"tipo": "Outros Serv. Terceiros -Pessoa Jurídica"
 },
 "prefeitura:2026:120264212": {
 "pf": "Aluguel de bens de pessoa física"
@@ -4423,6 +4597,12 @@
 "desc": "AQUISIÇÃO DE REFLETORES DE LED PARA MELHORAR A ILUMINAÇÃO DO GINÁSIO POLIESPORTIVO JOÃO FRANCISCO DA SILVA. BEM INVENTARIADO, CONFORME PREVISTO NA DELIBERAÇÃO NORMATIVA E PORTARIAS VIGENTES - RECURSO FUMPAC. C/C: 13.441-4.",
 "lic": "Dispensa 2026/189",
 "tipo": "Outros Materiais de Consumo"
+},
+"prefeitura:2026:120264359": {
+"acao": "AQUIS. DE VEÍCULOS, MÓVEIS E EQUIPAMENTO",
+"desc": "AQUISIÇÃO DE VEÍCULO NOVO, ZERO KM, TIPO PASSEIO PARA ATENDER AS DEMANDAS DA SECRETARIA MUNICIPAL DE INFRAESTRUTURA. RECURSO SEGOV/MG. TRANSFERÊNCIA ESPECIAL EMENDA PARLAMENTAR 643/2026. INDICAÇÃO 203484 DEPUTADO CEL. HENRIQUE. SIGCON. 001709/2026.",
+"lic": "Pregão Eletrônico 2026/29",
+"tipo": "Outros Materiais Permanentes"
 },
 "prefeitura:2026:120264366": {
 "acao": "CONVÊNIO COM AS POLÍCIAS MILITAR / CIVIL",
@@ -4676,8 +4856,14 @@
 "prefeitura:2026:12026455": {
 "pf": "Auxílio a atletas"
 },
+"prefeitura:2026:120264559": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
 "prefeitura:2026:12026456": {
 "pf": "Auxílio a atletas"
+},
+"prefeitura:2026:120264560": {
+"pf": "Microempreendedor(a) individual (materiais)"
 },
 "prefeitura:2026:120264562": {
 "pf": "Microempreendedor(a) individual (materiais)"
@@ -4994,6 +5180,12 @@
 "prefeitura:2026:120264779": {
 "pf": "Microempreendedor(a) individual (obras)"
 },
+"prefeitura:2026:120264780": {
+"acao": "PROMOÇÃO AO TURISMO, FESTAS TRADICIONAIS",
+"desc": "CONTRATAÇÃO DE EMPRESA PATA REALIZAÇÃO DE SHOW PIROTÉCNICO DE BAIXO RUÍDO PARA REALIZAÇÃO DO EVENTO DE COMEMORAÇÃO AOS 174 ANOS DE MORADA NOVA DE MINAS/MG. RECURSO FUNDO MUNICIPAL DE TURISMO.",
+"lic": "Dispensa 2026/231",
+"tipo": "Outros Serv. Terceiros -Pessoa Jurídica"
+},
 "prefeitura:2026:120264794": {
 "pf": "Microempreendedor(a) individual (serviços)"
 },
@@ -5111,6 +5303,9 @@
 "lic": "Pregão 2022/44",
 "tipo": "Outros Serv. Terceiros -Pessoa Jurídica"
 },
+"prefeitura:2026:120264860": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
 "prefeitura:2026:120264863": {
 "pf": "Auxiliar de engenharia civil"
 },
@@ -5148,6 +5343,9 @@
 "pf": "Transporte escolar"
 },
 "prefeitura:2026:120264882": {
+"pf": "Transporte escolar"
+},
+"prefeitura:2026:120264883": {
 "pf": "Transporte escolar"
 },
 "prefeitura:2026:120264889": {
@@ -5273,6 +5471,9 @@
 "prefeitura:2026:120264929": {
 "pf": "Motorista (diárias de viagem)"
 },
+"prefeitura:2026:12026493": {
+"pf": "Médico(a) pediatra"
+},
 "prefeitura:2026:120264930": {
 "pf": "Motorista (diárias de viagem)"
 },
@@ -5312,6 +5513,9 @@
 "lic": "Pregão Eletrônico 2024/32",
 "tipo": "Outros Materiais de Consumo"
 },
+"prefeitura:2026:120264943": {
+"pf": "Servidor(a) (acerto ou indenização)"
+},
 "prefeitura:2026:120264945": {
 "pf": "Diretor(a) escolar (diárias de viagem)"
 },
@@ -5325,6 +5529,9 @@
 "pf": "Especialista de educação (diárias de viagem)"
 },
 "prefeitura:2026:120264952": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
+"prefeitura:2026:120264953": {
 "pf": "Microempreendedor(a) individual (materiais)"
 },
 "prefeitura:2026:120264962": {
@@ -5426,6 +5633,9 @@
 "prefeitura:2026:120265004": {
 "pf": "Microempreendedor(a) individual (materiais)"
 },
+"prefeitura:2026:120265005": {
+"pf": "Auxiliar de engenharia civil"
+},
 "prefeitura:2026:120265007": {
 "pf": "Produtor(a) rural (alimentos)"
 },
@@ -5507,6 +5717,9 @@
 "prefeitura:2026:120265058": {
 "pf": "Diretor(a) escolar (diárias de viagem)"
 },
+"prefeitura:2026:120265060": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
 "prefeitura:2026:120265061": {
 "pf": "Microempreendedor(a) individual (serviços)"
 },
@@ -5556,6 +5769,9 @@
 "pf": "Motorista (diárias de viagem)"
 },
 "prefeitura:2026:120265119": {
+"pf": "Microempreendedor(a) individual (serviços)"
+},
+"prefeitura:2026:120265120": {
 "pf": "Microempreendedor(a) individual (serviços)"
 },
 "prefeitura:2026:120265121": {
@@ -5626,6 +5842,66 @@
 "desc": "AQUISIÇÃO DE VEÍCULO PARA ATENDER AS DEMANDAS DA SECRETARIA MUNICIPAL DE DESENVOLVIMENTO SOCIAL E TRABALHO.",
 "lic": "Pregão Eletrônico 2026/35",
 "tipo": "Outros Materiais Permanentes"
+},
+"prefeitura:2026:120265181": {
+"pf": "Microempreendedor(a) individual (serviços)"
+},
+"prefeitura:2026:120265182": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
+"prefeitura:2026:120265183": {
+"pf": "Microempreendedor(a) individual (serviços)"
+},
+"prefeitura:2026:120265184": {
+"pf": "Microempreendedor(a) individual (serviços)"
+},
+"prefeitura:2026:120265185": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
+"prefeitura:2026:120265186": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
+"prefeitura:2026:120265187": {
+"pf": "Microempreendedor(a) individual (serviços)"
+},
+"prefeitura:2026:120265188": {
+"pf": "Microempreendedor(a) individual (serviços)"
+},
+"prefeitura:2026:120265189": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
+"prefeitura:2026:120265190": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
+"prefeitura:2026:120265191": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
+"prefeitura:2026:120265192": {
+"pf": "Microempreendedor(a) individual (serviços)"
+},
+"prefeitura:2026:120265193": {
+"pf": "Microempreendedor(a) individual (serviços)"
+},
+"prefeitura:2026:120265194": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
+"prefeitura:2026:120265195": {
+"pf": "Microempreendedor(a) individual (serviços)"
+},
+"prefeitura:2026:120265196": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
+"prefeitura:2026:120265197": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
+"prefeitura:2026:120265198": {
+"pf": "Microempreendedor(a) individual (serviços)"
+},
+"prefeitura:2026:120265199": {
+"pf": "Microempreendedor(a) individual (serviços)"
+},
+"prefeitura:2026:120265200": {
+"pf": "Microempreendedor(a) individual (serviços)"
 },
 "prefeitura:2026:120265201": {
 "acao": "ABERTURA, CALÇAM, PAVIMENT. VIAS URBANAS",
@@ -5798,6 +6074,9 @@
 "prefeitura:2026:120265291": {
 "pf": "Microempreendedor(a) individual (serviços)"
 },
+"prefeitura:2026:120265292": {
+"pf": "Microempreendedor(a) individual (serviços)"
+},
 "prefeitura:2026:120265301": {
 "pf": "Psicólogo(a)"
 },
@@ -5835,6 +6114,9 @@
 "tipo": "Principal da Dívida por Contrato-Interna"
 },
 "prefeitura:2026:120265318": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
+"prefeitura:2026:120265320": {
 "pf": "Microempreendedor(a) individual (materiais)"
 },
 "prefeitura:2026:120265326": {
@@ -6089,6 +6371,9 @@
 "prefeitura:2026:120265522": {
 "pf": "Transporte escolar"
 },
+"prefeitura:2026:120265523": {
+"pf": "Transporte escolar"
+},
 "prefeitura:2026:120265531": {
 "acao": "MANUTENÇÃO DOS SERVIÇOS DA PREVIDÊNCIA",
 "desc": "EMPENHO REFERENTE PAGAMENTO DE APORTE FINANCEIRO AO IMPAS PARA AMORTIZAÇÃO DO DEFICIT ATUARIAL CONFORME ANEXO UNICO DA LEI 1.751/2.022. (OUTUBRO/2026) C/C: 24.712-X.",
@@ -6290,6 +6575,9 @@
 "prefeitura:2026:12026562": {
 "pf": "Motorista (diárias de viagem)"
 },
+"prefeitura:2026:120265624": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
 "prefeitura:2026:120265629": {
 "pf": "Técnico(a) de enfermagem (diárias de viagem)"
 },
@@ -6353,6 +6641,12 @@
 "prefeitura:2026:12026567": {
 "pf": "Microempreendedor(a) individual (serviços)"
 },
+"prefeitura:2026:120265691": {
+"acao": "ABASTEC. ÁGUAS, ESGOTO E GALERIA PLUVIAL",
+"desc": "AQUISIÇÃO DE MATERIAIS PARA USO NA EXECUÇÃO DA DRENAGEM NA RUA JOSÉ PEDRO DE OLIVEIRA.",
+"lic": "Pregão Eletrônico 2024/49",
+"tipo": "Obras e Instalações de Domínio Público"
+},
 "prefeitura:2026:120265700": {
 "pf": "Produtor(a) rural (alimentos)"
 },
@@ -6373,6 +6667,9 @@
 },
 "prefeitura:2026:120265709": {
 "pf": "Microempreendedor(a) individual (serviços)"
+},
+"prefeitura:2026:12026571": {
+"pf": "Microempreendedor(a) individual (materiais)"
 },
 "prefeitura:2026:120265710": {
 "pf": "Microempreendedor(a) individual (serviços)"
@@ -6500,14 +6797,29 @@
 "lic": "Não se Aplica",
 "tipo": "Outros Materiais de Consumo"
 },
+"prefeitura:2026:120265799": {
+"acao": "ABASTEC. ÁGUAS, ESGOTO E GALERIA PLUVIAL",
+"desc": "EMPENHO REFERENTE A PRESTAÇAO DE SERVIÇO DE ALVANEL NO ASSENTAMENTO DE MANILHA NA RUA JOSE PEDRO DE OLIVEIRA NO MES DE SETEMBRO DE 2026. REFERENTE A 104 HORAS TRABALHADAS A R$33,00 A HORA.",
+"lic": "Inexigibilidade 2026/6",
+"tipo": "Obras e Instalações de Domínio Público"
+},
 "prefeitura:2026:12026580": {
 "pf": "Técnico(a) de enfermagem (diárias de viagem)"
+},
+"prefeitura:2026:120265800": {
+"acao": "PROMOÇÃO AO TURISMO, FESTAS TRADICIONAIS",
+"desc": "EMPENHO REFERENTE LIGAÇÃO PROVISÓRIA DE CONSUMO DE ENERGIA ELÉTRICA PARA REALIZAÇÃO DE EVENTOS NA PRAÇA DR. AGENOR SOARES DOS SANTOS. RECURSO FUNDO MUNICIPAL TURISMO. C/C: 24.713-8.",
+"lic": "Não se Aplica",
+"tipo": "Serviços de Energia Elétrica"
 },
 "prefeitura:2026:120265802": {
 "acao": "MANUT. E CUSTEIO DA ILUMINAÇÃO PÚBLICA",
 "desc": "EMPENHO REFERENTE A TAXA DE ILUMINAÇÃO PUBLICA DESCONTADO NA FATURA DE CONSUMO DE ENERGIA ELETRICA DESTE MUNICIPIO DO MES DE SETEMBRO/2026.",
 "lic": "Não se Aplica",
 "tipo": "Serviços de Energia Elétrica"
+},
+"prefeitura:2026:120265804": {
+"pf": "Microempreendedor(a) individual (serviços)"
 },
 "prefeitura:2026:120265809": {
 "pf": "Microempreendedor(a) individual (materiais)"
@@ -6562,6 +6874,9 @@
 },
 "prefeitura:2026:12026585": {
 "pf": "Motorista (diárias de viagem)"
+},
+"prefeitura:2026:120265850": {
+"pf": "Microempreendedor(a) individual (serviços)"
 },
 "prefeitura:2026:120265852": {
 "pf": "Auxiliar de engenharia civil"
@@ -6965,6 +7280,9 @@
 "lic": "Artigo 75 Lei 14133 / 2021",
 "tipo": "Gêneros de Alimentação"
 },
+"prefeitura:2026:1202661": {
+"pf": "Consultoria tributaria"
+},
 "prefeitura:2026:12026610": {
 "acao": "CONTRIBUIÇÃO AO HOSPITAL DE MORADA NOVA",
 "desc": "EMPENHO REFERENTE A REPASSE DE SUBVENÇÃO SOCIAL CONCEDIDA A ENTIDADE SUPRA CITADA CONFORME LEI MUNICIPAL 1.857 DE 30 DE JANEIRO/2.026.",
@@ -7068,6 +7386,9 @@
 "tipo": "Obras e Instalações de Domínio Público"
 },
 "prefeitura:2026:120266221": {
+"pf": "Transporte escolar"
+},
+"prefeitura:2026:120266222": {
 "pf": "Transporte escolar"
 },
 "prefeitura:2026:120266233": {
@@ -7189,6 +7510,12 @@
 },
 "prefeitura:2026:120266272": {
 "pf": "Assistente de limpeza"
+},
+"prefeitura:2026:120266278": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
+"prefeitura:2026:120266289": {
+"pf": "Microempreendedor(a) individual (materiais)"
 },
 "prefeitura:2026:120266292": {
 "pf": "Produtor(a) rural (alimentos)"
@@ -7379,6 +7706,9 @@
 "prefeitura:2026:120266370": {
 "pf": "Microempreendedor(a) individual (obras)"
 },
+"prefeitura:2026:120266378": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
 "prefeitura:2026:120266380": {
 "pf": "Microempreendedor(a) individual (serviços)"
 },
@@ -7559,6 +7889,27 @@
 "lic": "Artigo 75 Lei 14133 / 2021",
 "tipo": "Outros Serv. Terceiros -Pessoa Jurídica"
 },
+"prefeitura:2026:120266488": {
+"acao": "MANUTENÇÃO DO MEIO AMBIENTE",
+"desc": "PRESTAÇAO DE SERVIÇO DE CASTRAÇOES E CONSULTAS EM ANIMAIS DE RUA NESSE MUNICIPIO EM 2026. REFERENTE A 2 CASTRAÇOES EM CADELA FEMEA A R$600,00 CADA, 3 CASTRAÇOES EM CÃO MACHO A R$400,00 CADA E 1 CONSULTA MEDICA VETERINARIA",
+"lic": "Artigo 75 Lei 14133 / 2021",
+"tipo": "Outros Serv. Terceiros -Pessoa Jurídica"
+},
+"prefeitura:2026:120266489": {
+"acao": "MANUTENÇÃO DO MEIO AMBIENTE",
+"desc": "PRESTAÇAO DE SERVIÇO DE EXAMES BIOQUIMICOS E CONSULTA EM ANIMAIS DE RUA NESSE MUNICIPIO EM 2026. REFERENTE A 1 CONSULTA MEDICA VETERINARIA A R$150,00 CADA E 3 EXAMES BIOQUIMICOS A R$250,00 CADA.",
+"lic": "Artigo 75 Lei 14133 / 2021",
+"tipo": "Outros Serv. Terceiros -Pessoa Jurídica"
+},
+"prefeitura:2026:1202665": {
+"pf": "Microempreendedor(a) individual (serviços)"
+},
+"prefeitura:2026:120266501": {
+"acao": "ABASTEC. ÁGUAS, ESGOTO E GALERIA PLUVIAL",
+"desc": "PRESTAÇÃO DE SERVIÇO PARA ELABORAÇÃO DE PROJETOS E LEVANTAMENTO TOPÓGRAFO PARA OBRA DE DRENAGEM PLUVIAL DO MUNICÍPIO E SEUS POVOADOS. RECURSO PROGRAMA PARAOPEBA SANEAMENTO NÃO REEMBONSÁVEL. 1º BOLETIM DE MEDIÇÃO.",
+"lic": "Artigo 75 Lei 14133 / 2021",
+"tipo": "Obras e Instalações de Domínio Público"
+},
 "prefeitura:2026:1202668": {
 "pf": "Microempreendedor(a) individual (serviços)"
 },
@@ -7604,6 +7955,9 @@
 "prefeitura:2026:12026736": {
 "pf": "Auxílio a paciente em tratamento"
 },
+"prefeitura:2026:1202674": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
 "prefeitura:2026:12026740": {
 "acao": "AMORTIZAÇÃO DA DÍVIDA CONTRATADA",
 "desc": "EMPENHO REFERENTE A PRINCIPAL DE EMPRESTIMO DO CONTRATO Nº 352354/22 CONFORME COMPROVANTE ANEXO. (22ª DE 54 PARCELAS).",
@@ -7614,6 +7968,15 @@
 "pf": "Microempreendedor(a) individual (serviços)"
 },
 "prefeitura:2026:12026746": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
+"prefeitura:2026:1202675": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
+"prefeitura:2026:12026757": {
+"pf": "Microempreendedor(a) individual (serviços)"
+},
+"prefeitura:2026:1202676": {
 "pf": "Microempreendedor(a) individual (materiais)"
 },
 "prefeitura:2026:12026767": {
@@ -7666,6 +8029,9 @@
 },
 "prefeitura:2026:12026792": {
 "pf": "Assistente de limpeza"
+},
+"prefeitura:2026:12026793": {
+"pf": "Microempreendedor(a) individual (serviços)"
 },
 "prefeitura:2026:12026795": {
 "pf": "Prestador(a) de serviço (pessoa física)"
@@ -7756,6 +8122,9 @@
 "desc": "EMPENHO REFERENTE FOLHA DE PAGAMENTO DOS SERVIDORES NO RESPECTIVO MES.",
 "lic": "Não se Aplica",
 "tipo": "Vencimentos e Salarios"
+},
+"prefeitura:2026:1202688": {
+"pf": "Microempreendedor(a) individual (serviços)"
 },
 "prefeitura:2026:12026897": {
 "pf": "Digitador"
@@ -7900,6 +8269,9 @@
 "desc": "EMPENHO REFERENTE A PRESTAÇAO DE SERVIÇO DE MANUTENÇAO PREVENTIVA EM ELEVADOR NA CASA DA CULTURA NESSE MUNICIPIO EM FEVEREIRO DE 2026. TOTALIZANDO 1 MANUTENÇAO SENDO R$700,00 CADA MANUTENÇÃ0. C.C10200-8",
 "lic": "Inexigibilidade 2025/18",
 "tipo": "Outros Serv. Terceiros -Pessoa Jurídica"
+},
+"prefeitura:2026:12026985": {
+"pf": "Microempreendedor(a) individual (serviços)"
 },
 "prefeitura:2026:12026987": {
 "pf": "Operador de maquina pesada"
