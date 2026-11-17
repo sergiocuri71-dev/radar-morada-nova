@@ -9,9 +9,7 @@ on:
     paths: ["coletor/**", ".github/workflows/**"]
 
 permissions:
-  contents: write
-  pages: write
-  id-token: write
+  contents: read
 
 concurrency:
   group: radar
@@ -20,6 +18,8 @@ concurrency:
 jobs:
   atualizar:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write      # só para guardar os dados no repositório
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
@@ -84,6 +84,9 @@ jobs:
   publicar:
     needs: atualizar
     runs-on: ubuntu-latest
+    permissions:
+      pages: write         # publicar no GitHub Pages
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}

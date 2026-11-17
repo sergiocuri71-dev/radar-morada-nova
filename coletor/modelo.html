@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2244%22%20fill%3D%22%2314213D%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2230%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-opacity%3D%22.35%22%20stroke-width%3D%222.5%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2216%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-opacity%3D%22.35%22%20stroke-width%3D%222.5%22/%3E%3Cpath%20d%3D%22M50%2050L50%206A44%2044%200%200%201%2090%2032z%22%20fill%3D%22%23FCC342%22/%3E%3Cpath%20d%3D%22M14%2064c6-5%2012-5%2018%200s12%205%2018%200%2012-5%2018%200%2012%205%2018%200%22%20fill%3D%22none%22%20stroke%3D%22%23FCC342%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22/%3E%3Cpath%20d%3D%22M22%2077c6-5%2012-5%2018%200s12%205%2018%200%2012-5%2018%200%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%225%22%20fill%3D%22%23ffffff%22/%3E%3C/svg%3E">
 <meta charset="utf-8">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2244%22%20fill%3D%22%2314213D%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2230%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-opacity%3D%22.35%22%20stroke-width%3D%222.5%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2216%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-opacity%3D%22.35%22%20stroke-width%3D%222.5%22/%3E%3Cpath%20d%3D%22M50%2050L50%206A44%2044%200%200%201%2090%2032z%22%20fill%3D%22%23FCC342%22/%3E%3Cpath%20d%3D%22M14%2064c6-5%2012-5%2018%200s12%205%2018%200%2012-5%2018%200%2012%205%2018%200%22%20fill%3D%22none%22%20stroke%3D%22%23FCC342%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22/%3E%3Cpath%20d%3D%22M22%2077c6-5%2012-5%2018%200s12%205%2018%200%2012-5%2018%200%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22/%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%225%22%20fill%3D%22%23ffffff%22/%3E%3C/svg%3E">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Radar - Morada Nova de Minas (MG)</title>
 <meta name="description" content="O que cada vereador de Morada Nova de Minas faz: propostas e votos, só com dados oficiais da Câmara Municipal.">
@@ -207,9 +209,9 @@ const hoje = (() => { const [d] = D.atualizado.split(' '); return dataNum(d); })
 const ordemData = (a,b) => dataNum(b.data) - dataNum(a.data) || b.numero - a.numero;
 const fonte = (url, txt='ver na Câmara') => `<a class="fonte" href="${esc(url)}" rel="noopener" target="_blank">${txt} ↗</a>`;
 const nomeCurto = v => v.apelido && v.apelido.toUpperCase() !== v.nome.split(' ')[0].toUpperCase()
-  ? `${v.nome} <span class="sub">(${esc(cap(v.apelido))})</span>` : esc(v.nome);
+  ? `${esc(v.nome)} <span class="sub">(${esc(cap(v.apelido))})</span>` : esc(v.nome);
 function cap(s){ return s.toLowerCase().replace(/(^|\s)\S/g, x => x.toUpperCase()).replace(/ (D[aeo]s?|E) /g, m => m.toLowerCase()); }
-const iniciais = n => { const p = n.split(' ').filter(x => !/^(d[aeo]s?|e)$/i.test(x)); return (p[0][0] + p[p.length-1][0]).toUpperCase(); };
+const iniciais = n => { const p = n.split(' ').filter(x => !/^(d[aeo]s?|e)$/i.test(x)); return esc((p[0][0] + p[p.length-1][0]).toUpperCase()); };
 const apelido = v => v.apelido ? cap(v.apelido) : v.nome.split(' ')[0];
 
 const VOTO = {
@@ -243,7 +245,7 @@ function noticias(){
   const validas = D.votacoes.filter(x => !x.conflito);
   let html = '';
   if (validas.length){
-    const ultima = validas.reduce((m, x) => dataNum(x.data) > dataNum(m) ? x.data : m, validas[0].data);
+    const ultima = esc(validas.reduce((m, x) => dataNum(x.data) > dataNum(m) ? x.data : m, validas[0].data));
     const doDia = validas.filter(x => x.data === ultima);
     const comContra = doDia.filter(x => (x.totais.contra || 0) + (x.totais.abstencao || 0) > 0);
     const titulo = doDia.length === 1
@@ -257,7 +259,7 @@ function noticias(){
   const notas = [];
   const futuras = D.props.filter(p => !p.projeto && dataNum(p.data) > hoje);
   if (futuras.length){
-    const prox = futuras.reduce((m, p) => dataNum(p.data) < dataNum(m) ? p.data : m, futuras[0].data);
+    const prox = esc(futuras.reduce((m, p) => dataNum(p.data) < dataNum(m) ? p.data : m, futuras[0].data));
     const n = futuras.filter(p => p.data === prox).length;
     notas.push([n, `${n === 1 ? 'proposta está' : 'propostas estão'} na pauta da reunião de ${prox}.`, '#pauta']);
   }
