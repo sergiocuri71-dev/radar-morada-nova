@@ -153,6 +153,9 @@
   .area .seta{color:var(--suave);font-weight:700;margin-left:2px}
   .area small{color:var(--suave);font-weight:600}
   .area-topo b{white-space:nowrap;flex:none}
+  .pf{font-style:normal;font-size:.72rem;font-weight:700;color:var(--suave);background:var(--cinza);border-radius:999px;padding:1px 7px;white-space:nowrap}
+  .caixa.aviso{background:#FFF4D6;border-color:#E8C35A}
+  .compra .tabela{margin-top:6px}
   .ver-detalhe{display:inline-block;margin-top:10px;font-weight:700;color:var(--azul)}
   .voltar{display:inline-block;margin:6px 0 2px;font-weight:700;color:var(--azul);text-decoration:none}
   .area{margin:10px 0}.area-topo{display:flex;justify-content:space-between;gap:10px;font-size:.92rem}.area.destaque span{font-weight:700}
@@ -323,8 +326,49 @@ function gastoView(slug){
     <h3>Em que o dinheiro foi gasto</h3>
     ${lista(A.tipos, camara ? 'var(--amarelo)' : 'var(--azul)')}
     ${!camara && A.setores.length > 1 ? `<h3>Por setor</h3>${lista(A.setores, 'var(--amarelo)')}` : ''}
-    <div class="caixa">${camara ? 'Inclui o subsídio dos vereadores e o salário dos servidores da Câmara. ' : ''}Os valores vêm do relatório contábil mensal que o município envia ao Tesouro Nacional, sem os repasses entre órgãos do próprio município. A lista de cada pagamento, com o nome da empresa ou pessoa que recebeu, fica no Portal da Transparência da ${camara ? 'Câmara' : 'Prefeitura'}.</div>
-    <p class="meta">Fonte oficial: <a href="${esc(det.fonte)}" rel="noopener" target="_blank">Matriz de Saldos Contábeis de ${esc(det.ate)}/${det.ano} (Siconfi)</a>.</p>`;
+    <div class="caixa">${camara ? 'Inclui o subsídio dos vereadores e o salário dos servidores da Câmara. ' : ''}Estes valores vêm do relatório contábil mensal que o município envia ao Tesouro Nacional, sem os repasses entre órgãos do próprio município.</div>
+    <p class="meta">Fonte oficial: <a href="${esc(det.fonte)}" rel="noopener" target="_blank">Matriz de Saldos Contábeis de ${esc(det.ate)}/${det.ano} (Siconfi)</a>.</p>
+    ${quemRecebeu(camara || nome === 'Legislativa' ? 'camara' : 'prefeitura', camara || nome === 'Legislativa' ? 'Câmara' : nome, A, det)}`;
+}
+
+const MESES_TXT = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+function quemRecebeu(ent, area, A, det){
+  const P = D.pag && D.pag[ent], X = P && P.areas[area];
+  if (!X) return '';
+  const [aa, mm, dd] = P.ultima.split('-');
+  const mx = Math.max(...X.recebedores.map(r => r.valor));
+  // o portal mostra tudo o que foi pago? compara com o que o município informou ao Tesouro no mesmo período
+  const noPortal = Object.entries(X.por_mes).filter(([m]) => +m <= det.mes).reduce((s, [, v]) => s + v, 0);
+  const tesouro = A.pago_tesouro || 0;
+  const falta = tesouro - noPortal;
+  const aviso = tesouro && falta > Math.max(20000, 0.03 * tesouro) ? `<div class="caixa aviso">Até ${esc(det.ate)}, o portal da ${ent === 'camara' ? 'Câmara' : 'Prefeitura'} mostra ${reaisD(noPortal)} em pagamentos nesta área, mas o município informou ao Tesouro Nacional ${reaisD(tesouro)} pagos. Cerca de <b>${reaisD(falta)}</b> não aparecem na lista de pagamentos do portal.</div>` : '';
+  return `
+    <h3>Quem recebeu em ${D.pag.ano}</h3>
+    <p class="intro">Pagamentos feitos de janeiro até ${+dd} de ${MESES_TXT[+mm - 1]}, segundo o Portal da Transparência da ${ent === 'camara' ? 'Câmara' : 'Prefeitura'}. Total: <b>${reaisD(X.pago)}</b>.</p>
+    ${aviso}
+    <div class="item">${X.recebedores.map(r => `
+      <div class="area"><div class="area-topo"><span>${esc(r.nome)}${r.pf ? ' <em class="pf">pessoa física</em>' : ''}</span><b>${reaisD(r.valor)}</b></div>${barraValor(r.valor, mx, r.pf ? 'var(--suave)' : 'var(--azul)')}</div>`).join('')}
+      ${X.n_outros ? `<p class="meta" style="margin-top:8px">Mais ${X.n_outros} recebedores somam ${reaisD(X.outros)}.</p>` : ''}
+    </div>
+    <p class="meta">Pessoas físicas aparecem só pelo cargo ou pelo tipo de serviço, sem o nome. A folha de salários sai em bloco, sem o valor de cada servidor.</p>
+    ${X.compras.length ? `<h3>Maiores compras e contratos</h3>
+    <p class="intro">Os maiores empenhos de ${D.pag.ano} (dinheiro reservado para uma compra ou contrato). Toque para ver os detalhes e os pagamentos.</p>
+    ${X.compras.map(c => `<details class="item item-pauta compra">
+      <summary>
+        <div class="meta"><b>${esc(c.quem)}</b> · empenho ${esc(c.n)} de ${esc(c.data)}</div>
+        <p>${esc(curto(c.desc || c.acao || '', 160))}</p>
+        <p class="nota-autor">Reservado: <b>${reaisD(c.valor)}</b> · pago até agora: <b>${reaisD(c.pago)}</b></p>
+        <span class="ler">Ver detalhes</span>
+      </summary>
+      <div class="integra">${esc(c.desc)}</div>
+      <table class="tabela"><tbody>
+        ${c.unidade ? `<tr><td>Setor</td><td>${esc(c.unidade)}</td></tr>` : ''}
+        ${c.acao ? `<tr><td>Ação do orçamento</td><td>${esc(c.acao)}</td></tr>` : ''}
+        ${c.lic ? `<tr><td>Forma de contratação</td><td>${esc(c.lic)}</td></tr>` : ''}
+        ${c.pagamentos.map(([d, v]) => `<tr><td>Pagamento em ${esc(d)}</td><td class="n">${reaisD(v)}</td></tr>`).join('')}
+      </tbody></table>
+    </details>`).join('')}` : ''}
+    <p class="meta">Fonte: <a href="${esc(P.portal)}" rel="noopener" target="_blank">Portal da Transparência da ${ent === 'camara' ? 'Câmara' : 'Prefeitura'}</a> (Dados Abertos, atualizado todo dia).</p>`;
 }
 
 function contasView(){

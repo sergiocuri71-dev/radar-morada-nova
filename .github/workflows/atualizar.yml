@@ -47,6 +47,11 @@ jobs:
         if: github.event_name != 'push'
         run: python3 coletor/financas.py dados/financas.json
 
+      - name: Quem recebeu (portais de transparência da Prefeitura e da Câmara)
+        if: github.event_name != 'push'
+        timeout-minutes: 25
+        run: python3 coletor/pagamentos.py dados/pagamentos.json dados/empenhos_cache.json
+
       - name: Coletar informações da cidade (IBGE e telefones úteis)
         if: github.event_name != 'push'
         run: python3 coletor/cidade.py dados/cidade.json

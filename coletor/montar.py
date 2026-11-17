@@ -126,6 +126,9 @@ for x in votacoes:
         problemas.insert(0, f"o projeto é de {m.group(2)}, da legislatura anterior, mas a votação aparece com data de {x['data']} e com os votos dos vereadores atuais, vários dos quais não eram vereadores em {m.group(2)}")
     if problemas:
         x["conflito"] = "; ".join(problemas)
+pagamentos = None
+if os.path.exists(f"{raiz}/pagamentos.json"):
+    pagamentos = json.load(open(f"{raiz}/pagamentos.json", encoding="utf-8"))
 financas = None
 if os.path.exists(f"{raiz}/financas.json"):
     financas = json.load(open(f"{raiz}/financas.json", encoding="utf-8"))
@@ -135,7 +138,7 @@ if os.path.exists(f"{raiz}/cidade.json"):
 coletado = datetime.datetime.fromisoformat(d["coletado_em"]).astimezone(datetime.timezone(datetime.timedelta(hours=-3)))
 repo = os.environ.get("GITHUB_REPOSITORY", "")
 dados = {"repo": repo, "atualizado": coletado.strftime("%d/%m/%Y às %H:%M"), "site": SITE,
-         "vereadores": vereadores, "props": props, "votacoes": votacoes, "totalAtas": len(atas), "fin": financas, "cidade": cidade,
+         "vereadores": vereadores, "props": props, "votacoes": votacoes, "totalAtas": len(atas), "fin": financas, "pag": pagamentos, "cidade": cidade,
          "lugares": lugares_saida, "repetidos": repetidos,
          "grupos": [{"id": k, "nome": GRUPOS[k], "explica": EXPLICA[k]} for k in GRUPOS]}
 tpl = open(os.path.join(os.path.dirname(__file__), "modelo.html"), encoding="utf-8").read()

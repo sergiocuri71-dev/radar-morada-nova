@@ -1,5 +1,5 @@
 {
- "coletado_em": "2026-11-16T23:53:20+00:00",
+ "coletado_em": "2026-11-17T00:40:03+00:00",
  "municipio": {
   "atual": {
    "ano": 2026,
@@ -144,6 +144,7 @@
     "areas": {
      "Judiciária": {
       "total": 302798.6,
+      "pago_tesouro": 302798.6,
       "setores": [
        {
         "nome": "Defesa do interesse público no processo judiciário",
@@ -175,6 +176,7 @@
      },
      "Administração": {
       "total": 8955824.08,
+      "pago_tesouro": 9214679.58,
       "setores": [
        {
         "nome": "Administração geral",
@@ -262,6 +264,7 @@
      },
      "Segurança Pública": {
       "total": 1009561.67,
+      "pago_tesouro": 1007652.06,
       "setores": [
        {
         "nome": "Defesa civil",
@@ -301,6 +304,7 @@
      },
      "Assistência Social": {
       "total": 1374454.86,
+      "pago_tesouro": 1313591.91,
       "setores": [
        {
         "nome": "Serviços socioassistenciais",
@@ -368,6 +372,7 @@
      },
      "Previdência Social": {
       "total": 7777162.24,
+      "pago_tesouro": 10248730.18,
       "setores": [
        {
         "nome": "Previdência do regime estatutário",
@@ -391,6 +396,7 @@
      },
      "Saúde": {
       "total": 11383863.88,
+      "pago_tesouro": 11305317.82,
       "setores": [
        {
         "nome": "Atenção básica",
@@ -494,6 +500,7 @@
      },
      "Trabalho": {
       "total": 374983.02,
+      "pago_tesouro": 374983.02,
       "setores": [
        {
         "nome": "Proteção e benefícios ao trabalhador",
@@ -513,6 +520,7 @@
      },
      "Educação": {
       "total": 13698485.63,
+      "pago_tesouro": 14272204.92,
       "setores": [
        {
         "nome": "Ensino fundamental",
@@ -588,6 +596,7 @@
      },
      "Cultura": {
       "total": 189818.01,
+      "pago_tesouro": 188037.01,
       "setores": [
        {
         "nome": "Difusão cultural",
@@ -627,6 +636,7 @@
      },
      "Urbanismo": {
       "total": 2512440.86,
+      "pago_tesouro": 2499482.66,
       "setores": [
        {
         "nome": "Serviços urbanos",
@@ -674,6 +684,7 @@
      },
      "Saneamento": {
       "total": 101111.42,
+      "pago_tesouro": 101111.42,
       "setores": [
        {
         "nome": "Saneamento básico rural",
@@ -697,6 +708,7 @@
      },
      "Gestão Ambiental": {
       "total": 137301.97,
+      "pago_tesouro": 137301.97,
       "setores": [
        {
         "nome": "Administração geral",
@@ -724,6 +736,7 @@
      },
      "Agricultura": {
       "total": 246939.17,
+      "pago_tesouro": 246939.17,
       "setores": [
        {
         "nome": "Abastecimento",
@@ -763,6 +776,7 @@
      },
      "Comércio e Serviços": {
       "total": 304005.32,
+      "pago_tesouro": 289761.32,
       "setores": [
        {
         "nome": "Turismo",
@@ -786,6 +800,7 @@
      },
      "Energia": {
       "total": 689281.67,
+      "pago_tesouro": 689281.67,
       "setores": [
        {
         "nome": "Energia elétrica",
@@ -809,6 +824,7 @@
      },
      "Transporte": {
       "total": 1802349.33,
+      "pago_tesouro": 1784227.63,
       "setores": [
        {
         "nome": "Transporte hidroviário",
@@ -844,6 +860,7 @@
      },
      "Desporto e Lazer": {
       "total": 412723.51,
+      "pago_tesouro": 395184.11,
       "setores": [
        {
         "nome": "Desporto comunitário",
@@ -895,6 +912,7 @@
      },
      "Encargos Especiais": {
       "total": 644773.4,
+      "pago_tesouro": 625445.26,
       "setores": [
        {
         "nome": "Serviço da dívida interna",
@@ -914,6 +932,7 @@
      },
      "Legislativa": {
       "total": 1308335.71,
+      "pago_tesouro": 1304335.71,
       "setores": [
        {
         "nome": "Administração geral",
@@ -961,6 +980,7 @@
      },
      "Habitação": {
       "total": 305565.17,
+      "pago_tesouro": 305565.17,
       "setores": [
        {
         "nome": "Habitação urbana",
@@ -980,6 +1000,7 @@
      },
      "Comunicações": {
       "total": 35820.0,
+      "pago_tesouro": 35820.0,
       "setores": [
        {
         "nome": "Telecomunicações",
@@ -1001,6 +1022,7 @@
     "poderes": {
      "prefeitura": {
       "total": 44812974.56,
+      "pago_tesouro": 47833292.53,
       "tipos": [
        {
         "nome": "Serviços de empresas (manutenção, transporte, eventos…)",
@@ -1114,6 +1136,7 @@
      },
      "camara": {
       "total": 1397931.19,
+      "pago_tesouro": 1452464.89,
       "tipos": [
        {
         "nome": "Salários e subsídios (servidores e agentes políticos)",
@@ -1155,6 +1178,7 @@
      },
      "previdencia": {
       "total": 7356693.77,
+      "pago_tesouro": 7356693.77,
       "tipos": [
        {
         "nome": "Aposentadorias e reformas",

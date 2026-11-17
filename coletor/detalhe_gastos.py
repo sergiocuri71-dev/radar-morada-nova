@@ -86,6 +86,12 @@ def montar(itens):
     soma = lambda: collections.defaultdict(float)
     area_sub, area_tipo, area_tot = collections.defaultdict(soma), collections.defaultdict(soma), soma()
     poder_tipo, poder_tot = collections.defaultdict(soma), soma()
+    pago_area, pago_poder = soma(), soma()   # tudo o que saiu do caixa (com os repasses internos), para comparar com os portais
+    for x in itens:
+        if x["conta_contabil"] == "622130400" and x.get("natureza_despesa"):
+            v = x["valor"] if x["natureza_conta"] == "C" else -x["valor"]
+            pago_area[x.get("funcao") or "??"] += v
+            pago_poder[PODERES.get(x.get("poder_orgao"), "outros")] += v
     for x in itens:
         nat = x.get("natureza_despesa") or ""
         if x["conta_contabil"] not in LIQUIDADO or not nat or nat[2:4] == "91":
@@ -100,7 +106,7 @@ def montar(itens):
         poder_tipo[p][t] += v
         poder_tot[p] += v
     lista = lambda d: [{"nome": k, "valor": round(v, 2)} for k, v in sorted(d.items(), key=lambda kv: -kv[1]) if round(v, 2) > 0]
-    areas = {FUNCOES.get(f, f): {"total": round(area_tot[f], 2), "setores": lista(area_sub[f]), "tipos": lista(area_tipo[f])}
+    areas = {FUNCOES.get(f, f): {"total": round(area_tot[f], 2), "pago_tesouro": round(pago_area[f], 2), "setores": lista(area_sub[f]), "tipos": lista(area_tipo[f])}
              for f in area_tot if area_tot[f] > 0}
-    poderes = {p: {"total": round(poder_tot[p], 2), "tipos": lista(poder_tipo[p])} for p in poder_tot if poder_tot[p] > 0}
+    poderes = {p: {"total": round(poder_tot[p], 2), "pago_tesouro": round(pago_poder[p], 2), "tipos": lista(poder_tipo[p])} for p in poder_tot if poder_tot[p] > 0}
     return {"areas": areas, "poderes": poderes}
