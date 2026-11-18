@@ -1,11 +1,11 @@
 {
- "coletado_em": "2026-11-17T16:21:37+00:00",
+ "coletado_em": "2026-11-18T15:59:07+00:00",
  "ano": 2026,
  "fonte": "https://publico.memory.com.br/openknowledge",
  "prefeitura": {
   "areas": {
    "Saúde": {
-    "pago": 13705275.48,
+    "pago": 13713234.77,
     "por_mes": {
      "1": 409979.6,
      "2": 1401646.15,
@@ -17,7 +17,7 @@
      "8": 1319276.61,
      "9": 1341951.96,
      "10": 1331221.9,
-     "11": 662349.7
+     "11": 670308.99
     },
     "recebedores": [
      {
@@ -111,8 +111,8 @@
       "n": 34
      }
     ],
-    "outros": 2364562.95,
-    "n_outros": 191,
+    "outros": 2372522.24,
+    "n_outros": 192,
     "compras": [
      {
       "n": "610/2026",
@@ -285,6 +285,18 @@
       ]
      },
      {
+      "n": "6517/2026",
+      "data": "16/11/2026",
+      "quem": "SIGMA MAQUINAS E REPRESENTAÇÕES LTDA",
+      "valor": 236300.0,
+      "pago": 0.0,
+      "desc": "AQUISIÇÃO DE UMA AMBULANCIA/TIPO A- SIMPLES REMOÇÃO, DESTINADA AO ATENDIMENTO DAS DEMANDAS DA REDE MUNICIPAL DE SAUDE.",
+      "acao": "AQUIS. DE VEÍCULOS, MÓVEIS E EQUIPAMENTO",
+      "lic": "Pregão Eletrônico",
+      "unidade": "Secretaria Municipal de Saude",
+      "pagamentos": []
+     },
+     {
       "n": "3047/2026",
       "data": "22/05/2026",
       "quem": "CASA DE CARIDADE SAO SEBASTIAO",
@@ -300,28 +312,11 @@
         204750.0
        ]
       ]
-     },
-     {
-      "n": "565/2026",
-      "data": "06/02/2026",
-      "quem": "CASA DE CARIDADE SAO SEBASTIAO",
-      "valor": 192000.0,
-      "pago": 192000.0,
-      "desc": "EMPENHO REFERENTE A REPASSE FINANCEIRO CONCEDIDO A ENTIDADE SUPRA CITADA CONFORME LEI MUNICIPAL 1857/2026 - RESOLUÇÃO S.E.S 10.895 DE 23 DE JANEIRO/2026 - PROGRAMA VALORA MINAS. C/C: 16.757-6.",
-      "acao": "CONTRIBUIÇÃO AO HOSPITAL DE MORADA NOVA",
-      "lic": "Não se Aplica",
-      "unidade": "Secretaria Municipal de Saude",
-      "pagamentos": [
-       [
-        "09/02/2026",
-        192000.0
-       ]
-      ]
      }
     ]
    },
    "Educação": {
-    "pago": 19011432.45,
+    "pago": 19059975.0,
     "por_mes": {
      "1": 654208.63,
      "2": 1364056.8,
@@ -333,7 +328,7 @@
      "8": 1631968.51,
      "9": 2167063.21,
      "10": 1934452.54,
-     "11": 637711.78
+     "11": 686254.33
     },
     "recebedores": [
      {
@@ -409,6 +404,12 @@
       "n": 48
      },
      {
+      "nome": "Produtor(a) rural (alimentos)",
+      "pf": true,
+      "valor": 188537.0,
+      "n": 26
+     },
+     {
       "nome": "CONSÓRCIO INTERFEDERATIVO MINAS GERAIS - CIMINAS",
       "pf": false,
       "valor": 183341.38,
@@ -419,15 +420,9 @@
       "pf": false,
       "valor": 169145.13,
       "n": 9
-     },
-     {
-      "nome": "Produtor(a) rural (alimentos)",
-      "pf": true,
-      "valor": 163114.0,
-      "n": 23
      }
     ],
-    "outros": 2330245.66,
+    "outros": 2353365.21,
     "n_outros": 129,
     "compras": [
      {
@@ -1002,7 +997,7 @@
     ]
    },
    "Transporte": {
-    "pago": 2913372.43,
+    "pago": 2914272.43,
     "por_mes": {
      "1": 137431.62,
      "2": 62182.69,
@@ -1014,7 +1009,7 @@
      "8": 405969.45,
      "9": 138248.05,
      "10": 767891.38,
-     "11": 223005.37
+     "11": 223905.37
     },
     "recebedores": [
      {
@@ -1108,7 +1103,7 @@
       "n": 10
      }
     ],
-    "outros": 276025.54,
+    "outros": 276925.54,
     "n_outros": 49,
     "compras": [
      {
@@ -1324,7 +1319,7 @@
     ]
    },
    "Administração": {
-    "pago": 11152077.85,
+    "pago": 11154307.82,
     "por_mes": {
      "1": 637798.41,
      "2": 951067.54,
@@ -1336,7 +1331,7 @@
      "8": 1440978.37,
      "9": 913714.4,
      "10": 955844.74,
-     "11": 268878.48
+     "11": 271108.45
     },
     "recebedores": [
      {
@@ -1430,7 +1425,7 @@
       "n": 1
      }
     ],
-    "outros": 1443387.05,
+    "outros": 1445617.02,
     "n_outros": 143,
     "compras": [
      {
@@ -1729,11 +1724,11 @@
        ],
        [
         "30/01/2026",
-        7834.89
+        18.69
        ],
        [
         "30/01/2026",
-        18.69
+        7834.89
        ],
        [
         "10/02/2026",
@@ -2262,7 +2257,7 @@
     ]
    },
    "Assistência Social": {
-    "pago": 1804882.41,
+    "pago": 1806213.65,
     "por_mes": {
      "1": 107392.69,
      "2": 132423.41,
@@ -2274,7 +2269,7 @@
      "8": 144110.57,
      "9": 283802.11,
      "10": 178326.52,
-     "11": 29161.87
+     "11": 30493.11
     },
     "recebedores": [
      {
@@ -2368,7 +2363,7 @@
       "n": 2
      }
     ],
-    "outros": 177104.39,
+    "outros": 178435.63,
     "n_outros": 65,
     "compras": [
      {
@@ -3322,42 +3317,6 @@
       ]
      },
      {
-      "n": "6159/2026",
-      "data": "13/10/2026",
-      "quem": "TREZE DISTRIBUIDORA LTDA - ME",
-      "valor": 552.92,
-      "pago": 0.0,
-      "desc": "AQUISIÇÃO DE PRODUTOS DE LIMPEZA E HIGIENE PESSOAL PARA ATENDER AS DEMANDAS DO SINDICATO RURAL DESTE MUNICIPIO.",
-      "acao": "ATIVIDADES DEPARTAMENTO DE AGRICULTURA",
-      "lic": "Artigo 75 Lei 14133 / 2021",
-      "unidade": "Secretaria Municipal de Infra-estrutura",
-      "pagamentos": []
-     },
-     {
-      "n": "6157/2026",
-      "data": "13/10/2026",
-      "quem": "DINIZ E DINIZ COMERCIO DIGITAL LTDA - ME",
-      "valor": 470.65,
-      "pago": 0.0,
-      "desc": "AQUISIÇÃO DE PRODUTOS DE LIMPEZA E HIGIENE PESSOAL PARA ATENDER AS DEMANDAS DO SINDICATO RURAL DESTE MUNICIPIO.",
-      "acao": "ATIVIDADES DEPARTAMENTO DE AGRICULTURA",
-      "lic": "Artigo 75 Lei 14133 / 2021",
-      "unidade": "Secretaria Municipal de Infra-estrutura",
-      "pagamentos": []
-     },
-     {
-      "n": "6158/2026",
-      "data": "13/10/2026",
-      "quem": "DINIZ E DINIZ COMERCIO DIGITAL LTDA - ME",
-      "valor": 428.62,
-      "pago": 0.0,
-      "desc": "AQUISIÇÃO DE PRODUTOS DE LIMPEZA E HIGIENE PESSOAL PARA ATENDER AS DEMANDAS DO SINDICATO RURAL DESTE MUNICIPIO.",
-      "acao": "ATIVIDADES DEPARTAMENTO DE AGRICULTURA",
-      "lic": "Artigo 75 Lei 14133 / 2021",
-      "unidade": "Secretaria Municipal de Infra-estrutura",
-      "pagamentos": []
-     },
-     {
       "n": "4846/2026",
       "data": "17/08/2026",
       "quem": "JVW ESTRUTURAL",
@@ -3565,6 +3524,18 @@
       "pagamentos": []
      },
      {
+      "n": "6595/2026",
+      "data": "03/11/2026",
+      "quem": "GG CONSTRUCOES E ACABAMENTOS LTDA",
+      "valor": 20933.9,
+      "pago": 0.0,
+      "desc": "PRESTAÇÃO DE SERVIÇOS PARA 2ª ETAPA DA REFORMA E AMPLIAÇÃO DO CAMPO DE FUTEBOL ANEXO AO POLIESPORTIVO JOÃO FRANCISCO DA SILVA CONFORME ANEXO. RECURSO FUNDO MUNICIPAL DIREITOS DA CRIANÇA E DO ADOLESCENTE - ACORDO JUDICIAL VALE DO RIO DOCE.",
+      "acao": "CONST. REFORMA ESTÁDIOS/GINASIOS POLIESP",
+      "lic": "Artigo 75 Lei 14133 / 2021",
+      "unidade": "Secretaria de Esporte, Turismo e Cultura",
+      "pagamentos": []
+     },
+     {
       "n": "6479/2026",
       "data": "29/10/2026",
       "quem": "SOCIAL ESPORTE CLUBE",
@@ -3694,23 +3665,6 @@
       "lic": "Artigo 75 Lei 14133 / 2021",
       "unidade": "Secretaria de Esporte, Turismo e Cultura",
       "pagamentos": []
-     },
-     {
-      "n": "3913/2026",
-      "data": "06/07/2026",
-      "quem": "CASA MAIS M. DE CONSTRUÇÃO E PRODUTOS AGROPECUARIOS EIRELI",
-      "valor": 2789.85,
-      "pago": 2789.85,
-      "desc": "AQUISIÇÃO DE AREIA GROSSA PARA USO NA MANUTENÇÃO DO \"CAMPO ARENA FREI ORLANDO\" NO DISTRITO DE FREI ORLANDO. C/C: 10.200-8.",
-      "acao": "ATIVID. ADMINISTRAT. DO ESPORTE E LAZER",
-      "lic": "Pregão Eletrônico 2025/15",
-      "unidade": "Secretaria de Esporte, Turismo e Cultura",
-      "pagamentos": [
-       [
-        "22/07/2026",
-        2789.85
-       ]
-      ]
      }
     ]
    },
@@ -5141,7 +5095,7 @@
     "compras": []
    },
    "Cultura": {
-    "pago": 335728.14,
+    "pago": 340559.04,
     "por_mes": {
      "1": 4351.21,
      "2": 8502.37,
@@ -5153,7 +5107,7 @@
      "8": 43574.18,
      "9": 49950.69,
      "10": 24438.44,
-     "11": 73302.0
+     "11": 78132.9
     },
     "recebedores": [
      {
@@ -5171,8 +5125,8 @@
      {
       "nome": "Prêmio cultural ou esportivo",
       "pf": true,
-      "valor": 55062.0,
-      "n": 27
+      "valor": 57127.0,
+      "n": 28
      },
      {
       "nome": "Microempreendedor(a) individual (serviços)",
@@ -5217,6 +5171,12 @@
       "n": 5
      },
      {
+      "nome": "BENEVIDES TURISMO",
+      "pf": false,
+      "valor": 2706.0,
+      "n": 1
+     },
+     {
       "nome": "GRAFMOR",
       "pf": false,
       "valor": 1781.0,
@@ -5239,16 +5199,10 @@
       "pf": false,
       "valor": 683.5,
       "n": 1
-     },
-     {
-      "nome": "CASA MAIS M. DE CONSTRUÇÃO E PRODUTOS AGROPECUARIOS EIRELI",
-      "pf": false,
-      "valor": 545.28,
-      "n": 2
      }
     ],
-    "outros": 1824.34,
-    "n_outros": 10,
+    "outros": 2429.52,
+    "n_outros": 11,
     "compras": [
      {
       "n": "3603/2026",
@@ -5363,12 +5317,17 @@
       "data": "19/10/2026",
       "quem": "BENEVIDES TURISMO",
       "valor": 2706.0,
-      "pago": 0.0,
+      "pago": 2706.0,
       "desc": "EMPENHO REFERENTE A PRESTAÇAO DE SERVIÇO DE LOCAÇAO DE ONIBUS PARA CONDUZIR INTEGRANTES DA FOLIA DE REIS PARA SERRA DA SAUDADE. TOTALIZANDO 330KM PERCORRIDOS A R$8,20 CADA KM. RECURSO FUMPAC.",
       "acao": "ATIVIDADES DA SECRETARIA DE CULTURA",
       "lic": "Artigo 75 Lei 14133 / 2021",
       "unidade": "Secretaria de Esporte, Turismo e Cultura",
-      "pagamentos": []
+      "pagamentos": [
+       [
+        "17/11/2026",
+        2706.0
+       ]
+      ]
      },
      {
       "n": "3087/2026",
@@ -5814,7 +5773,7 @@
     "compras": []
    },
    "Habitação": {
-    "pago": 543843.23,
+    "pago": 546160.23,
     "por_mes": {
      "4": 5451.49,
      "5": 39025.38,
@@ -5822,7 +5781,7 @@
      "7": 256724.2,
      "9": 233427.26,
      "10": 3766.0,
-     "11": 1084.8
+     "11": 3401.8
     },
     "recebedores": [
      {
@@ -5846,8 +5805,8 @@
      {
       "nome": "CASA ALVORADA FERRO E AÇO LTDA",
       "pf": false,
-      "valor": 3766.0,
-      "n": 1
+      "valor": 6083.0,
+      "n": 2
      },
      {
       "nome": "GRAFMOR",
@@ -5893,6 +5852,18 @@
         244455.43
        ]
       ]
+     },
+     {
+      "n": "6516/2026",
+      "data": "03/11/2026",
+      "quem": "TERRACOTA ENGENHARIA LTDA - EPP",
+      "valor": 239786.43,
+      "pago": 0.0,
+      "desc": "PRESTAÇÃO DE SERVIÇO NA CONSTRUÇÃO DE UNIDADES HABITACIONAIS DO PROGRAMA \"MINHA CASA MINHA VIDA\". RECURSO MINISTÉRIO DAS CIDADES. PROGRAMA MORADIA DIGNA. TERMO COMPROMISSO 9871492025. OPERAÇÃO 110.3850-26. C/C: 572.989.833-5 C.E.F. 3º BOLETIM",
+      "acao": "CONSTRUÇÃO E REFORMA CASA POPULAR BAIXA",
+      "lic": "Artigo 75 Lei 14133 / 2021",
+      "unidade": "Secretaria Municipal de Infra-estrutura",
+      "pagamentos": []
      },
      {
       "n": "5048/2026",
@@ -6001,12 +5972,17 @@
       "data": "09/10/2026",
       "quem": "CASA ALVORADA FERRO E AÇO LTDA",
       "valor": 2317.0,
-      "pago": 0.0,
+      "pago": 2317.0,
       "desc": "AQUISIÇÃO DE VERGALHÃO PARA USO NA DOAÇÃO PARA MARIA LUCIMEIRE NA CONSTRUÇÃO DE UM QUARTO. RECURSO FUNDO HABITACIONAL.",
       "acao": "CONSTRUÇÃO E REFORMA CASA POPULAR BAIXA",
       "lic": "Artigo 75 Lei 14133 / 2021",
       "unidade": "Secretaria Municipal de Infra-estrutura",
-      "pagamentos": []
+      "pagamentos": [
+       [
+        "17/11/2026",
+        2317.0
+       ]
+      ]
      },
      {
       "n": "2747/2026",
@@ -6026,6 +6002,18 @@
       ]
      },
      {
+      "n": "6531/2026",
+      "data": "03/11/2026",
+      "quem": "CASA MAIS M. DE CONSTRUÇÃO E PRODUTOS AGROPECUARIOS EIRELI",
+      "valor": 1695.0,
+      "pago": 0.0,
+      "desc": "AQUISIÇÃO DE MATERIAIS DE DOAÇÃO PARA EXECUÇÃO DO QUARTO PARA MARIA LUCIMEIRE NA RUA PROFESSOR JOSÉ FELIPE 285 NO BAIRRO NOVA CAP. RECURSO FUNDO MUNICIPAL HABITACIONAL.",
+      "acao": "CONSTRUÇÃO E REFORMA CASA POPULAR BAIXA",
+      "lic": "Artigo 75 Lei 14133 / 2021",
+      "unidade": "Secretaria Municipal de Infra-estrutura",
+      "pagamentos": []
+     },
+     {
       "n": "3902/2026",
       "data": "01/07/2026",
       "quem": "URBANO ENGENHARIA E CONSTRUÇÕES LTDA",
@@ -6041,45 +6029,11 @@
         1483.2
        ]
       ]
-     },
-     {
-      "n": "6058/2026",
-      "data": "13/10/2026",
-      "quem": "CASA MAIS M. DE CONSTRUÇÃO E PRODUTOS AGROPECUARIOS EIRELI",
-      "valor": 1084.8,
-      "pago": 1084.8,
-      "desc": "AQUISIÇÃO DE CIMENTO PARA DOAÇÃO A GESSICA MENDES SILVA DE JESUS NO POVOADO DE CACIMBAS. RECURSO FUNDO HABITACIONAL.",
-      "acao": "CONSTRUÇÃO E REFORMA CASA POPULAR BAIXA",
-      "lic": "Artigo 75 Lei 14133 / 2021",
-      "unidade": "Secretaria Municipal de Infra-estrutura",
-      "pagamentos": [
-       [
-        "03/11/2026",
-        1084.8
-       ]
-      ]
-     },
-     {
-      "n": "2740/2026",
-      "data": "04/05/2026",
-      "quem": "GRAFMOR",
-      "valor": 358.8,
-      "pago": 358.8,
-      "desc": "PRESTAÇÃO DE SERVIÇOS NA CONFECÇÃO DE IMPRESSOS PARA OS CONTEMPLADOS NO PROGRAMA HABITACIONAL DE CASAS. RECURSO FUNDO HABITACIONAL. C/C: 11.457-X.",
-      "acao": "CONSTRUÇÃO E REFORMA CASA POPULAR BAIXA",
-      "lic": "Pregão 2023/19",
-      "unidade": "Secretaria Municipal de Infra-estrutura",
-      "pagamentos": [
-       [
-        "27/05/2026",
-        358.8
-       ]
-      ]
      }
     ]
    }
   },
-  "ultima": "2026-11-16",
+  "ultima": "2026-11-17",
   "portal": "https://ilai.memory.com.br/#/entidades/login/9BP6DH/1/"
  },
  "camara": {

@@ -107,6 +107,9 @@
 "camara:2026:22026174": {
 "pf": "Produtor(a) rural (alimentos)"
 },
+"camara:2026:22026176": {
+"pf": "Servidor(a) (acerto ou indenização)"
+},
 "camara:2026:2202618": {
 "acao": "MANUT. ATIVIDADES SECRETARIA DA CÂMARA",
 "desc": "VALOR REFERE-SE A LOCAÇÃO DE SOFTWARES DE SISTEMA DE CONTABILIDADE, COMPRAS, LICITAÇÃO, RECURSOS HUMANOS E OUTROS À CÂMARA MUNICIPAL DE MORADA NOVA DE MINAS, PARA O EXERCICIO DE 2026.",
@@ -7907,6 +7910,54 @@
 "prefeitura:2026:120266501": {
 "acao": "ABASTEC. ÁGUAS, ESGOTO E GALERIA PLUVIAL",
 "desc": "PRESTAÇÃO DE SERVIÇO PARA ELABORAÇÃO DE PROJETOS E LEVANTAMENTO TOPÓGRAFO PARA OBRA DE DRENAGEM PLUVIAL DO MUNICÍPIO E SEUS POVOADOS. RECURSO PROGRAMA PARAOPEBA SANEAMENTO NÃO REEMBONSÁVEL. 1º BOLETIM DE MEDIÇÃO.",
+"lic": "Artigo 75 Lei 14133 / 2021",
+"tipo": "Obras e Instalações de Domínio Público"
+},
+"prefeitura:2026:120266516": {
+"acao": "CONSTRUÇÃO E REFORMA CASA POPULAR BAIXA",
+"desc": "PRESTAÇÃO DE SERVIÇO NA CONSTRUÇÃO DE UNIDADES HABITACIONAIS DO PROGRAMA \"MINHA CASA MINHA VIDA\". RECURSO MINISTÉRIO DAS CIDADES. PROGRAMA MORADIA DIGNA. TERMO COMPROMISSO 9871492025. OPERAÇÃO 110.3850-26. C/C: 572.989.833-5 C.E.F. 3º BOLETIM",
+"lic": "Artigo 75 Lei 14133 / 2021",
+"tipo": "Obras e Instalações de Domínio Público"
+},
+"prefeitura:2026:120266517": {
+"acao": "AQUIS. DE VEÍCULOS, MÓVEIS E EQUIPAMENTO",
+"desc": "AQUISIÇÃO DE UMA AMBULANCIA/TIPO A- SIMPLES REMOÇÃO, DESTINADA AO ATENDIMENTO DAS DEMANDAS DA REDE MUNICIPAL DE SAUDE.",
+"lic": "Pregão Eletrônico",
+"tipo": "Veículos Diversos"
+},
+"prefeitura:2026:120266531": {
+"acao": "CONSTRUÇÃO E REFORMA CASA POPULAR BAIXA",
+"desc": "AQUISIÇÃO DE MATERIAIS DE DOAÇÃO PARA EXECUÇÃO DO QUARTO PARA MARIA LUCIMEIRE NA RUA PROFESSOR JOSÉ FELIPE 285 NO BAIRRO NOVA CAP. RECURSO FUNDO MUNICIPAL HABITACIONAL.",
+"lic": "Artigo 75 Lei 14133 / 2021",
+"tipo": "Outros Material, Bem Serviço p/Dist.Grat"
+},
+"prefeitura:2026:120266535": {
+"pf": "Microempreendedor(a) individual (serviços)"
+},
+"prefeitura:2026:120266536": {
+"pf": "Assistente de limpeza"
+},
+"prefeitura:2026:120266537": {
+"pf": "Assistente de limpeza"
+},
+"prefeitura:2026:120266538": {
+"pf": "Assistente de limpeza"
+},
+"prefeitura:2026:120266539": {
+"pf": "Assistente de limpeza"
+},
+"prefeitura:2026:120266540": {
+"pf": "Assistente de limpeza"
+},
+"prefeitura:2026:120266541": {
+"pf": "Assistente de limpeza"
+},
+"prefeitura:2026:120266542": {
+"pf": "Microempreendedor(a) individual (serviços)"
+},
+"prefeitura:2026:120266595": {
+"acao": "CONST. REFORMA ESTÁDIOS/GINASIOS POLIESP",
+"desc": "PRESTAÇÃO DE SERVIÇOS PARA 2ª ETAPA DA REFORMA E AMPLIAÇÃO DO CAMPO DE FUTEBOL ANEXO AO POLIESPORTIVO JOÃO FRANCISCO DA SILVA CONFORME ANEXO. RECURSO FUNDO MUNICIPAL DIREITOS DA CRIANÇA E DO ADOLESCENTE - ACORDO JUDICIAL VALE DO RIO DOCE.",
 "lic": "Artigo 75 Lei 14133 / 2021",
 "tipo": "Obras e Instalações de Domínio Público"
 },
