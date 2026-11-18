@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Radar - Morada Nova de Minas (MG)</title>
-<meta name="description" content="O que cada vereador de Morada Nova de Minas faz: propostas e votos, só com dados oficiais da Câmara Municipal.">
+<title>Radar - {{CIDADE}} (MG)</title>
+<meta name="description" content="O que cada vereador de {{CIDADE}} faz: propostas e votos, só com dados oficiais da Câmara Municipal.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap">
@@ -167,7 +167,7 @@
 <body>
 <header class="topo">
   <div class="wrap">
-    <div class="marca"><a href="#inicio"><svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#ffffff"/><circle cx="50" cy="50" r="30" fill="none" stroke="#14213D" stroke-opacity=".35" stroke-width="2.5"/><circle cx="50" cy="50" r="16" fill="none" stroke="#14213D" stroke-opacity=".35" stroke-width="2.5"/><path d="M50 50L50 6A44 44 0 0 1 90 32z" fill="#FCC342"/><path d="M14 64c6-5 12-5 18 0s12 5 18 0 12-5 18 0 12 5 18 0" fill="none" stroke="#FCC342" stroke-width="5" stroke-linecap="round"/><path d="M22 77c6-5 12-5 18 0s12 5 18 0 12-5 18 0" fill="none" stroke="#14213D" stroke-width="5" stroke-linecap="round"/><circle cx="50" cy="50" r="5" fill="#14213D"/></svg><span class="nome">RADAR</span><span class="cidade">MORADA NOVA DE MINAS</span></a><div class="atualizado" id="atualizado"></div></div>
+    <div class="marca"><a href="#inicio"><svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#ffffff"/><circle cx="50" cy="50" r="30" fill="none" stroke="#14213D" stroke-opacity=".35" stroke-width="2.5"/><circle cx="50" cy="50" r="16" fill="none" stroke="#14213D" stroke-opacity=".35" stroke-width="2.5"/><path d="M50 50L50 6A44 44 0 0 1 90 32z" fill="#FCC342"/><path d="M14 64c6-5 12-5 18 0s12 5 18 0 12-5 18 0 12 5 18 0" fill="none" stroke="#FCC342" stroke-width="5" stroke-linecap="round"/><path d="M22 77c6-5 12-5 18 0s12 5 18 0 12-5 18 0" fill="none" stroke="#14213D" stroke-width="5" stroke-linecap="round"/><circle cx="50" cy="50" r="5" fill="#14213D"/></svg><span class="nome">RADAR</span><span class="cidade">{{CIDADE_UP}}</span></a><div class="atualizado" id="atualizado"></div></div>
   </div>
 </header>
 <div class="barra-abas">
@@ -188,11 +188,11 @@
 <main class="wrap" id="conteudo"></main>
 <footer>
   <div class="wrap rodape">
-    <div class="rod-box rod-destaque">Todos os números vêm de fontes oficiais: o <a href="https://camaramoradanova.mg.gov.br" rel="noopener">site da Câmara Municipal</a> e os relatórios fiscais que o município entrega ao <a href="https://siconfi.tesouro.gov.br" rel="noopener">Tesouro Nacional</a>.</div>
+    <div class="rod-box rod-destaque">Todos os números vêm de fontes oficiais: o <a href="{{CAMARA}}" rel="noopener">site da Câmara Municipal</a> e os relatórios fiscais que o município entrega ao <a href="https://siconfi.tesouro.gov.br" rel="noopener">Tesouro Nacional</a>.</div>
     <div class="rod-box rod-centro">Este site não dá nota nem opinião: só organiza o que é publicado.</div>
     <p class="rod-indep">Projeto independente, sem ligação com a Câmara, a Prefeitura ou partidos.</p>
     <div class="rod-box rod-centro"><a href="#sobre">Como funciona o site e como avisar de um erro</a>.<br>Contato: <a href="mailto:radarmnm@gmail.com">radarmnm@gmail.com</a></div>
-    <p class="rod-direitos">© <span id="ano-rodape"></span> Radar – Morada Nova de Minas. Todos os direitos reservados.</p>
+    <p class="rod-direitos">© <span id="ano-rodape"></span> Radar – {{CIDADE}}. Todos os direitos reservados.</p>
   </div>
 </footer>
 
@@ -479,9 +479,9 @@ function cidadeView(){
   const cats = [...new Set(tels.map(t => t.categoria))].sort((a,b) => (a === 'Outros') - (b === 'Outros') || a.localeCompare(b, 'pt'));
   let q = '';
   $c.innerHTML = `
-    <nav class="blocos" aria-label="Guia comercial"><a class="bloco largo contas" href="https://radarmnm.ironguia.com/" rel="noopener"><div class="ic">${icone('g')}</div><div><b>Guia comercial</b><span>lojas, restaurantes, pousadas e serviços da cidade (site parceiro)</span></div></a></nav>
-    <h2>Morada Nova de Minas</h2>
-    <p class="intro">Município da região central de Minas Gerais, às margens da represa de Três Marias.</p>
+    ${D.guia ? `<nav class="blocos" aria-label="Guia comercial"><a class="bloco largo contas" href="https://radarmnm.ironguia.com/" rel="noopener"><div class="ic">${icone('g')}</div><div><b>Guia comercial</b><span>lojas, restaurantes, pousadas e serviços da cidade (site parceiro)</span></div></a></nav>` : ''}
+    <h2>${esc(D.cidadeNome)}</h2>
+    <p class="intro">${esc(D.cidadeIntro || '')}</p>
 
     <h3>A cidade em números</h3>
     <div class="nums nums-cidade">
@@ -495,16 +495,17 @@ function cidadeView(){
       <p style="margin:0">Segundo a Pesquisa da Pecuária Municipal do IBGE, o município ficou em ${n.tilapia_pos_mg}º lugar em Minas Gerais e em ${n.tilapia_pos_br}º no Brasil na produção de tilápia em ${esc(n.ano_tilapia)}.</p></div>` : ''}
 
     <h3>Distritos e povoados</h3>
-    ${(n.distritos || []).length ? `<p>O IBGE divide o município em ${n.distritos.length} distritos: ${n.distritos.map(d => `<b>${esc(d.nome === 'Morada Nova de Minas' ? 'Sede' : d.nome)}</b> (${milhar(d.populacao)} moradores)`).join(' e ')}, pelo Censo 2022. Os povoados e comunidades abaixo fazem parte deles.</p>` : ''}
+    ${(n.distritos || []).length ? `<p>O IBGE divide o município em ${n.distritos.length} ${n.distritos.length === 1 ? 'distrito' : 'distritos'}: ${n.distritos.map(d => `<b>${esc(d.nome === D.cidadeNome ? 'Sede' : d.nome)}</b> (${milhar(d.populacao)} moradores)`).join(' e ')}, pelo Censo 2022. Os povoados e comunidades abaixo fazem parte deles.</p>` : ''}
     <p class="intro">Povoados, distritos e comunidades citados nos pedidos dos vereadores desde 2025. Toque para ver o que foi pedido para cada um.</p>
     <div class="tipos">${areas.map(([k, l, c]) => `<a class="chip" href="#${slugLugar(k)}">${esc(l.tipo)} ${esc(l.nome)} <span>${c}</span></a>`).join('')}</div>
 
     <h3>Telefones úteis</h3>
     <div class="caixa" style="margin-top:0"><strong>Emergência:</strong> Polícia Militar <a href="tel:190">190</a> · SAMU <a href="tel:192">192</a> · Bombeiros <a href="tel:193">193</a></div>
-    <input class="busca" id="buscaTel" type="search" placeholder="Buscar: hospital, escola, cartório…" aria-label="Buscar telefone">
-    <div id="listaTel"></div>
-    <p class="meta"><a href="${esc(C.balsas || '#')}" rel="noopener" target="_blank">Horários das balsas (site da Prefeitura) ↗</a></p>
+    ${tels.length ? `<input class="busca" id="buscaTel" type="search" placeholder="Buscar: hospital, escola, cartório…" aria-label="Buscar telefone">
+    <div id="listaTel"></div>` : ''}
+    ${C.balsas ? `<p class="meta"><a href="${esc(C.balsas)}" rel="noopener" target="_blank">Horários das balsas (site da Prefeitura) ↗</a></p>` : ''}
     <p class="meta">Fontes: IBGE (<a href="${esc(n.fonte_censo || '#')}" rel="noopener" target="_blank">Censo 2022</a>${n.fonte_estimativa ? `, <a href="${esc(n.fonte_estimativa)}" rel="noopener" target="_blank">estimativa</a>` : ''}${n.fonte_pib ? `, <a href="${esc(n.fonte_pib)}" rel="noopener" target="_blank">PIB</a>` : ''}${n.fonte_tilapia ? `, <a href="${esc(n.fonte_tilapia)}" rel="noopener" target="_blank">aquicultura</a>` : ''}${n.fonte_distritos ? `, <a href="${esc(n.fonte_distritos)}" rel="noopener" target="_blank">distritos</a>` : ''}) e a <a href="${esc(C.fonte_telefones || '#')}" rel="noopener" target="_blank">lista de telefones da Câmara Municipal</a>. Algum telefone mudou? Avise pela página Sobre.</p>`;
+  if (!tels.length) return;
   const desenhar = () => {
     const nq = semAcento(q).trim();
     document.getElementById('listaTel').innerHTML = cats.map(cat => {
@@ -532,7 +533,7 @@ function vereadoresView(){
   const vs = [...D.vereadores].sort((a,b) => a.nome.localeCompare(b.nome,'pt'));
   const totalVot = D.votacoes.filter(x => !x.conflito).length;
   $c.innerHTML = `
-    <h2>Os 9 vereadores (2025–2028)</h2>
+    <h2>Os ${D.vereadores.length} vereadores (2025–2028)</h2>
     <p class="intro">Toque em um nome para ver tudo o que a pessoa pediu e como votou. A ordem é alfabética.</p>
     <div class="lista-ver">${vs.map(v => {
       const n = propsDe(v).length, vt = votosDe(v).length;
@@ -584,7 +585,7 @@ function vereador(id){
     <div id="lista"></div>
     <h3>Como votou</h3>
     <p class="intro">${vts.length ? `A favor: <b>${cont('favor')}</b> · Contra: <b>${cont('contra')}</b> · Abstenção: <b>${cont('abstencao')}</b>${cont('naoExigido') ? ` · Como presidente, sem voto exigido: <b>${cont('naoExigido')}</b>` : ''}.` : ''}
-      A Câmara só publica o voto de cada vereador desde agosto de 2026.</p>
+      ${desdeVotos()}</p>
     <div>${vts.sort((a,b)=>dataNum(b.x.data)-dataNum(a.x.data)).map(({x,voto}) => `
       <div class="item">
         <div class="meta"><b>${esc(x.titulo)}</b> · ${esc(x.data)}</div>
@@ -621,7 +622,7 @@ function votacoes(){
   const cores = {favor:'var(--favor)', contra:'var(--contra)', abstencao:'#c28a1e'};
   $c.innerHTML = `
     <h2>Votações no plenário</h2>
-    <p class="intro">${ord.length} votações com o voto de cada vereador. A Câmara só começou a publicar esse detalhe em agosto de 2026; votações mais antigas aparecem apenas nas atas das reuniões.</p>
+    <p class="intro">${ord.length} votações com o voto de cada vereador. ${desdeVotos()}${D.votacoes.length ? ' Votações mais antigas aparecem apenas nas atas das reuniões.' : ''}</p>
     ${ord.map(x => {
       const t = x.totais, tot = (t.favor||0)+(t.contra||0)+(t.abstencao||0)+(t.impedido||0);
       const seg = ['favor','contra','abstencao'].map(k => t[k] ? `<i style="width:${100*t[k]/(tot||1)}%;background:${cores[k]}"></i>` : '').join('');
@@ -692,14 +693,21 @@ function lugaresView(inicial){
   desenhar();
 }
 
+function desdeVotos(){
+  if (!D.votacoes.length) return 'A Câmara ainda não publica no site o voto de cada vereador.';
+  const p = D.votacoes.map(x => x.data.split('/')).map(([d, m, a]) => [+a, +m]).sort((x, y) => x[0] - y[0] || x[1] - y[1])[0];
+  const M = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+  return `A Câmara publica o voto de cada vereador desde ${M[p[1] - 1]} de ${p[0]}.`;
+}
+
 function sobre(){
   $c.innerHTML = `
     <h2>Como funciona</h2>
-    <p>Este site junta, num lugar só e em linguagem simples, o que a Câmara Municipal de Morada Nova de Minas publica no <a href="${esc(D.site)}" rel="noopener">site oficial</a>. Cada número tem um link para a página da Câmara de onde ele saiu.</p>
+    <p>Este site junta, num lugar só e em linguagem simples, o que a Câmara Municipal de ${esc(D.cidadeNome)} publica no <a href="${esc(D.site)}" rel="noopener">site oficial</a>. Cada número tem um link para a página da Câmara de onde ele saiu.</p>
     <h3>As regras</h3>
     <div class="caixa">
       <p><strong>Só dado oficial.</strong> Nada de boato, print ou reportagem como fonte de número.</p>
-      <p><strong>Mesma régua para todos.</strong> Os 9 vereadores, de todos os partidos, aparecem com as mesmas regras, em ordem alfabética.</p>
+      <p><strong>Mesma régua para todos.</strong> Os ${D.vereadores.length} vereadores, de todos os partidos, aparecem com as mesmas regras, em ordem alfabética.</p>
       <p><strong>Sem nota e sem opinião.</strong> Mais propostas não quer dizer trabalho melhor: o site só mostra o que foi registrado.</p>
       <p><strong>Dado ausente não é falta.</strong> Se a Câmara não registrou algo, o site não conclui nada.</p>
     </div>
@@ -708,7 +716,7 @@ function sobre(){
       <p><strong>Propostas:</strong> contamos cada requerimento, indicação, moção e projeto apresentado desde 2025. O autor é quem assina o documento: uma proposta assinada por dois vereadores conta para os dois. Quando o cadastro da Câmara aponta outro autor, o site mostra o aviso na própria proposta. Por isso a ficha oficial de alguns vereadores pode mostrar um número um pouco diferente. Propostas já pautadas para a próxima reunião também entram. Projetos do Prefeito e da Mesa Diretora não entram na conta de nenhum vereador.</p>
       <p><strong>Presença:</strong> a ficha da Câmara mostra 100% para todos. O site também lê as atas das reuniões (ordinárias, extraordinárias e audiências; não entram comissões, posse e sessões solenes) e lista cada ausência registrada, dizendo se a ata fala em justificativa ou falta abonada. As atas são escaneadas e lidas por reconhecimento de texto, por isso cada ausência tem o link para a ata.</p>
       <p><strong>Votações em conflito:</strong> quando uma votação publicada não aparece na ata da reunião, ou mostra votando alguém que a ata dá como ausente, o site avisa e não conta essa votação para nenhum vereador.</p>
-      <p><strong>Votos:</strong> a Câmara publica o voto de cada vereador desde agosto de 2026. O presidente só vota em caso de empate ou quando o Regimento exige; nas outras votações aparece como "Presidente, sem voto".</p>
+      <p><strong>Votos:</strong> ${desdeVotos()} O presidente só vota em caso de empate ou quando o Regimento exige; nas outras votações aparece como "Presidente, sem voto".</p>
       <p><strong>Partido:</strong> é o do cadastro atual na Câmara, que pode ser diferente do partido na época de uma votação.</p>
       <p><strong>Resumo do pedido:</strong> o texto de cada proposta é um trecho do documento oficial, encurtado. Para ler tudo, toque em "texto completo na Câmara".</p>
     </div>

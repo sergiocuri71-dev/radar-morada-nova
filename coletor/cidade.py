@@ -2,16 +2,17 @@
 Uso: python3 cidade.py dados/cidade.json"""
 import datetime, html, json, os, re, sys, time, urllib.request
 sys.path.insert(0, os.path.dirname(__file__))
-from coletar import api
+from coletar import api, SITE
+from cidades import C
 
-IBGE = "3143500"
+IBGE = C["ibge"]
 SIDRA = "https://apisidra.ibge.gov.br/values"
 
 def sidra(caminho):
     url = SIDRA + caminho
     for i in range(4):
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": "RadarMoradaNova/0.1 (projeto civico)"})
+            req = urllib.request.Request(url, headers={"User-Agent": "RadarMG/0.1 (projeto civico)"})
             with urllib.request.urlopen(req, timeout=180) as r:
                 return json.loads(r.read().decode("utf-8"))[1:], url
         except Exception:
@@ -40,7 +41,7 @@ def numeros():
     if linhas:
         out["pib_mil_reais"], out["ano_pib"], out["fonte_pib"] = num(linhas[0]["V"]), linhas[0]["D3N"], url
     # tilápia: produção do município e posição em Minas e no Brasil
-    linhas, url = sidra(f"/t/3940/n6/{IBGE}/v/4146/p/last/c654/32877")
+    linhas, url = (sidra(f"/t/3940/n6/{IBGE}/v/4146/p/last/c654/32877") if C.get("tilapia") else ([], None))
     if linhas:
         out["tilapia_kg"], out["ano_tilapia"], out["fonte_tilapia"] = num(linhas[0]["V"]), linhas[0]["D3N"], url
         for nivel, chave in (("in%20n3%2031", "tilapia_pos_mg"), ("all", "tilapia_pos_br")):
@@ -63,7 +64,7 @@ CATEGORIAS = [
 ]
 
 def telefones():
-    d = api("/portal/transparencia/recuperar/1330857165")
+    d = api(f"/portal/transparencia/recuperar/{C['telefones_id']}")
     t = re.sub(r"</p>", "\n", d.get("descricao") or "")
     t = html.unescape(re.sub(r"<[^>]+>", "", t))
     itens = []
@@ -86,13 +87,17 @@ def main(saida):
         print(f"AVISO: IBGE indisponível ({e}); mantidos os números anteriores.")
         dados["numeros"] = anterior.get("numeros")
     try:
+        if not C.get("telefones_id"):
+            raise RuntimeError("sem lista de telefones configurada")
         tel = telefones()
         dados["telefones"] = tel if len(tel) >= 20 else anterior.get("telefones")
     except Exception as e:
         print(f"AVISO: telefones não atualizados ({e}); mantida a lista anterior.")
         dados["telefones"] = anterior.get("telefones")
-    dados["fonte_telefones"] = "https://camaramoradanova.mg.gov.br/transparencia/1330857165"
-    dados["balsas"] = "https://www.moradanova.mg.gov.br/detalhe-da-materia/info/atencao-confira-aqui-os-horarios-de-travessia-das-balsas-atualizados/46834"
+    if C.get("telefones_id"):
+        dados["fonte_telefones"] = f"{SITE}/transparencia/{C['telefones_id']}"
+    if C.get("balsas"):
+        dados["balsas"] = C["balsas"]
     if not dados["numeros"] and not dados["telefones"]:
         raise SystemExit("nada coletado")
     json.dump(dados, open(saida, "w", encoding="utf-8"), ensure_ascii=False, indent=1)

@@ -1,0 +1,23 @@
+{
+ "coletado_em": "2026-11-18T02:25:37+00:00",
+ "numeros": {
+  "populacao_2022": 22675.0,
+  "area_km2": 1817.067,
+  "densidade": 12.48,
+  "fonte_censo": "https://apisidra.ibge.gov.br/values/t/4714/n6/3100203/v/93,6318,614/p/2022",
+  "populacao_estimada": 23185.0,
+  "ano_estimativa": "2026",
+  "fonte_estimativa": "https://apisidra.ibge.gov.br/values/t/6579/n6/3100203/v/9324/p/last",
+  "pib_mil_reais": 641971.0,
+  "ano_pib": "2023",
+  "fonte_pib": "https://apisidra.ibge.gov.br/values/t/5938/n6/3100203/v/37/p/last",
+  "distritos": [
+   {
+    "nome": "Abaeté",
+    "populacao": 22675.0
+   }
+  ],
+  "fonte_distritos": "https://apisidra.ibge.gov.br/values/t/9923/n10/in%20n6%203100203/v/93/p/2022"
+ },
+ "telefones": null
+}

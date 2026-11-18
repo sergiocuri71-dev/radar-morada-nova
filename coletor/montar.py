@@ -5,8 +5,9 @@ sys.path.insert(0, os.path.dirname(__file__))
 from pedido import pedido, autores
 from lugares import indexar, tema
 from classificar import classificar_proposicao, classificar_projeto, GRUPOS, EXPLICA
+from cidades import C as CFG
 
-SITE = "https://camaramoradanova.mg.gov.br"
+SITE = CFG["camara"]
 raiz = sys.argv[1] if len(sys.argv) > 1 else "dados"          # onde estão data.json e ausencias.json
 saida = sys.argv[2] if len(sys.argv) > 2 else f"{raiz}/index.html"  # onde gravar a página
 d = json.load(open(f"{raiz}/data.json", encoding="utf-8"))
@@ -137,11 +138,13 @@ if os.path.exists(f"{raiz}/cidade.json"):
     cidade = json.load(open(f"{raiz}/cidade.json", encoding="utf-8"))
 coletado = datetime.datetime.fromisoformat(d["coletado_em"]).astimezone(datetime.timezone(datetime.timedelta(hours=-3)))
 repo = os.environ.get("GITHUB_REPOSITORY", "")
-dados = {"repo": repo, "atualizado": coletado.strftime("%d/%m/%Y às %H:%M"), "site": SITE,
+dados = {"slug": CFG["slug"], "cidadeNome": CFG["nome"], "cidadeIntro": CFG["intro"], "guia": CFG.get("guia"), "repo": repo, "atualizado": coletado.strftime("%d/%m/%Y às %H:%M"), "site": SITE,
          "vereadores": vereadores, "props": props, "votacoes": votacoes, "totalAtas": len(atas), "fin": financas, "pag": pagamentos, "cidade": cidade,
          "lugares": lugares_saida, "repetidos": repetidos,
          "grupos": [{"id": k, "nome": GRUPOS[k], "explica": EXPLICA[k]} for k in GRUPOS]}
 tpl = open(os.path.join(os.path.dirname(__file__), "modelo.html"), encoding="utf-8").read()
+tpl = (tpl.replace("{{CIDADE_UP}}", CFG["nome"].upper()).replace("{{CIDADE}}", CFG["nome"])
+          .replace("{{CAMARA}}", CFG["camara"]))
 js = json.dumps(dados, ensure_ascii=False).replace("</", "<\\/")
 os.makedirs(os.path.dirname(saida) or ".", exist_ok=True)
 open(saida, "w", encoding="utf-8").write(tpl.replace("/*DADOS*/null", js))

@@ -17,7 +17,11 @@ LIGA = {'de', 'do', 'da', 'dos', 'das', 'e'}
 PALAVRA = r"[A-Za-zÀ-ÿ0-9][A-Za-zÀ-ÿ0-9'’\-]*\.?"
 RX = re.compile(r"\b(Rua|R\.|Avenida|Av\.|Praça|Pça\.|Travessa|Alameda|Bairros?|bairros?|Povoados?|povoados?|Distrito|distrito|Comunidade|comunidade|Vila|Loteamento|Condomínio)\s+((?:" + PALAVRA + r"\s*)+)")
 # nomes que não são lugares de verdade
-NAO_LUGAR = {'morada nova de minas', 'horizontal de lotes', 'empresarial', 'municipal'}
+import os, sys, unicodedata as _u
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from cidades import C as _C
+_CID = ''.join(c for c in _u.normalize('NFD', _C['nome'].lower()) if _u.category(c) != 'Mn')
+NAO_LUGAR = {'morada nova de minas', _CID, 'municipio', 'cidade', 'estado', 'horizontal de lotes', 'empresarial', 'municipal'}
 
 def _nome(trecho):
     """Pega as palavras do nome até a primeira palavra minúscula que não seja ligação, ou fim de frase."""
@@ -59,7 +63,7 @@ def lugares(texto):
             continue
         nome = _nome(m.group(2))
         base = re.sub(r'^(de|do|da|dos|das) ', '', sem_acento(nome).lower())
-        if len(nome) < 3 or base in NAO_LUGAR or base.startswith('morada nova'):
+        if len(nome) < 3 or base in NAO_LUGAR or base.startswith('morada nova') or base.startswith(_CID):
             continue
         achados.append((tipo, nome))
     return achados

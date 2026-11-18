@@ -3,3 +3,5 @@ dados/atas/*.png
 __pycache__/
 _site/
 novo/
+dados/*/atas/*.pdf
+dados/*/atas/*.png

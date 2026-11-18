@@ -1,0 +1,1411 @@
+{
+ "coletado_em": "2026-11-18T02:25:34+00:00",
+ "municipio": {
+  "atual": {
+   "ano": 2026,
+   "bimestre": 4,
+   "meses": "jan–ago",
+   "fonte": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo?an_exercicio=2026&nr_periodo=4&co_tipo_demonstrativo=RREO+Simplificado&id_ente=3100203",
+   "receita_prevista": 180246329,
+   "receita_realizada": 126527028.68,
+   "despesa_autorizada": 188523233.57,
+   "despesa_empenhada": 92281681.96,
+   "despesa_liquidada": 82354360.79,
+   "despesa_paga": 76247024.06,
+   "funcoes": [
+    {
+     "funcao": "Saúde",
+     "dotacao": 41714464.09,
+     "empenhado": 29110000.79,
+     "liquidado": 26772898.71
+    },
+    {
+     "funcao": "Educação",
+     "dotacao": 34794007.16,
+     "empenhado": 23388063.24,
+     "liquidado": 21821509.06
+    },
+    {
+     "funcao": "Administração",
+     "dotacao": 11904018.85,
+     "empenhado": 8042862.84,
+     "liquidado": 6376215.05
+    },
+    {
+     "funcao": "Encargos Especiais",
+     "dotacao": 6701064.37,
+     "empenhado": 6699841.33,
+     "liquidado": 5595290.1
+    },
+    {
+     "funcao": "Urbanismo",
+     "dotacao": 50634262.07,
+     "empenhado": 5414251.92,
+     "liquidado": 5344325.55
+    },
+    {
+     "funcao": "Saneamento",
+     "dotacao": 15006137.25,
+     "empenhado": 3946276.1,
+     "liquidado": 3742459.29
+    },
+    {
+     "funcao": "Transporte",
+     "dotacao": 5592764.2,
+     "empenhado": 3657459.31,
+     "liquidado": 3114154.79
+    },
+    {
+     "funcao": "Assistência Social",
+     "dotacao": 3744636.12,
+     "empenhado": 2077447.61,
+     "liquidado": 2009293.12
+    },
+    {
+     "funcao": "Legislativa",
+     "dotacao": 3085400,
+     "empenhado": 2587325.79,
+     "liquidado": 1658596.74
+    },
+    {
+     "funcao": "Gestão Ambiental",
+     "dotacao": 1660709.04,
+     "empenhado": 1162769.48,
+     "liquidado": 1133841.64
+    },
+    {
+     "funcao": "Desporto e Lazer",
+     "dotacao": 2415217.65,
+     "empenhado": 1067073.58,
+     "liquidado": 1008641.77
+    },
+    {
+     "funcao": "Energia",
+     "dotacao": 2600000,
+     "empenhado": 1496982.88,
+     "liquidado": 952126.59
+    },
+    {
+     "funcao": "Cultura",
+     "dotacao": 2035263.25,
+     "empenhado": 943227.52,
+     "liquidado": 815360.64
+    },
+    {
+     "funcao": "Judiciária",
+     "dotacao": 1458830.2,
+     "empenhado": 650791.11,
+     "liquidado": 604639
+    },
+    {
+     "funcao": "Agricultura",
+     "dotacao": 1829390,
+     "empenhado": 1067670.77,
+     "liquidado": 528511.7
+    },
+    {
+     "funcao": "Previdência Social",
+     "dotacao": 1399863.95,
+     "empenhado": 496932.73,
+     "liquidado": 496932.73
+    },
+    {
+     "funcao": "Trabalho",
+     "dotacao": 220285,
+     "empenhado": 125302.47,
+     "liquidado": 125172.47
+    },
+    {
+     "funcao": "Comércio e Serviços",
+     "dotacao": 395500,
+     "empenhado": 216078.27,
+     "liquidado": 123067.62
+    },
+    {
+     "funcao": "Habitação",
+     "dotacao": 109230.37,
+     "empenhado": 79324.23,
+     "liquidado": 79324.23
+    },
+    {
+     "funcao": "Segurança Pública",
+     "dotacao": 122190,
+     "empenhado": 51999.99,
+     "liquidado": 51999.99
+    }
+   ],
+   "detalhe": {
+    "areas": {
+     "Administração": {
+      "total": 6376215.05,
+      "pago_tesouro": 5873089.32,
+      "setores": [
+       {
+        "nome": "Administração geral",
+        "valor": 4672833.57
+       },
+       {
+        "nome": "Planejamento e orçamento",
+        "valor": 1338104.16
+       },
+       {
+        "nome": "Administração financeira",
+        "valor": 228253.69
+       },
+       {
+        "nome": "Policiamento",
+        "valor": 54961.76
+       },
+       {
+        "nome": "Comunicação social",
+        "valor": 41624.94
+       },
+       {
+        "nome": "Controle interno",
+        "valor": 39236.93
+       },
+       {
+        "nome": "Formação de recursos humanos",
+        "valor": 1200.0
+       }
+      ],
+      "tipos": [
+       {
+        "nome": "Encargos sobre a folha (INSS, previdência)",
+        "valor": 1709505.19
+       },
+       {
+        "nome": "Salários e subsídios (servidores e agentes políticos)",
+        "valor": 1259226.08
+       },
+       {
+        "nome": "Impostos e taxas pagos",
+        "valor": 1162759.88
+       },
+       {
+        "nome": "Serviços de empresas (manutenção, transporte, eventos…)",
+        "valor": 814375.55
+       },
+       {
+        "nome": "Indenizações trabalhistas",
+        "valor": 597729.23
+       },
+       {
+        "nome": "Consultoria",
+        "valor": 231000.0
+       },
+       {
+        "nome": "Rateio de consórcios públicos (saúde, obras…)",
+        "valor": 180155.85
+       },
+       {
+        "nome": "Contratos temporários (pessoal)",
+        "valor": 164362.09
+       },
+       {
+        "nome": "Serviços de informática e telefonia",
+        "valor": 66775.4
+       },
+       {
+        "nome": "Contribuições (repasse ao Estado)",
+        "valor": 54961.76
+       },
+       {
+        "nome": "Equipamentos e material permanente",
+        "valor": 52510.93
+       },
+       {
+        "nome": "Material de consumo (combustível, alimentos, remédios, escritório…)",
+        "valor": 48705.07
+       },
+       {
+        "nome": "Serviços de pessoas físicas",
+        "valor": 20000.0
+       },
+       {
+        "nome": "Diárias de viagem",
+        "valor": 9046.06
+       },
+       {
+        "nome": "Indenizações e restituições",
+        "valor": 5101.96
+       }
+      ]
+     },
+     "Saúde": {
+      "total": 26772898.71,
+      "pago_tesouro": 24714400.03,
+      "setores": [
+       {
+        "nome": "Assistência hospitalar e ambulatorial",
+        "valor": 15649447.09
+       },
+       {
+        "nome": "Atenção básica",
+        "valor": 7849015.41
+       },
+       {
+        "nome": "Administração geral",
+        "valor": 1554381.37
+       },
+       {
+        "nome": "Suporte profilático e terapêutico",
+        "valor": 944626.42
+       },
+       {
+        "nome": "Vigilância epidemiológica",
+        "valor": 678432.23
+       },
+       {
+        "nome": "Vigilância sanitária",
+        "valor": 96996.19
+       }
+      ],
+      "tipos": [
+       {
+        "nome": "Serviços de empresas (manutenção, transporte, eventos…)",
+        "valor": 11241483.37
+       },
+       {
+        "nome": "Contratos temporários (pessoal)",
+        "valor": 4497393.31
+       },
+       {
+        "nome": "Salários e subsídios (servidores e agentes políticos)",
+        "valor": 3891531.81
+       },
+       {
+        "nome": "Material de consumo (combustível, alimentos, remédios, escritório…)",
+        "valor": 2191114.79
+       },
+       {
+        "nome": "Encargos sobre a folha (INSS, previdência)",
+        "valor": 1809347.59
+       },
+       {
+        "nome": "Material para distribuição gratuita",
+        "valor": 1465689.45
+       },
+       {
+        "nome": "Equipamentos e material permanente",
+        "valor": 354021.94
+       },
+       {
+        "nome": "Obras e instalações",
+        "valor": 315826.46
+       },
+       {
+        "nome": "Subvenções sociais (a entidades sem fins lucrativos)",
+        "valor": 300000.0
+       },
+       {
+        "nome": "Diárias de viagem",
+        "valor": 211387.56
+       },
+       {
+        "nome": "Contribuições",
+        "valor": 147984.09
+       },
+       {
+        "nome": "Auxílio financeiro a pessoas físicas",
+        "valor": 92299.22
+       },
+       {
+        "nome": "Rateio de consórcios públicos (saúde, obras…)",
+        "valor": 91777.0
+       },
+       {
+        "nome": "Consultoria",
+        "valor": 48406.05
+       },
+       {
+        "nome": "Auxílio-alimentação",
+        "valor": 35812.15
+       },
+       {
+        "nome": "Despesas de anos anteriores",
+        "valor": 29913.79
+       },
+       {
+        "nome": "Serviços de pessoas físicas",
+        "valor": 17277.48
+       },
+       {
+        "nome": "Serviços de informática e telefonia",
+        "valor": 15416.65
+       },
+       {
+        "nome": "Contribuições (a entidades sem fins lucrativos)",
+        "valor": 12980.0
+       },
+       {
+        "nome": "Indenizações e restituições",
+        "valor": 1980.0
+       },
+       {
+        "nome": "Impostos e taxas pagos",
+        "valor": 1256.0
+       }
+      ]
+     },
+     "Previdência Social": {
+      "total": 496932.73,
+      "pago_tesouro": 434822.71,
+      "setores": [
+       {
+        "nome": "Previdência especial",
+        "valor": 496932.73
+       }
+      ],
+      "tipos": [
+       {
+        "nome": "Aposentadorias e reformas",
+        "valor": 396560.65
+       },
+       {
+        "nome": "Pensões",
+        "valor": 100372.08
+       }
+      ]
+     },
+     "Judiciária": {
+      "total": 604639.0,
+      "pago_tesouro": 551446.49,
+      "setores": [
+       {
+        "nome": "Defesa do interesse público no processo judiciário",
+        "valor": 604639.0
+       }
+      ],
+      "tipos": [
+       {
+        "nome": "Salários e subsídios (servidores e agentes políticos)",
+        "valor": 348573.04
+       },
+       {
+        "nome": "Sentenças judiciais",
+        "valor": 108200.48
+       },
+       {
+        "nome": "Consultoria",
+        "valor": 94263.88
+       },
+       {
+        "nome": "Contratos temporários (pessoal)",
+        "valor": 45570.92
+       },
+       {
+        "nome": "Serviços de empresas (manutenção, transporte, eventos…)",
+        "valor": 8030.68
+       }
+      ]
+     },
+     "Assistência Social": {
+      "total": 2009293.12,
+      "pago_tesouro": 1842356.21,
+      "setores": [
+       {
+        "nome": "Assistência comunitária",
+        "valor": 824662.99
+       },
+       {
+        "nome": "Serviços socioassistenciais",
+        "valor": 502253.64
+       },
+       {
+        "nome": "Administração geral",
+        "valor": 498193.85
+       },
+       {
+        "nome": "Assistência à criança e ao adolescente",
+        "valor": 184182.64
+       }
+      ],
+      "tipos": [
+       {
+        "nome": "Auxílio financeiro a pessoas físicas",
+        "valor": 445526.25
+       },
+       {
+        "nome": "Contratos temporários (pessoal)",
+        "valor": 435543.37
+       },
+       {
+        "nome": "Salários e subsídios (servidores e agentes políticos)",
+        "valor": 325485.51
+       },
+       {
+        "nome": "Material para distribuição gratuita",
+        "valor": 210349.96
+       },
+       {
+        "nome": "Material de consumo (combustível, alimentos, remédios, escritório…)",
+        "valor": 191809.41
+       },
+       {
+        "nome": "Subvenções sociais (a entidades sem fins lucrativos)",
+        "valor": 124271.0
+       },
+       {
+        "nome": "Serviços de empresas (manutenção, transporte, eventos…)",
+        "valor": 117076.76
+       },
+       {
+        "nome": "Serviços de pessoas físicas",
+        "valor": 53638.56
+       },
+       {
+        "nome": "Equipamentos e material permanente",
+        "valor": 51649.02
+       },
+       {
+        "nome": "Encargos sobre a folha (INSS, previdência)",
+        "valor": 27691.25
+       },
+       {
+        "nome": "Diárias de viagem",
+        "valor": 25782.03
+       },
+       {
+        "nome": "Contribuições (a entidades sem fins lucrativos)",
+        "valor": 400.0
+       },
+       {
+        "nome": "Indenizações e restituições",
+        "valor": 70.0
+       }
+      ]
+     },
+     "Educação": {
+      "total": 21821509.06,
+      "pago_tesouro": 19954653.7,
+      "setores": [
+       {
+        "nome": "Ensino fundamental",
+        "valor": 11985644.2
+       },
+       {
+        "nome": "Educação infantil",
+        "valor": 5905862.81
+       },
+       {
+        "nome": "Administração geral",
+        "valor": 1656969.46
+       },
+       {
+        "nome": "Alimentação e nutrição",
+        "valor": 989150.5
+       },
+       {
+        "nome": "Educação especial",
+        "valor": 718863.08
+       },
+       {
+        "nome": "Ensino superior",
+        "valor": 343681.72
+       },
+       {
+        "nome": "Educação de jovens e adultos",
+        "valor": 221337.29
+       }
+      ],
+      "tipos": [
+       {
+        "nome": "Salários e subsídios (servidores e agentes políticos)",
+        "valor": 10419644.65
+       },
+       {
+        "nome": "Serviços de empresas (manutenção, transporte, eventos…)",
+        "valor": 3221096.47
+       },
+       {
+        "nome": "Material de consumo (combustível, alimentos, remédios, escritório…)",
+        "valor": 2830019.67
+       },
+       {
+        "nome": "Contratos temporários (pessoal)",
+        "valor": 2309987.36
+       },
+       {
+        "nome": "Encargos sobre a folha (INSS, previdência)",
+        "valor": 2172767.81
+       },
+       {
+        "nome": "Serviços de pessoas físicas",
+        "valor": 573383.44
+       },
+       {
+        "nome": "Bolsas de estudo",
+        "valor": 114906.8
+       },
+       {
+        "nome": "Impostos e taxas pagos",
+        "valor": 78821.96
+       },
+       {
+        "nome": "Equipamentos e material permanente",
+        "valor": 40280.83
+       },
+       {
+        "nome": "Consultoria",
+        "valor": 30516.66
+       },
+       {
+        "nome": "Diárias de viagem",
+        "valor": 27072.49
+       },
+       {
+        "nome": "Despesas de anos anteriores",
+        "valor": 1500.0
+       },
+       {
+        "nome": "Contribuições (a consórcios públicos)",
+        "valor": 918.0
+       },
+       {
+        "nome": "Serviços de informática e telefonia",
+        "valor": 592.92
+       }
+      ]
+     },
+     "Cultura": {
+      "total": 815360.64,
+      "pago_tesouro": 777320.1,
+      "setores": [
+       {
+        "nome": "Difusão cultural",
+        "valor": 815360.64
+       }
+      ],
+      "tipos": [
+       {
+        "nome": "Subvenções sociais (a entidades sem fins lucrativos)",
+        "valor": 396018.31
+       },
+       {
+        "nome": "Salários e subsídios (servidores e agentes políticos)",
+        "valor": 217718.3
+       },
+       {
+        "nome": "Serviços de empresas (manutenção, transporte, eventos…)",
+        "valor": 67415.88
+       },
+       {
+        "nome": "Contratos temporários (pessoal)",
+        "valor": 60391.74
+       },
+       {
+        "nome": "Material de consumo (combustível, alimentos, remédios, escritório…)",
+        "valor": 43355.21
+       },
+       {
+        "nome": "Diárias de viagem",
+        "valor": 13037.24
+       },
+       {
+        "nome": "Equipamentos e material permanente",
+        "valor": 9802.71
+       },
+       {
+        "nome": "Contribuições (a entidades sem fins lucrativos)",
+        "valor": 7586.25
+       },
+       {
+        "nome": "Indenizações e restituições",
+        "valor": 35.0
+       }
+      ]
+     },
+     "Urbanismo": {
+      "total": 5344325.55,
+      "pago_tesouro": 5137374.17,
+      "setores": [
+       {
+        "nome": "Infraestrutura urbana",
+        "valor": 5344325.55
+       }
+      ],
+      "tipos": [
+       {
+        "nome": "Obras e instalações",
+        "valor": 1895907.6
+       },
+       {
+        "nome": "Serviços de empresas (manutenção, transporte, eventos…)",
+        "valor": 1224040.82
+       },
+       {
+        "nome": "Material de consumo (combustível, alimentos, remédios, escritório…)",
+        "valor": 963707.7
+       },
+       {
+        "nome": "Salários e subsídios (servidores e agentes políticos)",
+        "valor": 711986.4
+       },
+       {
+        "nome": "Serviços de pessoas físicas",
+        "valor": 314281.96
+       },
+       {
+        "nome": "Contratos temporários (pessoal)",
+        "valor": 217071.88
+       },
+       {
+        "nome": "Equipamentos e material permanente",
+        "valor": 15683.96
+       },
+       {
+        "nome": "Diárias de viagem",
+        "valor": 1645.23
+       }
+      ]
+     },
+     "Gestão Ambiental": {
+      "total": 1133841.64,
+      "pago_tesouro": 1049644.37,
+      "setores": [
+       {
+        "nome": "Preservação e conservação ambiental",
+        "valor": 1133841.64
+       }
+      ],
+      "tipos": [
+       {
+        "nome": "Salários e subsídios (servidores e agentes políticos)",
+        "valor": 383520.83
+       },
+       {
+        "nome": "Serviços de pessoas físicas",
+        "valor": 302285.38
+       },
+       {
+        "nome": "Contratos temporários (pessoal)",
+        "valor": 266239.15
+       },
+       {
+        "nome": "Serviços de empresas (manutenção, transporte, eventos…)",
+        "valor": 159649.8
+       },
+       {
+        "nome": "Rateio de consórcios públicos (saúde, obras…)",
+        "valor": 16212.56
+       },
+       {
+        "nome": "Material de consumo (combustível, alimentos, remédios, escritório…)",
+        "valor": 5823.5
+       },
+       {
+        "nome": "Diárias de viagem",
+        "valor": 110.42
+       }
+      ]
+     },
+     "Agricultura": {
+      "total": 528511.7,
+      "pago_tesouro": 262296.13,
+      "setores": [
+       {
+        "nome": "Extensão rural",
+        "valor": 503558.1
+       },
+       {
+        "nome": "Normatização e fiscalização",
+        "valor": 24953.6
+       }
+      ],
+      "tipos": [
+       {
+        "nome": "Subvenções sociais (a entidades sem fins lucrativos)",
+        "valor": 250000.0
+       },
+       {
+        "nome": "Contribuições (a consórcios públicos)",
+        "valor": 120833.91
+       },
+       {
+        "nome": "Salários e subsídios (servidores e agentes políticos)",
+        "valor": 110294.18
+       },
+       {
+        "nome": "Rateio de consórcios públicos (saúde, obras…)",
+        "valor": 24953.6
+       },
+       {
+        "nome": "Contratos temporários (pessoal)",
+        "valor": 16950.67
+       },
+       {
+        "nome": "Material de consumo (combustível, alimentos, remédios, escritório…)",
+        "valor": 3380.18
+       },
+       {
+        "nome": "Serviços de empresas (manutenção, transporte, eventos…)",
+        "valor": 1241.6
+       },
+       {
+        "nome": "Diárias de viagem",
+        "valor": 857.56
+       }
+      ]
+     },
+     "Transporte": {
+      "total": 3114154.79,
+      "pago_tesouro": 2815239.03,
+      "setores": [
+       {
+        "nome": "Transporte rodoviário",
+        "valor": 2730832.88
+       },
+       {
+        "nome": "Infraestrutura urbana",
+        "valor": 383321.91
+       }
+      ],
+      "tipos": [
+       {
+        "nome": "Material de consumo (combustível, alimentos, remédios, escritório…)",
+        "valor": 2372453.61
+       },
+       {
+        "nome": "Serviços de empresas (manutenção, transporte, eventos…)",
+        "valor": 302569.41
+       },
+       {
+        "nome": "Salários e subsídios (servidores e agentes políticos)",
+        "valor": 249195.92
+       },
+       {
+        "nome": "Serviços de pessoas físicas",
+        "valor": 137854.87
+       },
+       {
+        "nome": "Contratos temporários (pessoal)",
+        "valor": 49654.09
+       },
+       {
+        "nome": "Diárias de viagem",
+        "valor": 2426.89
+       }
+      ]
+     },
+     "Desporto e Lazer": {
+      "total": 1008641.77,
+      "pago_tesouro": 943020.03,
+      "setores": [
+       {
+        "nome": "Lazer",
+        "valor": 642997.64
+       },
+       {
+        "nome": "Desporto comunitário",
+        "valor": 365644.13
+       }
+      ],
+      "tipos": [
+       {
+        "nome": "Serviços de empresas (manutenção, transporte, eventos…)",
+        "valor": 282139.99
+       },
+       {
+        "nome": "Material de consumo (combustível, alimentos, remédios, escritório…)",
+        "valor": 190605.19
+       },
+       {
+        "nome": "Salários e subsídios (servidores e agentes políticos)",
+        "valor": 190591.75
+       },
+       {
+        "nome": "Serviços de pessoas físicas",
+        "valor": 141928.62
+       },
+       {
+        "nome": "Obras e instalações",
+        "valor": 117999.58
+       },
+       {
+        "nome": "Subvenções sociais (a entidades sem fins lucrativos)",
+        "valor": 28297.9
+       },
+       {
+        "nome": "Contratos temporários (pessoal)",
+        "valor": 26702.74
+       },
+       {
+        "nome": "Consultoria",
+        "valor": 21000.0
+       },
+       {
+        "nome": "Diárias de viagem",
+        "valor": 4727.0
+       },
+       {
+        "nome": "Equipamentos e material permanente",
+        "valor": 4649.0
+       }
+      ]
+     },
+     "Trabalho": {
+      "total": 125172.47,
+      "pago_tesouro": 109676.74,
+      "setores": [
+       {
+        "nome": "Fomento ao trabalho",
+        "valor": 125172.47
+       }
+      ],
+      "tipos": [
+       {
+        "nome": "Salários e subsídios (servidores e agentes políticos)",
+        "valor": 123120.43
+       },
+       {
+        "nome": "Diárias de viagem",
+        "valor": 969.58
+       },
+       {
+        "nome": "Material de consumo (combustível, alimentos, remédios, escritório…)",
+        "valor": 918.46
+       },
+       {
+        "nome": "Serviços de empresas (manutenção, transporte, eventos…)",
+        "valor": 164.0
+       }
+      ]
+     },
+     "Saneamento": {
+      "total": 3742459.29,
+      "pago_tesouro": 3332090.32,
+      "setores": [
+       {
+        "nome": "Saneamento básico urbano",
+        "valor": 3742459.29
+       }
+      ],
+      "tipos": [
+       {
+        "nome": "Serviços de empresas (manutenção, transporte, eventos…)",
+        "valor": 1217537.99
+       },
+       {
+        "nome": "Obras e instalações",
+        "valor": 1056449.23
+       },
+       {
+        "nome": "Salários e subsídios (servidores e agentes políticos)",
+        "valor": 1019577.01
+       },
+       {
+        "nome": "Material de consumo (combustível, alimentos, remédios, escritório…)",
+        "valor": 310967.79
+       },
+       {
+        "nome": "Serviços de pessoas físicas",
+        "valor": 136807.27
+       },
+       {
+        "nome": "Equipamentos e material permanente",
+        "valor": 1120.0
+       }
+      ]
+     },
+     "Habitação": {
+      "total": 79324.23,
+      "pago_tesouro": 79137.43,
+      "setores": [
+       {
+        "nome": "Habitação urbana",
+        "valor": 79324.23
+       }
+      ],
+      "tipos": [
+       {
+        "nome": "Obras e instalações",
+        "valor": 65330.37
+       },
+       {
+        "nome": "Material de consumo (combustível, alimentos, remédios, escritório…)",
+        "valor": 11720.06
+       },
+       {
+        "nome": "Serviços de empresas (manutenção, transporte, eventos…)",
+        "valor": 2273.8
+       }
+      ]
+     },
+     "Comércio e Serviços": {
+      "total": 123067.62,
+      "pago_tesouro": 123067.62,
+      "setores": [
+       {
+        "nome": "Turismo",
+        "valor": 123067.62
+       }
+      ],
+      "tipos": [
+       {
+        "nome": "Serviços de empresas (manutenção, transporte, eventos…)",
+        "valor": 108717.57
+       },
+       {
+        "nome": "Contribuições (a entidades sem fins lucrativos)",
+        "valor": 10000.0
+       },
+       {
+        "nome": "Material de consumo (combustível, alimentos, remédios, escritório…)",
+        "valor": 4350.05
+       }
+      ]
+     },
+     "Energia": {
+      "total": 952126.59,
+      "pago_tesouro": 943102.83,
+      "setores": [
+       {
+        "nome": "Energia elétrica",
+        "valor": 952126.59
+       }
+      ],
+      "tipos": [
+       {
+        "nome": "Serviços de empresas (manutenção, transporte, eventos…)",
+        "valor": 852219.44
+       },
+       {
+        "nome": "Material de consumo (combustível, alimentos, remédios, escritório…)",
+        "valor": 99907.15
+       }
+      ]
+     },
+     "Legislativa": {
+      "total": 1658596.74,
+      "pago_tesouro": 1656996.74,
+      "setores": [
+       {
+        "nome": "Ação legislativa",
+        "valor": 1658596.74
+       }
+      ],
+      "tipos": [
+       {
+        "nome": "Salários e subsídios (servidores e agentes políticos)",
+        "valor": 927374.57
+       },
+       {
+        "nome": "Serviços de empresas (manutenção, transporte, eventos…)",
+        "valor": 319446.93
+       },
+       {
+        "nome": "Encargos sobre a folha (INSS, previdência)",
+        "valor": 139820.04
+       },
+       {
+        "nome": "Consultoria",
+        "valor": 117720.0
+       },
+       {
+        "nome": "Equipamentos e material permanente",
+        "valor": 86000.18
+       },
+       {
+        "nome": "Material de consumo (combustível, alimentos, remédios, escritório…)",
+        "valor": 43752.75
+       },
+       {
+        "nome": "Serviços de pessoas físicas",
+        "valor": 6101.72
+       },
+       {
+        "nome": "Indenizações e restituições",
+        "valor": 5971.32
+       },
+       {
+        "nome": "Serviços de informática e telefonia",
+        "valor": 5522.7
+       },
+       {
+        "nome": "Passagens e transporte",
+        "valor": 5446.59
+       },
+       {
+        "nome": "Indenizações trabalhistas",
+        "valor": 809.85
+       },
+       {
+        "nome": "Contratos temporários (pessoal)",
+        "valor": 630.09
+       }
+      ]
+     },
+     "Encargos Especiais": {
+      "total": 5595290.1,
+      "pago_tesouro": 5595290.1,
+      "setores": [
+       {
+        "nome": "Serviço da dívida interna",
+        "valor": 5595290.1
+       }
+      ],
+      "tipos": [
+       {
+        "nome": "Juros da dívida",
+        "valor": 2859058.72
+       },
+       {
+        "nome": "Pagamento da dívida (principal)",
+        "valor": 2736231.38
+       }
+      ]
+     },
+     "Segurança Pública": {
+      "total": 51999.99,
+      "pago_tesouro": 51999.99,
+      "setores": [
+       {
+        "nome": "Defesa civil",
+        "valor": 51999.99
+       }
+      ],
+      "tipos": [
+       {
+        "nome": "Material de consumo (combustível, alimentos, remédios, escritório…)",
+        "valor": 51999.99
+       }
+      ]
+     }
+    },
+    "poderes": {
+     "prefeitura": {
+      "total": 80695764.05,
+      "pago_tesouro": 74590027.32,
+      "tipos": [
+       {
+        "nome": "Serviços de empresas (manutenção, transporte, eventos…)",
+        "valor": 19620033.13
+       },
+       {
+        "nome": "Salários e subsídios (servidores e agentes políticos)",
+        "valor": 19250465.91
+       },
+       {
+        "nome": "Material de consumo (combustível, alimentos, remédios, escritório…)",
+        "valor": 9320837.83
+       },
+       {
+        "nome": "Contratos temporários (pessoal)",
+        "valor": 8089867.32
+       },
+       {
+        "nome": "Encargos sobre a folha (INSS, previdência)",
+        "valor": 5719311.84
+       },
+       {
+        "nome": "Obras e instalações",
+        "valor": 3451513.24
+       },
+       {
+        "nome": "Juros da dívida",
+        "valor": 2859058.72
+       },
+       {
+        "nome": "Pagamento da dívida (principal)",
+        "valor": 2736231.38
+       },
+       {
+        "nome": "Serviços de pessoas físicas",
+        "valor": 1697457.58
+       },
+       {
+        "nome": "Material para distribuição gratuita",
+        "valor": 1676039.41
+       },
+       {
+        "nome": "Impostos e taxas pagos",
+        "valor": 1242837.84
+       },
+       {
+        "nome": "Subvenções sociais (a entidades sem fins lucrativos)",
+        "valor": 1098587.21
+       },
+       {
+        "nome": "Indenizações trabalhistas",
+        "valor": 597729.23
+       },
+       {
+        "nome": "Auxílio financeiro a pessoas físicas",
+        "valor": 537825.47
+       },
+       {
+        "nome": "Equipamentos e material permanente",
+        "valor": 529718.39
+       },
+       {
+        "nome": "Consultoria",
+        "valor": 425186.59
+       },
+       {
+        "nome": "Aposentadorias e reformas",
+        "valor": 396560.65
+       },
+       {
+        "nome": "Rateio de consórcios públicos (saúde, obras…)",
+        "valor": 313099.01
+       },
+       {
+        "nome": "Diárias de viagem",
+        "valor": 297062.06
+       },
+       {
+        "nome": "Contribuições",
+        "valor": 147984.09
+       },
+       {
+        "nome": "Contribuições (a consórcios públicos)",
+        "valor": 121751.91
+       },
+       {
+        "nome": "Bolsas de estudo",
+        "valor": 114906.8
+       },
+       {
+        "nome": "Sentenças judiciais",
+        "valor": 108200.48
+       },
+       {
+        "nome": "Pensões",
+        "valor": 100372.08
+       },
+       {
+        "nome": "Serviços de informática e telefonia",
+        "valor": 82784.97
+       },
+       {
+        "nome": "Contribuições (repasse ao Estado)",
+        "valor": 54961.76
+       },
+       {
+        "nome": "Auxílio-alimentação",
+        "valor": 35812.15
+       },
+       {
+        "nome": "Despesas de anos anteriores",
+        "valor": 31413.79
+       },
+       {
+        "nome": "Contribuições (a entidades sem fins lucrativos)",
+        "valor": 30966.25
+       },
+       {
+        "nome": "Indenizações e restituições",
+        "valor": 7186.96
+       }
+      ]
+     },
+     "camara": {
+      "total": 1658596.74,
+      "pago_tesouro": 1656996.74,
+      "tipos": [
+       {
+        "nome": "Salários e subsídios (servidores e agentes políticos)",
+        "valor": 927374.57
+       },
+       {
+        "nome": "Serviços de empresas (manutenção, transporte, eventos…)",
+        "valor": 319446.93
+       },
+       {
+        "nome": "Encargos sobre a folha (INSS, previdência)",
+        "valor": 139820.04
+       },
+       {
+        "nome": "Consultoria",
+        "valor": 117720.0
+       },
+       {
+        "nome": "Equipamentos e material permanente",
+        "valor": 86000.18
+       },
+       {
+        "nome": "Material de consumo (combustível, alimentos, remédios, escritório…)",
+        "valor": 43752.75
+       },
+       {
+        "nome": "Serviços de pessoas físicas",
+        "valor": 6101.72
+       },
+       {
+        "nome": "Indenizações e restituições",
+        "valor": 5971.32
+       },
+       {
+        "nome": "Serviços de informática e telefonia",
+        "valor": 5522.7
+       },
+       {
+        "nome": "Passagens e transporte",
+        "valor": 5446.59
+       },
+       {
+        "nome": "Indenizações trabalhistas",
+        "valor": 809.85
+       },
+       {
+        "nome": "Contratos temporários (pessoal)",
+        "valor": 630.09
+       }
+      ]
+     }
+    },
+    "ano": 2026,
+    "mes": 8,
+    "ate": "agosto",
+    "fonte": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/msc_orcamentaria?id_ente=3100203&an_referencia=2026&me_referencia=8&co_tipo_matriz=MSCC&classe_conta=6&id_tv=ending_balance"
+   }
+  },
+  "ano_anterior": {
+   "ano": 2025,
+   "fonte": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2025&no_anexo=DCA-Anexo+I-C&id_ente=3100203",
+   "receita_bruta": 142647957.38,
+   "receita_realizada": 130879290.85,
+   "despesa_empenhada": 129873017.84,
+   "despesa_liquidada": 123288624.46,
+   "despesa_paga": 122930369.28,
+   "funcoes": [
+    {
+     "funcao": "Saúde",
+     "empenhado": 42124316.92,
+     "liquidado": 39916395.18,
+     "pago": 39821028.02
+    },
+    {
+     "funcao": "Educação",
+     "empenhado": 31508518.76,
+     "liquidado": 29739912.83,
+     "pago": 29641817.51
+    },
+    {
+     "funcao": "Saneamento",
+     "empenhado": 13746923.01,
+     "liquidado": 12467634.15,
+     "pago": 12410691.77
+    },
+    {
+     "funcao": "Administração",
+     "empenhado": 8736236.62,
+     "liquidado": 8398660.53,
+     "pago": 8398035.77
+    },
+    {
+     "funcao": "Urbanismo",
+     "empenhado": 6744415.51,
+     "liquidado": 6322050.35,
+     "pago": 6322050.35
+    },
+    {
+     "funcao": "Encargos Especiais",
+     "empenhado": 5325054.06,
+     "liquidado": 5325054.06,
+     "pago": 5325054.06
+    },
+    {
+     "funcao": "Transporte",
+     "empenhado": 5053132.47,
+     "liquidado": 4988481.53,
+     "pago": 4976532.53
+    },
+    {
+     "funcao": "Habitação",
+     "empenhado": 2997879.46,
+     "liquidado": 2997879.46,
+     "pago": 2997879.46
+    },
+    {
+     "funcao": "Legislativa",
+     "empenhado": 2397088.53,
+     "liquidado": 2386966.68,
+     "pago": 2372204.94
+    },
+    {
+     "funcao": "Assistência Social",
+     "empenhado": 2373668.74,
+     "liquidado": 2279577.19,
+     "pago": 2279377.29
+    },
+    {
+     "funcao": "Energia",
+     "empenhado": 1968606.11,
+     "liquidado": 1968606.11,
+     "pago": 1968606.11
+    },
+    {
+     "funcao": "Desporto e Lazer",
+     "empenhado": 1655305.1,
+     "liquidado": 1589240.61,
+     "pago": 1568652.61
+    },
+    {
+     "funcao": "Gestão Ambiental",
+     "empenhado": 1215965.13,
+     "liquidado": 1142034.06,
+     "pago": 1082307.14
+    },
+    {
+     "funcao": "Cultura",
+     "empenhado": 1187285.09,
+     "liquidado": 1105605.02,
+     "pago": 1105605.02
+    },
+    {
+     "funcao": "Judiciária",
+     "empenhado": 907987.12,
+     "liquidado": 845367.63,
+     "pago": 845367.63
+    },
+    {
+     "funcao": "Previdência Social",
+     "empenhado": 903153.86,
+     "liquidado": 843563.37,
+     "pago": 843563.37
+    },
+    {
+     "funcao": "Agricultura",
+     "empenhado": 570114.59,
+     "liquidado": 531914.36,
+     "pago": 531914.36
+    },
+    {
+     "funcao": "Comércio e Serviços",
+     "empenhado": 275999.72,
+     "liquidado": 272835.12,
+     "pago": 272835.12
+    },
+    {
+     "funcao": "Trabalho",
+     "empenhado": 181367.04,
+     "liquidado": 166846.22,
+     "pago": 166846.22
+    }
+   ],
+   "tipo": "balanço anual"
+  }
+ },
+ "camara_pessoal": {
+  "ano": 2026,
+  "semestre": 1,
+  "fonte": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=S&nr_periodo=1&co_tipo_demonstrativo=RGF+Simplificado&co_poder=L&id_ente=3100203",
+  "pessoal_12m": 1708893.84,
+  "pessoal_pct": 1.48,
+  "limite_pct": 6,
+  "limite_valor": 6908817.13,
+  "rcl": 120649837.55
+ },
+ "prefeitura_pessoal": {
+  "ano": 2026,
+  "semestre": 1,
+  "fonte": "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2026&in_periodicidade=S&nr_periodo=1&co_tipo_demonstrativo=RGF+Simplificado&co_poder=E&id_ente=3100203",
+  "pessoal_12m": 48687422.79,
+  "pessoal_pct": 42.28,
+  "limite_pct": 54,
+  "limite_valor": 62179354.16,
+  "rcl": 120649837.55
+ }
+}

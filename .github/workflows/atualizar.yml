@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write      # só para guardar os dados no repositório
-    timeout-minutes: 60
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
 
@@ -61,6 +61,29 @@ jobs:
 
       - name: Montar a página
         run: python3 coletor/montar.py dados _site/index.html
+
+      - name: Outras cidades em teste (Abaeté e Três Marias) — se falhar, não atrapalha Morada Nova
+        continue-on-error: true
+        timeout-minutes: 40
+        env:
+          COLETAR: ${{ github.event_name != 'push' }}
+        run: |
+          for c in abaete tres-marias; do
+            export CIDADE=$c
+            mkdir -p dados/$c novo/$c _site/$c
+            if [ "$COLETAR" = "true" ]; then
+              if python3 coletor/coletar.py novo/$c/data.json && python3 coletor/verificar.py dados/$c/data.json novo/$c/data.json; then
+                mv novo/$c/data.json dados/$c/data.json
+              else
+                echo "AVISO: coleta de $c suspeita ou incompleta; mantida a última versão boa"
+              fi
+              python3 coletor/financas.py dados/$c/financas.json || echo "AVISO: finanças de $c"
+              python3 coletor/cidade.py dados/$c/cidade.json || echo "AVISO: IBGE de $c"
+            fi
+            [ -f dados/$c/data.json ] || continue
+            python3 coletor/atas.py dados/$c/atas dados/$c/ausencias.json || echo "AVISO: atas de $c"
+            python3 coletor/montar.py dados/$c _site/$c/index.html || echo "AVISO: página de $c"
+          done
 
       - name: Guardar os dados no repositório
         run: |

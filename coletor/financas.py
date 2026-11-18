@@ -4,9 +4,10 @@ Uso: python3 financas.py dados/financas.json"""
 import datetime, json, os, re, sys, time, urllib.parse, urllib.request
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from detalhe_gastos import montar as montar_detalhe
+from cidades import C
 
 SICONFI = "https://apidatalake.tesouro.gov.br/ords/siconfi/tt"
-IBGE = 3143500  # Morada Nova de Minas
+IBGE = int(C["ibge"])
 FUNCOES = ["Legislativa", "Judiciária", "Essencial à Justiça", "Administração", "Defesa Nacional", "Segurança Pública",
            "Relações Exteriores", "Assistência Social", "Previdência Social", "Saúde", "Trabalho", "Educação", "Cultura",
            "Direitos da Cidadania", "Urbanismo", "Habitação", "Saneamento", "Gestão Ambiental", "Ciência e Tecnologia",

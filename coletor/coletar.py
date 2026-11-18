@@ -1,9 +1,12 @@
 """Coleta os dados oficiais da Câmara Municipal de Morada Nova de Minas (API Syssolution).
 Gera data.json. Uso: python3 coletar.py saida/data.json"""
-import json, sys, time, urllib.request, datetime
+import json, os, re, sys, time, urllib.request, datetime
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from cidades import C
 
 BASE = "https://api.syssolution.com.br"
-SITE = "https://camaramoradanova.mg.gov.br"
+SITE = C["camara"]
+DESDE = C.get("desde")  # se definido, só coleta o que é deste ano em diante
 HEADERS = {"Origin": SITE, "Referer": SITE + "/",
            "User-Agent": "RadarMoradaNova/0.1 (projeto civico, coleta lenta)"}
 PAUSA = 0.7  # segundos entre chamadas, para não pesar no servidor
@@ -23,11 +26,27 @@ def api(caminho, tentativas=5):
                 raise
             time.sleep(10 * (i + 1))
 
+def ano_de(x):
+    for k in ("ano",):
+        if str(x.get(k) or "").isdigit():
+            return int(x[k])
+    m = re.search(r"(\d{4})", str(x.get("data") or x.get("data_recebimento") or ""))
+    return int(m.group(1)) if m else 9999
+
 def paginado(caminho_fmt):
+    """Lê todas as páginas. Com DESDE, guarda só o que é recente e para quando
+    uma página inteira já é anterior a DESDE (as listas vêm da mais nova para a mais antiga)."""
     itens, pg = [], 1
     while True:
         d = api(caminho_fmt.format(pg=pg))
-        itens += d.get("data") or []
+        pagina = d.get("data") or []
+        if DESDE:
+            novos = [x for x in pagina if ano_de(x) >= DESDE]
+            itens += novos
+            if pagina and not novos:
+                return itens
+        else:
+            itens += pagina
         if pg >= int(d.get("totalPaginas") or 1):
             return itens
         pg += 1
@@ -61,9 +80,9 @@ def main(saida):
         "projetos": projetos,
     }
     # checagem mínima: não gravar coleta incompleta
-    assert len(vereadores) >= 9, "menos vereadores que o esperado"
-    assert len(props) >= 100, "poucas proposições: coleta suspeita"
-    assert len(projetos) >= 50, "poucos projetos: coleta suspeita"
+    assert len(vereadores) >= C["min_vereadores"], "menos vereadores que o esperado"
+    assert len(props) >= C["min_props"], "poucas proposições: coleta suspeita"
+    assert len(projetos) >= C["min_projetos"], "poucos projetos: coleta suspeita"
     with open(saida, "w", encoding="utf-8") as f:
         json.dump(dados, f, ensure_ascii=False)
     print(f"ok: {len(vereadores)} vereadores, {len(props)} proposições, {len(projetos)} projetos, {len(votacoes)} votações")

@@ -2,15 +2,17 @@
 Compara com a última versão boa (a que está no repositório). Se algo parecer estranho, sai com erro
 e o robô não publica: o site continua com a última versão boa.
 Uso: python3 verificar.py dados/data.json novo/data.json"""
-import json, sys
+import json, os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from cidades import C
 
-antigo = json.load(open(sys.argv[1], encoding="utf-8")) if len(sys.argv) > 2 else None
+antigo = json.load(open(sys.argv[1], encoding="utf-8")) if len(sys.argv) > 2 and os.path.exists(sys.argv[1]) else None
 novo = json.load(open(sys.argv[-1], encoding="utf-8"))
 erros = []
 n = {k: len(novo.get(k, [])) for k in ("vereadores", "proposicoes", "votacoes", "projetos")}
 print("coleta nova:", n)
-if n["vereadores"] != 9:
-    erros.append(f"esperava 9 vereadores, vieram {n['vereadores']}")
+if n["vereadores"] != C["vereadores"]:
+    erros.append(f"esperava {C['vereadores']} vereadores, vieram {n['vereadores']}")
 for v in novo["vereadores"]:
     if not v.get("partido") or "estatisticas" not in v:
         erros.append(f"vereador sem partido ou estatísticas: {v.get('nome')}")
