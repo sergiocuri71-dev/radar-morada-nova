@@ -1,11 +1,11 @@
 {
- "coletado_em": "2026-11-18T15:59:07+00:00",
+ "coletado_em": "2026-11-19T16:01:57+00:00",
  "ano": 2026,
  "fonte": "https://publico.memory.com.br/openknowledge",
  "prefeitura": {
   "areas": {
    "Saúde": {
-    "pago": 13713234.77,
+    "pago": 13718218.1,
     "por_mes": {
      "1": 409979.6,
      "2": 1401646.15,
@@ -17,7 +17,7 @@
      "8": 1319276.61,
      "9": 1341951.96,
      "10": 1331221.9,
-     "11": 670308.99
+     "11": 675292.32
     },
     "recebedores": [
      {
@@ -111,8 +111,8 @@
       "n": 34
      }
     ],
-    "outros": 2372522.24,
-    "n_outros": 192,
+    "outros": 2377505.57,
+    "n_outros": 193,
     "compras": [
      {
       "n": "610/2026",
@@ -316,7 +316,7 @@
     ]
    },
    "Educação": {
-    "pago": 19059975.0,
+    "pago": 19062375.0,
     "por_mes": {
      "1": 654208.63,
      "2": 1364056.8,
@@ -328,7 +328,7 @@
      "8": 1631968.51,
      "9": 2167063.21,
      "10": 1934452.54,
-     "11": 686254.33
+     "11": 688654.33
     },
     "recebedores": [
      {
@@ -422,7 +422,7 @@
       "n": 9
      }
     ],
-    "outros": 2353365.21,
+    "outros": 2355765.21,
     "n_outros": 129,
     "compras": [
      {
@@ -997,7 +997,7 @@
     ]
    },
    "Transporte": {
-    "pago": 2914272.43,
+    "pago": 2978089.12,
     "por_mes": {
      "1": 137431.62,
      "2": 62182.69,
@@ -1009,7 +1009,7 @@
      "8": 405969.45,
      "9": 138248.05,
      "10": 767891.38,
-     "11": 223905.37
+     "11": 287722.06
     },
     "recebedores": [
      {
@@ -1043,16 +1043,16 @@
       "n": 18
      },
      {
+      "nome": "TRIAR ENGENHARIA E LOCAÇÕES LTDA - ME",
+      "pf": false,
+      "valor": 146853.39,
+      "n": 5
+     },
+     {
       "nome": "AMARAL FRANCO TRANSPORTES LTDA",
       "pf": false,
       "valor": 130804.02,
       "n": 10
-     },
-     {
-      "nome": "TRIAR ENGENHARIA E LOCAÇÕES LTDA - ME",
-      "pf": false,
-      "valor": 114243.83,
-      "n": 4
      },
      {
       "nome": "RODOVIARIO 3A LTDA",
@@ -1103,8 +1103,8 @@
       "n": 10
      }
     ],
-    "outros": 276925.54,
-    "n_outros": 49,
+    "outros": 308132.67,
+    "n_outros": 50,
     "compras": [
      {
       "n": "4591/2026",
@@ -1292,12 +1292,17 @@
       "data": "19/10/2026",
       "quem": "TRIAR ENGENHARIA E LOCAÇÕES LTDA - ME",
       "valor": 32609.56,
-      "pago": 0.0,
+      "pago": 32609.56,
       "desc": "PRESTAÇÃO DE SERVIÇO NA IMPLANTAÇÃO DE ADUELAS SOBRE O CÓRREGO PALMEIRA. RECURSO ACORDO JUDICIAL VALE RIO DOCE- CONSTRUÇÃO DE PONTES. C/C: 125.177-5. 1º ADITIVO.",
       "acao": "CONSTR/AMPL. ESTRADAS, PONTE MATA-BURROS",
       "lic": "Artigo 75 Lei 14133 / 2021",
       "unidade": "Secretaria Municipal de Infra-estrutura",
-      "pagamentos": []
+      "pagamentos": [
+       [
+        "18/11/2026",
+        32609.56
+       ]
+      ]
      },
      {
       "n": "5729/2026",
@@ -1319,7 +1324,7 @@
     ]
    },
    "Administração": {
-    "pago": 11154307.82,
+    "pago": 11157021.76,
     "por_mes": {
      "1": 637798.41,
      "2": 951067.54,
@@ -1331,7 +1336,7 @@
      "8": 1440978.37,
      "9": 913714.4,
      "10": 955844.74,
-     "11": 271108.45
+     "11": 273822.39
     },
     "recebedores": [
      {
@@ -1425,7 +1430,7 @@
       "n": 1
      }
     ],
-    "outros": 1445617.02,
+    "outros": 1448330.96,
     "n_outros": 143,
     "compras": [
      {
@@ -1724,11 +1729,11 @@
        ],
        [
         "30/01/2026",
-        18.69
+        7834.89
        ],
        [
         "30/01/2026",
-        7834.89
+        18.69
        ],
        [
         "10/02/2026",
@@ -1931,7 +1936,7 @@
     ]
    },
    "Saneamento": {
-    "pago": 136926.7,
+    "pago": 196143.84,
     "por_mes": {
      "1": 16751.72,
      "2": 10485.09,
@@ -1943,9 +1948,15 @@
      "8": 12450.23,
      "9": 637.88,
      "10": 24709.2,
-     "11": 10468.2
+     "11": 69685.34
     },
     "recebedores": [
+     {
+      "nome": "FRAGA MARQUES ENGENHARIA LTDA - ME",
+      "pf": false,
+      "valor": 59059.14,
+      "n": 1
+     },
      {
       "nome": "Microempreendedor(a) individual (materiais)",
       "pf": true,
@@ -2029,16 +2040,10 @@
       "pf": false,
       "valor": 1046.0,
       "n": 7
-     },
-     {
-      "nome": "JJ ELETRICA E ELETRONICA LTDA - ME",
-      "pf": false,
-      "valor": 726.0,
-      "n": 1
      }
     ],
-    "outros": 735.28,
-    "n_outros": 4,
+    "outros": 1619.28,
+    "n_outros": 6,
     "compras": [
      {
       "n": "6501/2026",
@@ -2057,12 +2062,17 @@
       "data": "26/10/2026",
       "quem": "FRAGA MARQUES ENGENHARIA LTDA - ME",
       "valor": 59059.14,
-      "pago": 0.0,
+      "pago": 59059.14,
       "desc": "PRESTAÇÃO DE SERVIÇO DE ENGENHARIA E ARQUITETURA PARA ELABORAÇÃO DE PROJETOS, ESTUDOS E ORÇAMENTOS DE OBRAS DE DRENAGEM PLUVIAL, ABASTECIMENTO DE ÁGUA E ESGOTAMENTO SANITÁRIO DO MUNICÍPIO E SEUS POVOADOS.",
       "acao": "ABASTEC. ÁGUAS, ESGOTO E GALERIA PLUVIAL",
       "lic": "Artigo 75 Lei 14133 / 2021",
       "unidade": "Secretaria Municipal de Infra-estrutura",
-      "pagamentos": []
+      "pagamentos": [
+       [
+        "18/11/2026",
+        59059.14
+       ]
+      ]
      },
      {
       "n": "499/2026",
@@ -2257,7 +2267,7 @@
     ]
    },
    "Assistência Social": {
-    "pago": 1806213.65,
+    "pago": 1806768.98,
     "por_mes": {
      "1": 107392.69,
      "2": 132423.41,
@@ -2269,7 +2279,7 @@
      "8": 144110.57,
      "9": 283802.11,
      "10": 178326.52,
-     "11": 30493.11
+     "11": 31048.44
     },
     "recebedores": [
      {
@@ -2363,7 +2373,7 @@
       "n": 2
      }
     ],
-    "outros": 178435.63,
+    "outros": 178990.96,
     "n_outros": 65,
     "compras": [
      {
@@ -3317,6 +3327,42 @@
       ]
      },
      {
+      "n": "6159/2026",
+      "data": "13/10/2026",
+      "quem": "TREZE DISTRIBUIDORA LTDA - ME",
+      "valor": 552.92,
+      "pago": 0.0,
+      "desc": "AQUISIÇÃO DE PRODUTOS DE LIMPEZA E HIGIENE PESSOAL PARA ATENDER AS DEMANDAS DO SINDICATO RURAL DESTE MUNICIPIO.",
+      "acao": "ATIVIDADES DEPARTAMENTO DE AGRICULTURA",
+      "lic": "Artigo 75 Lei 14133 / 2021",
+      "unidade": "Secretaria Municipal de Infra-estrutura",
+      "pagamentos": []
+     },
+     {
+      "n": "6157/2026",
+      "data": "13/10/2026",
+      "quem": "DINIZ E DINIZ COMERCIO DIGITAL LTDA - ME",
+      "valor": 470.65,
+      "pago": 0.0,
+      "desc": "AQUISIÇÃO DE PRODUTOS DE LIMPEZA E HIGIENE PESSOAL PARA ATENDER AS DEMANDAS DO SINDICATO RURAL DESTE MUNICIPIO.",
+      "acao": "ATIVIDADES DEPARTAMENTO DE AGRICULTURA",
+      "lic": "Artigo 75 Lei 14133 / 2021",
+      "unidade": "Secretaria Municipal de Infra-estrutura",
+      "pagamentos": []
+     },
+     {
+      "n": "6158/2026",
+      "data": "13/10/2026",
+      "quem": "DINIZ E DINIZ COMERCIO DIGITAL LTDA - ME",
+      "valor": 428.62,
+      "pago": 0.0,
+      "desc": "AQUISIÇÃO DE PRODUTOS DE LIMPEZA E HIGIENE PESSOAL PARA ATENDER AS DEMANDAS DO SINDICATO RURAL DESTE MUNICIPIO.",
+      "acao": "ATIVIDADES DEPARTAMENTO DE AGRICULTURA",
+      "lic": "Artigo 75 Lei 14133 / 2021",
+      "unidade": "Secretaria Municipal de Infra-estrutura",
+      "pagamentos": []
+     },
+     {
       "n": "4846/2026",
       "data": "17/08/2026",
       "quem": "JVW ESTRUTURAL",
@@ -3336,7 +3382,7 @@
     ]
    },
    "Desporto e Lazer": {
-    "pago": 540489.68,
+    "pago": 562139.68,
     "por_mes": {
      "1": 27605.57,
      "2": 27171.75,
@@ -3348,7 +3394,7 @@
      "8": 44735.55,
      "9": 57795.73,
      "10": 57636.8,
-     "11": 29873.04
+     "11": 51523.04
     },
     "recebedores": [
      {
@@ -3366,8 +3412,8 @@
      {
       "nome": "UNIAO MORADANOVENSE DE DESPORTOS",
       "pf": false,
-      "valor": 53800.0,
-      "n": 4
+      "valor": 75450.0,
+      "n": 5
      },
      {
       "nome": "ESCOLINHA LAERCIO LUCAS DE SOUZA",
@@ -3516,12 +3562,17 @@
       "data": "03/11/2026",
       "quem": "UNIAO MORADANOVENSE DE DESPORTOS",
       "valor": 21650.0,
-      "pago": 0.0,
+      "pago": 21650.0,
       "desc": "EMPENHO REF. A REPASSE DE CONTRIBUIÇÃO SOCIAL (EMENDA IMPOSITIVA 03/2025) CONCEDIDA A ENTIDADE SUPRA CITADA CONFORME LEI MUNICIPAL 1865/2026. REPASSE PARA REFORMA TELHADO DO VESTIARIO E PAGAMENTO DE ARBITRAGEM.",
       "acao": "CONTRIB. UNIÃO MORADENSENSE DE DESPORTO",
       "lic": "Não se Aplica",
       "unidade": "Secretaria de Esporte, Turismo e Cultura",
-      "pagamentos": []
+      "pagamentos": [
+       [
+        "18/11/2026",
+        21650.0
+       ]
+      ]
      },
      {
       "n": "6595/2026",
@@ -3984,7 +4035,7 @@
     ]
    },
    "Gestão Ambiental": {
-    "pago": 168992.47,
+    "pago": 172442.47,
     "por_mes": {
      "1": 11683.52,
      "2": 13938.65,
@@ -3996,7 +4047,7 @@
      "8": 17647.28,
      "9": 13784.74,
      "10": 15999.51,
-     "11": 1906.25
+     "11": 5356.25
     },
     "recebedores": [
      {
@@ -4034,6 +4085,12 @@
       "pf": false,
       "valor": 3615.57,
       "n": 3
+     },
+     {
+      "nome": "CLINICA VETERINARIA MORADA DOS PETS",
+      "pf": false,
+      "valor": 3450.0,
+      "n": 2
      },
      {
       "nome": "CONSELHO FEDERAL DOS TECNICOS AGRICOLAS - CFTA",
@@ -4155,20 +4212,66 @@
       "data": "03/11/2026",
       "quem": "CLINICA VETERINARIA MORADA DOS PETS",
       "valor": 2550.0,
-      "pago": 0.0,
+      "pago": 2550.0,
       "desc": "PRESTAÇAO DE SERVIÇO DE CASTRAÇOES E CONSULTAS EM ANIMAIS DE RUA NESSE MUNICIPIO EM 2026. REFERENTE A 2 CASTRAÇOES EM CADELA FEMEA A R$600,00 CADA, 3 CASTRAÇOES EM CÃO MACHO A R$400,00 CADA E 1 CONSULTA MEDICA VETERINARIA",
       "acao": "MANUTENÇÃO DO MEIO AMBIENTE",
       "lic": "Artigo 75 Lei 14133 / 2021",
       "unidade": "Secretaria Municipal de Infra-estrutura",
-      "pagamentos": []
+      "pagamentos": [
+       [
+        "18/11/2026",
+        2550.0
+       ]
+      ]
      },
      {
       "n": "6489/2026",
       "data": "03/11/2026",
       "quem": "CLINICA VETERINARIA MORADA DOS PETS",
       "valor": 900.0,
-      "pago": 0.0,
+      "pago": 900.0,
       "desc": "PRESTAÇAO DE SERVIÇO DE EXAMES BIOQUIMICOS E CONSULTA EM ANIMAIS DE RUA NESSE MUNICIPIO EM 2026. REFERENTE A 1 CONSULTA MEDICA VETERINARIA A R$150,00 CADA E 3 EXAMES BIOQUIMICOS A R$250,00 CADA.",
+      "acao": "MANUTENÇÃO DO MEIO AMBIENTE",
+      "lic": "Artigo 75 Lei 14133 / 2021",
+      "unidade": "Secretaria Municipal de Infra-estrutura",
+      "pagamentos": [
+       [
+        "18/11/2026",
+        900.0
+       ]
+      ]
+     },
+     {
+      "n": "6663/2026",
+      "data": "03/11/2026",
+      "quem": "TREZE DISTRIBUIDORA LTDA - ME",
+      "valor": 688.98,
+      "pago": 0.0,
+      "desc": "AQUISIÇÃO DE PRODUTOS PARA ATENDER AS DEMANDAS DO CENTRO DE CASTRAÇÃO DESTE MUNICIPIO.",
+      "acao": "MANUTENÇÃO DO MEIO AMBIENTE",
+      "lic": "Artigo 75 Lei 14133 / 2021",
+      "unidade": "Secretaria Municipal de Infra-estrutura",
+      "pagamentos": []
+     },
+     {
+      "n": "6661/2026",
+      "data": "03/11/2026",
+      "quem": "DINIZ E DINIZ COMERCIO DIGITAL LTDA - ME",
+      "valor": 480.49,
+      "pago": 0.0,
+      "desc": "AQUISIÇÃO DE PRODUTOS PARA ATENDER AS DEMANDAS DO CENTRO DE CASTRAÇÃO DESTE MUNICIPIO.",
+      "acao": "MANUTENÇÃO DO MEIO AMBIENTE",
+      "lic": "Artigo 75 Lei 14133 / 2021",
+      "unidade": "Secretaria Municipal de Infra-estrutura",
+      "pagamentos": []
+     },
+     {
+      "n": "6662/2026",
+      "data": "03/11/2026",
+      "quem": "DINIZ E DINIZ COMERCIO DIGITAL LTDA - ME",
+      "valor": 316.6,
+      "pago": 0.0,
+      "desc": "AQUISIÇÃO DE PRODUTOS PARA ATENDER AS DEMANDAS DO CENTRO DE CASTRAÇÃO DESTE MUNICIPIO.",
       "acao": "MANUTENÇÃO DO MEIO AMBIENTE",
       "lic": "Artigo 75 Lei 14133 / 2021",
       "unidade": "Secretaria Municipal de Infra-estrutura",
@@ -4222,23 +4325,6 @@
        [
         "31/03/2026",
         116.0
-       ]
-      ]
-     },
-     {
-      "n": "6384/2026",
-      "data": "26/10/2026",
-      "quem": "SECRETARIA DE ESTADO DA FAZENDA DE MINAS GERAIS",
-      "valor": 69.48,
-      "pago": 69.48,
-      "desc": "EMPENHO REFERENTE A DECLARAÇÃO E CERTIDOES RELATIVASA PROCESSO DE LICENCIAMENTO E DE REGULARIZAÇÃO AMBIENTAL PAVIMENTAÇAO ESTRADA VICINAL NESTE MUNICIPIO.",
-      "acao": "MANUTENÇÃO DO MEIO AMBIENTE",
-      "lic": "Não se Aplica",
-      "unidade": "Secretaria Municipal de Infra-estrutura",
-      "pagamentos": [
-       [
-        "09/11/2026",
-        69.48
        ]
       ]
      }
@@ -6033,7 +6119,7 @@
     ]
    }
   },
-  "ultima": "2026-11-17",
+  "ultima": "2026-11-18",
   "portal": "https://ilai.memory.com.br/#/entidades/login/9BP6DH/1/"
  },
  "camara": {
