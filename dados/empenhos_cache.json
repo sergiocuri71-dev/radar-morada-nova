@@ -7904,6 +7904,9 @@
 "lic": "Artigo 75 Lei 14133 / 2021",
 "tipo": "Outros Serv. Terceiros -Pessoa Jurídica"
 },
+"prefeitura:2026:120266491": {
+"pf": "Microempreendedor(a) individual (serviços)"
+},
 "prefeitura:2026:1202665": {
 "pf": "Microempreendedor(a) individual (serviços)"
 },
@@ -7979,11 +7982,47 @@
 "lic": "Artigo 75 Lei 14133 / 2021",
 "tipo": "Outros Materiais de Consumo"
 },
+"prefeitura:2026:120266765": {
+"pf": "Auxiliar de engenharia civil"
+},
+"prefeitura:2026:120266766": {
+"pf": "Pintor"
+},
+"prefeitura:2026:120266767": {
+"pf": "Ajudante de engenharia civil"
+},
+"prefeitura:2026:120266768": {
+"pf": "Microempreendedor(a) individual (serviços)"
+},
 "prefeitura:2026:1202668": {
 "pf": "Microempreendedor(a) individual (serviços)"
 },
 "prefeitura:2026:12026680": {
 "pf": "Microempreendedor(a) individual (serviços)"
+},
+"prefeitura:2026:120266801": {
+"acao": "ATIVIDADES DA SECRETARIA DE CULTURA",
+"desc": "AQUISIÇÃO DE SACOS DE LIXO PARA USO NA LIMPEZA DA CASA DA CULTURA DESTE MUNICIPIO. C/C: 10.200-8.",
+"lic": "Dispensa Art. 24",
+"tipo": "Outros Materiais de Consumo"
+},
+"prefeitura:2026:120266803": {
+"acao": "MANUTENÇÃO DO MEIO AMBIENTE",
+"desc": "AQUISIÇÃO DE SACOS DE LIXO PARA ATENDER AS DEMANDAS DO CENTRO DE CASTRAÇÃO DESTE MUNICIPIO. C/C: 14.521-1.",
+"lic": "Dispensa Art. 24",
+"tipo": "Outros Materiais de Consumo"
+},
+"prefeitura:2026:120266805": {
+"acao": "ATIVIDADES DA SECRETARIA DE CULTURA",
+"desc": "AQUISIÇÃO DE PRODUTOS DE LIMPEZA PARA ATENDER AS DEMANDAS DA CASA DA CULTURA. C/C: 10.200-8.",
+"lic": "Artigo 75 Lei 14133 / 2021",
+"tipo": "Outros Materiais de Consumo"
+},
+"prefeitura:2026:120266813": {
+"pf": "Ajudante de engenharia civil"
+},
+"prefeitura:2026:120266814": {
+"pf": "Auxiliar de engenharia civil"
 },
 "prefeitura:2026:12026691": {
 "pf": "Microempreendedor(a) individual (serviços)"

@@ -1,5 +1,5 @@
 {
- "coletado_em": "2026-11-19T16:01:57+00:00",
+ "coletado_em": "2026-11-20T15:44:55+00:00",
  "ano": 2026,
  "fonte": "https://publico.memory.com.br/openknowledge",
  "prefeitura": {
@@ -1324,7 +1324,7 @@
     ]
    },
    "Administração": {
-    "pago": 11157021.76,
+    "pago": 11159219.0,
     "por_mes": {
      "1": 637798.41,
      "2": 951067.54,
@@ -1336,7 +1336,7 @@
      "8": 1440978.37,
      "9": 913714.4,
      "10": 955844.74,
-     "11": 273822.39
+     "11": 276019.63
     },
     "recebedores": [
      {
@@ -1354,8 +1354,8 @@
      {
       "nome": "MINISTÉRIO DA FAZENDA",
       "pf": false,
-      "valor": 723167.69,
-      "n": 146
+      "valor": 725351.66,
+      "n": 148
      },
      {
       "nome": "PRIME CONSULTORIA E ASSESSORIA EMPRESARIAL LTDA",
@@ -1430,7 +1430,7 @@
       "n": 1
      }
     ],
-    "outros": 1448330.96,
+    "outros": 1448344.23,
     "n_outros": 143,
     "compras": [
      {
@@ -1697,7 +1697,7 @@
       "data": "02/01/2026",
       "quem": "MINISTÉRIO DA FAZENDA",
       "valor": 150000.0,
-      "pago": 208064.02,
+      "pago": 210247.99,
       "desc": "EMPENHO REFERENTE A DESCONTO DO PASEP EFETUADO NA COTA DO",
       "acao": "ATIVID. SECRET. ADMINISTRAÇÃO E FAZENDA",
       "lic": "Não se Aplica",
@@ -4278,6 +4278,18 @@
       "pagamentos": []
      },
      {
+      "n": "6803/2026",
+      "data": "18/11/2026",
+      "quem": "LOGO ALI SUPERMERCADO LTDA",
+      "valor": 267.0,
+      "pago": 0.0,
+      "desc": "AQUISIÇÃO DE SACOS DE LIXO PARA ATENDER AS DEMANDAS DO CENTRO DE CASTRAÇÃO DESTE MUNICIPIO. C/C: 14.521-1.",
+      "acao": "MANUTENÇÃO DO MEIO AMBIENTE",
+      "lic": "Dispensa Art. 24",
+      "unidade": "Secretaria Municipal de Infra-estrutura",
+      "pagamentos": []
+     },
+     {
       "n": "1229/2026",
       "data": "11/02/2026",
       "quem": "SECRETARIA DE ESTADO DA FAZENDA DE MINAS GERAIS",
@@ -4308,23 +4320,6 @@
        [
         "13/03/2026",
         136.5
-       ]
-      ]
-     },
-     {
-      "n": "1500/2026",
-      "data": "05/03/2026",
-      "quem": "GRAFMOR",
-      "valor": 116.0,
-      "pago": 116.0,
-      "desc": "EMPENHO REFERENTE A PRESTAÇÃO DE SERVIÇO NA CONFECÇÃO DE CARIMBO AUTOMÁTICO PARA USO NO DEPARTAMENTO DO MEIO AMBIENTE DESTE MUNICIPIO. C/C: 14.521-1.",
-      "acao": "MANUTENÇÃO DO MEIO AMBIENTE",
-      "lic": "Pregão 2023/19",
-      "unidade": "Secretaria Municipal de Infra-estrutura",
-      "pagamentos": [
-       [
-        "31/03/2026",
-        116.0
        ]
       ]
      }
@@ -5496,31 +5491,26 @@
       ]
      },
      {
-      "n": "1671/2026",
-      "data": "05/03/2026",
-      "quem": "TREZE DISTRIBUIDORA LTDA - ME",
-      "valor": 525.6,
-      "pago": 525.6,
-      "desc": "EMPENHO REFERENTE A AQUISIÇÃO DE PRODUTOS DE LIMPEZA PARA ATENDER AS DEMANDAS DAS PRAÇAS DR AGENOR SOARES DOS SANTOS, PADRE BARONE E OLÍMPIO FRANCISCO DA SILVA DESTE MUNICIPIO. C/C: 10.200-8.",
-      "acao": "ATIVIDADES DA SECRETARIA DE CULTURA",
-      "lic": "Pregão Eletrônico 2025/38",
-      "unidade": "Secretaria de Esporte, Turismo e Cultura",
-      "pagamentos": [
-       [
-        "08/05/2026",
-        525.6
-       ]
-      ]
-     },
-     {
-      "n": "6476/2026",
-      "data": "26/10/2026",
-      "quem": "ATTOLLO ELEVADORES LTDA",
-      "valor": 500.0,
+      "n": "6805/2026",
+      "data": "10/11/2026",
+      "quem": "DINIZ E DINIZ COMERCIO DIGITAL LTDA - ME",
+      "valor": 557.18,
       "pago": 0.0,
-      "desc": "EMPENHO REFERENTE A PRESTAÇAO DE SERVIÇO DE MANUTENÇAO PREVENTIVA NO ELEVADOR DA CASA DA CULTURA EM NOVEMBRO DE 2026. TOTALIZANDO 1 MANUTENÇAO A R$500,00.",
+      "desc": "AQUISIÇÃO DE PRODUTOS DE LIMPEZA PARA ATENDER AS DEMANDAS DA CASA DA CULTURA. C/C: 10.200-8.",
       "acao": "ATIVIDADES DA SECRETARIA DE CULTURA",
       "lic": "Artigo 75 Lei 14133 / 2021",
+      "unidade": "Secretaria de Esporte, Turismo e Cultura",
+      "pagamentos": []
+     },
+     {
+      "n": "6801/2026",
+      "data": "18/11/2026",
+      "quem": "LOGO ALI SUPERMERCADO LTDA",
+      "valor": 534.0,
+      "pago": 0.0,
+      "desc": "AQUISIÇÃO DE SACOS DE LIXO PARA USO NA LIMPEZA DA CASA DA CULTURA DESTE MUNICIPIO. C/C: 10.200-8.",
+      "acao": "ATIVIDADES DA SECRETARIA DE CULTURA",
+      "lic": "Dispensa Art. 24",
       "unidade": "Secretaria de Esporte, Turismo e Cultura",
       "pagamentos": []
      }
@@ -6119,7 +6109,7 @@
     ]
    }
   },
-  "ultima": "2026-11-18",
+  "ultima": "2026-11-19",
   "portal": "https://ilai.memory.com.br/#/entidades/login/9BP6DH/1/"
  },
  "camara": {
