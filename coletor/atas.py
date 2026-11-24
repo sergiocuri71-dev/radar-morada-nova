@@ -1,7 +1,7 @@
 """Baixa as atas (PDF escaneado), faz OCR e extrai as ausências de vereadores.
 Uso: python3 atas.py pasta_cache saida/ausencias.json
 Precisa de: pdftoppm (poppler-utils) e tesseract com o idioma 'por'."""
-import json, os, re, subprocess, sys, unicodedata, urllib.request
+import datetime, json, os, re, subprocess, sys, unicodedata, urllib.request
 sys.path.insert(0, os.path.dirname(__file__))
 from coletar import api, HEADERS
 from cidades import C
@@ -85,13 +85,29 @@ def ausencias(texto):
                 achados[nome] = achados.get(nome, False) or justificada
     return achados
 
+MESES = ["janeiro", "fevereiro", "marco", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
+
+def data_do_texto(texto, rotulo):
+    """Data escrita dentro da própria ata ("realizada no dia 03 de novembro de 2026").
+    A Câmara às vezes cadastra a ata no site com a data errada; vale o que está no documento,
+    desde que a data seja plausível (até 90 dias do rótulo)."""
+    m = re.search(r'realizad[ao] no dia (\d{1,2}) de (\w+) de (\d{4})', sa(re.sub(r'\s+', ' ', texto)))
+    if not m or m.group(2) not in MESES:
+        return rotulo
+    try:
+        d = datetime.date(int(m.group(3)), MESES.index(m.group(2)) + 1, int(m.group(1)))
+        r = datetime.date(int(rotulo[6:]), int(rotulo[3:5]), int(rotulo[:2]))
+    except ValueError:
+        return rotulo
+    return d.strftime("%d/%m/%Y") if abs((d - r).days) <= 90 else rotulo
+
 def main(cache, saida):
     global APELIDOS
     os.makedirs(cache, exist_ok=True)
     if C["slug"] != "morada-nova-de-minas":
         APELIDOS = apelidos_automaticos(os.path.join(os.path.dirname(saida), "data.json"))
     lista = api("/portal/reuniao/Atas")
-    reunioes = []
+    reunioes, vistas = [], set()
     for a in sorted(lista, key=lambda x: x["data"]):
         if not PLENARIO.search(a["nome"]) or re.search(r'comiss|posse|solene|elei|especial', a["nome"], re.I):
             continue
@@ -105,7 +121,17 @@ def main(cache, saida):
             print(f"AVISO: ata {a['link']} não lida ({e})")
             continue
         d = a["data"]
-        reunioes.append({"data": f"{d[8:]}/{d[5:7]}/{d[:4]}", "nome": a["nome"].strip(),
+        rotulo = f"{d[8:]}/{d[5:7]}/{d[:4]}"
+        data = data_do_texto(texto, rotulo)
+        num = re.search(r'(\d+)\s*[ªº]', a["nome"])
+        chave = (data, num.group(1) if num else a["nome"], bool(re.search(r'extraord', a["nome"], re.I)))
+        if chave in vistas:
+            print(f"AVISO: ata repetida no site da Câmara ({a['nome'].strip()}); usada só uma vez")
+            continue
+        vistas.add(chave)
+        if data != rotulo:
+            print(f"AVISO: '{a['nome'].strip()}' está no site com data {rotulo}, mas o documento diz {data}")
+        reunioes.append({"data": data, "data_site": rotulo if data != rotulo else None, "nome": a["nome"].strip(),
                          "url": CDN + a["link"], "ausentes": ausencias(texto),
                          "texto": sa(re.sub(r'\s+', ' ', texto))})
     json.dump({"reunioes": reunioes}, open(saida, "w", encoding="utf-8"), ensure_ascii=False)
