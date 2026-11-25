@@ -116,6 +116,9 @@
 "lic": "ADESÃO PREGÃO ELETRONICO 2025/1",
 "tipo": "Locação de Softwares"
 },
+"camara:2026:22026185": {
+"pf": "Servidor(a) (acerto ou indenização)"
+},
 "camara:2026:2202619": {
 "acao": "MANUT. ATIVIDADES SECRETARIA DA CÂMARA",
 "desc": "VALOR REFERE-SE A PREST. SERV. E LOCAÇÃO DE LICENCIAMENTO, NÃO VITALÍCIO, DO DIREITO DE USO DE SISTEMA DE GESTÃO LEGISLATIVA, APOIO PARLAMENTAR, HOSPEDAGEM DE PORTAL WEB E MÓDULOS DE CONTROLE E VOTAÇÃO DAS SESSÕES LEGISLATIVAS, NO EXERCÍCIO DE 2026.",
@@ -8022,6 +8025,39 @@
 "pf": "Ajudante de engenharia civil"
 },
 "prefeitura:2026:120266814": {
+"pf": "Auxiliar de engenharia civil"
+},
+"prefeitura:2026:120266832": {
+"pf": "Prefeito (diárias de viagem)"
+},
+"prefeitura:2026:120266834": {
+"pf": "Microempreendedor(a) individual (obras)"
+},
+"prefeitura:2026:120266835": {
+"pf": "Hospedagens"
+},
+"prefeitura:2026:120266836": {
+"pf": "Assistente de limpeza"
+},
+"prefeitura:2026:120266837": {
+"pf": "Fisioterapeuta"
+},
+"prefeitura:2026:120266839": {
+"pf": "Estoquista"
+},
+"prefeitura:2026:120266841": {
+"pf": "Microempreendedor(a) individual (obras)"
+},
+"prefeitura:2026:120266842": {
+"pf": "Microempreendedor(a) individual (materiais)"
+},
+"prefeitura:2026:120266843": {
+"pf": "Assistente de limpeza"
+},
+"prefeitura:2026:120266844": {
+"pf": "Auxiliar de cuidador"
+},
+"prefeitura:2026:120266845": {
 "pf": "Auxiliar de engenharia civil"
 },
 "prefeitura:2026:12026691": {

@@ -1,11 +1,11 @@
 {
- "coletado_em": "2026-11-23T18:36:47+00:00",
+ "coletado_em": "2026-11-25T17:31:10+00:00",
  "ano": 2026,
  "fonte": "https://publico.memory.com.br/openknowledge",
  "prefeitura": {
   "areas": {
    "Saúde": {
-    "pago": 13718218.1,
+    "pago": 13799112.61,
     "por_mes": {
      "1": 409979.6,
      "2": 1401646.15,
@@ -17,7 +17,7 @@
      "8": 1319276.61,
      "9": 1341951.96,
      "10": 1331221.9,
-     "11": 675292.32
+     "11": 756186.83
     },
     "recebedores": [
      {
@@ -35,8 +35,8 @@
      {
       "nome": "ASSOCIACAO DE PAIS E AMIGOS DOS EXCEPCIONAIS DE MORADA NOVA",
       "pf": false,
-      "valor": 607761.76,
-      "n": 22
+      "valor": 640682.33,
+      "n": 23
      },
      {
       "nome": "PRIME CONSULTORIA E ASSESSORIA EMPRESARIAL LTDA",
@@ -53,8 +53,8 @@
      {
       "nome": "POSTO SAO JOAO BOSCO LTDA",
       "pf": false,
-      "valor": 319922.99,
-      "n": 155
+      "valor": 330450.6,
+      "n": 161
      },
      {
       "nome": "CLINICA MEDICA E PEDIATRA COSTA CORDEIRO",
@@ -65,8 +65,8 @@
      {
       "nome": "Microempreendedor(a) individual (serviços)",
       "pf": true,
-      "valor": 237801.26,
-      "n": 70
+      "valor": 238401.26,
+      "n": 71
      },
      {
       "nome": "LC SERVIÇOS DE SAÚDE LTDA",
@@ -111,8 +111,8 @@
       "n": 34
      }
     ],
-    "outros": 2377505.57,
-    "n_outros": 193,
+    "outros": 2414351.9,
+    "n_outros": 195,
     "compras": [
      {
       "n": "610/2026",
@@ -316,7 +316,7 @@
     ]
    },
    "Educação": {
-    "pago": 19062375.0,
+    "pago": 19085996.54,
     "por_mes": {
      "1": 654208.63,
      "2": 1364056.8,
@@ -328,7 +328,7 @@
      "8": 1631968.51,
      "9": 2167063.21,
      "10": 1934452.54,
-     "11": 688654.33
+     "11": 712275.87
     },
     "recebedores": [
      {
@@ -376,8 +376,8 @@
      {
       "nome": "POSTO SAO JOAO BOSCO LTDA",
       "pf": false,
-      "valor": 252187.47,
-      "n": 65
+      "valor": 263411.76,
+      "n": 68
      },
      {
       "nome": "LEMOS & MENDONCA TRANSPORTES LTDA",
@@ -422,8 +422,8 @@
       "n": 9
      }
     ],
-    "outros": 2355765.21,
-    "n_outros": 129,
+    "outros": 2368162.46,
+    "n_outros": 130,
     "compras": [
      {
       "n": "3532/2026",
@@ -679,7 +679,7 @@
     ]
    },
    "Segurança Pública": {
-    "pago": 1288267.11,
+    "pago": 1297380.18,
     "por_mes": {
      "1": 108170.42,
      "2": 114520.02,
@@ -691,7 +691,7 @@
      "8": 120540.8,
      "9": 136832.14,
      "10": 132080.81,
-     "11": 11702.1
+     "11": 20815.17
     },
     "recebedores": [
      {
@@ -703,8 +703,8 @@
      {
       "nome": "POSTO SAO JOAO BOSCO LTDA",
       "pf": false,
-      "valor": 122939.62,
-      "n": 83
+      "valor": 127884.64,
+      "n": 87
      },
      {
       "nome": "MUNICIPIO DE MORADA NOVA DE MINAS",
@@ -735,6 +735,12 @@
       "pf": false,
       "valor": 4340.0,
       "n": 2
+     },
+     {
+      "nome": "AUTO POSTO MAX MORADA NOVA",
+      "pf": false,
+      "valor": 4168.05,
+      "n": 3
      },
      {
       "nome": "VANDERLUCIO RESTAURANTE E PIZZARIA LTDA",
@@ -777,16 +783,10 @@
       "pf": true,
       "valor": 322.0,
       "n": 1
-     },
-     {
-      "nome": "POSTO MANAO LTDA",
-      "pf": false,
-      "valor": 227.15,
-      "n": 1
      }
     ],
-    "outros": 190.9,
-    "n_outros": 3,
+    "outros": 418.05,
+    "n_outros": 4,
     "compras": [
      {
       "n": "4281/2026",
@@ -997,7 +997,7 @@
     ]
    },
    "Transporte": {
-    "pago": 2978089.12,
+    "pago": 3001155.53,
     "por_mes": {
      "1": 137431.62,
      "2": 62182.69,
@@ -1009,7 +1009,7 @@
      "8": 405969.45,
      "9": 138248.05,
      "10": 767891.38,
-     "11": 287722.06
+     "11": 310788.47
     },
     "recebedores": [
      {
@@ -1051,8 +1051,8 @@
      {
       "nome": "AMARAL FRANCO TRANSPORTES LTDA",
       "pf": false,
-      "valor": 130804.02,
-      "n": 10
+      "valor": 146094.43,
+      "n": 11
      },
      {
       "nome": "RODOVIARIO 3A LTDA",
@@ -1103,8 +1103,8 @@
       "n": 10
      }
     ],
-    "outros": 308132.67,
-    "n_outros": 50,
+    "outros": 315908.67,
+    "n_outros": 51,
     "compras": [
      {
       "n": "4591/2026",
@@ -1128,7 +1128,7 @@
       "data": "05/01/2026",
       "quem": "AMARAL FRANCO TRANSPORTES LTDA",
       "valor": 150000.0,
-      "pago": 130804.02,
+      "pago": 146094.43,
       "desc": "EMPENHO REFERENTE A PRESTAÇÃO DE SERVIÇO DE TRANSPORTE EXECUTIVO NESTE MUNICIPIO NO EXERCICIO DE 2026. CONFORME PROCESSO JUDICIAL Nº 100000-87-2018.4.01.3812, PREFEITURA MUNICIPAL DE MORADA NOVA DE MINAS/MG-CODEVASF.",
       "acao": "CONVÊNIO COM A CODEVASF",
       "lic": "Inexigibilidade 2025/3",
@@ -1173,6 +1173,10 @@
        [
         "23/10/2026",
         15400.03
+       ],
+       [
+        "23/11/2026",
+        15290.41
        ]
       ]
      },
@@ -1324,7 +1328,7 @@
     ]
    },
    "Administração": {
-    "pago": 11159219.0,
+    "pago": 11223618.56,
     "por_mes": {
      "1": 637798.41,
      "2": 951067.54,
@@ -1336,7 +1340,7 @@
      "8": 1440978.37,
      "9": 913714.4,
      "10": 955844.74,
-     "11": 276019.63
+     "11": 340419.19
     },
     "recebedores": [
      {
@@ -1348,8 +1352,8 @@
      {
       "nome": "POSTO SAO JOAO BOSCO LTDA",
       "pf": false,
-      "valor": 927115.14,
-      "n": 90
+      "valor": 964793.29,
+      "n": 92
      },
      {
       "nome": "MINISTÉRIO DA FAZENDA",
@@ -1402,8 +1406,8 @@
      {
       "nome": "COPASA MG",
       "pf": false,
-      "valor": 153647.14,
-      "n": 15
+      "valor": 154048.8,
+      "n": 16
      },
      {
       "nome": "PUBLICUS CONTABILIDADE E SISTEMA S/C LTDA.",
@@ -1430,8 +1434,8 @@
       "n": 1
      }
     ],
-    "outros": 1448344.23,
-    "n_outros": 143,
+    "outros": 1474663.98,
+    "n_outros": 144,
     "compras": [
      {
       "n": "1392/2026",
@@ -2267,7 +2271,7 @@
     ]
    },
    "Assistência Social": {
-    "pago": 1806768.98,
+    "pago": 1838589.86,
     "por_mes": {
      "1": 107392.69,
      "2": 132423.41,
@@ -2279,7 +2283,7 @@
      "8": 144110.57,
      "9": 283802.11,
      "10": 178326.52,
-     "11": 31048.44
+     "11": 62869.32
     },
     "recebedores": [
      {
@@ -2315,8 +2319,14 @@
      {
       "nome": "LOGO ALI SUPERMERCADO LTDA",
       "pf": false,
-      "valor": 67581.98,
-      "n": 33
+      "valor": 76343.78,
+      "n": 40
+     },
+     {
+      "nome": "ESCOLINHA LAERCIO LUCAS DE SOUZA",
+      "pf": false,
+      "valor": 70876.56,
+      "n": 2
      },
      {
       "nome": "Psicólogo(a)",
@@ -2329,12 +2339,6 @@
       "pf": true,
       "valor": 54565.75,
       "n": 22
-     },
-     {
-      "nome": "ESCOLINHA LAERCIO LUCAS DE SOUZA",
-      "pf": false,
-      "valor": 49876.56,
-      "n": 1
      },
      {
       "nome": "GRUPO ESPERANCA",
@@ -2373,8 +2377,8 @@
       "n": 2
      }
     ],
-    "outros": 178990.96,
-    "n_outros": 65,
+    "outros": 181050.04,
+    "n_outros": 66,
     "compras": [
      {
       "n": "1345/2026",
@@ -2642,7 +2646,7 @@
       "data": "01/04/2026",
       "quem": "REPRIL LTDA - EPP",
       "valor": 32000.0,
-      "pago": 2355.99,
+      "pago": 2725.71,
       "desc": "EMPENHO REFERENTE A LOCAÇÃO DE MAQUINAS E COPIADORAS PARA USO NOS DIVERSOS SETORES DA SECRETARIA MUNICIPAL DE ASSISTENCIA SOCIAL DURANTE O EXERCÍCIO 2026. C/C: 10.200-8",
       "acao": "ATIVIDADES DO DESENVOLVIMENTO SOCIAL",
       "lic": "Pregão Eletrônico 2022/2",
@@ -2675,6 +2679,10 @@
        [
         "23/10/2026",
         275.47
+       ],
+       [
+        "23/11/2026",
+        369.72
        ]
       ]
      },
@@ -2695,12 +2703,17 @@
       "data": "03/11/2026",
       "quem": "ESCOLINHA LAERCIO LUCAS DE SOUZA",
       "valor": 21000.0,
-      "pago": 0.0,
+      "pago": 21000.0,
       "desc": "",
       "acao": "",
       "lic": "",
       "unidade": "Secretaria Municipal de Desenvolvimento",
-      "pagamentos": []
+      "pagamentos": [
+       [
+        "23/11/2026",
+        21000.0
+       ]
+      ]
      }
     ]
    },
@@ -3382,7 +3395,7 @@
     ]
    },
    "Desporto e Lazer": {
-    "pago": 562139.68,
+    "pago": 583073.58,
     "por_mes": {
      "1": 27605.57,
      "2": 27171.75,
@@ -3394,7 +3407,7 @@
      "8": 44735.55,
      "9": 57795.73,
      "10": 57636.8,
-     "11": 51523.04
+     "11": 72456.94
     },
     "recebedores": [
      {
@@ -3426,6 +3439,12 @@
       "pf": true,
       "valor": 22297.0,
       "n": 18
+     },
+     {
+      "nome": "GG CONSTRUCOES E ACABAMENTOS LTDA",
+      "pf": false,
+      "valor": 20933.9,
+      "n": 1
      },
      {
       "nome": "SOCIAL ESPORTE CLUBE",
@@ -3480,16 +3499,10 @@
       "pf": false,
       "valor": 3700.0,
       "n": 1
-     },
-     {
-      "nome": "Show artístico",
-      "pf": true,
-      "valor": 3000.0,
-      "n": 1
      }
     ],
-    "outros": 31451.0,
-    "n_outros": 34,
+    "outros": 34451.0,
+    "n_outros": 35,
     "compras": [
      {
       "n": "613/2026",
@@ -3579,12 +3592,17 @@
       "data": "03/11/2026",
       "quem": "GG CONSTRUCOES E ACABAMENTOS LTDA",
       "valor": 20933.9,
-      "pago": 0.0,
+      "pago": 20933.9,
       "desc": "PRESTAÇÃO DE SERVIÇOS PARA 2ª ETAPA DA REFORMA E AMPLIAÇÃO DO CAMPO DE FUTEBOL ANEXO AO POLIESPORTIVO JOÃO FRANCISCO DA SILVA CONFORME ANEXO. RECURSO FUNDO MUNICIPAL DIREITOS DA CRIANÇA E DO ADOLESCENTE - ACORDO JUDICIAL VALE DO RIO DOCE.",
       "acao": "CONST. REFORMA ESTÁDIOS/GINASIOS POLIESP",
       "lic": "Artigo 75 Lei 14133 / 2021",
       "unidade": "Secretaria de Esporte, Turismo e Cultura",
-      "pagamentos": []
+      "pagamentos": [
+       [
+        "23/11/2026",
+        20933.9
+       ]
+      ]
      },
      {
       "n": "6479/2026",
@@ -3720,7 +3738,7 @@
     ]
    },
    "Urbanismo": {
-    "pago": 3808898.68,
+    "pago": 3818813.74,
     "por_mes": {
      "1": 280335.82,
      "2": 235175.1,
@@ -3732,7 +3750,7 @@
      "8": 162341.08,
      "9": 317741.63,
      "10": 810120.07,
-     "11": 181554.32
+     "11": 191469.38
     },
     "recebedores": [
      {
@@ -3780,8 +3798,8 @@
      {
       "nome": "CASA MAIS M. DE CONSTRUÇÃO E PRODUTOS AGROPECUARIOS EIRELI",
       "pf": false,
-      "valor": 61753.18,
-      "n": 40
+      "valor": 63961.92,
+      "n": 42
      },
      {
       "nome": "Microempreendedor(a) individual (obras)",
@@ -3826,7 +3844,7 @@
       "n": 11
      }
     ],
-    "outros": 216404.0,
+    "outros": 224110.32,
     "n_outros": 38,
     "compras": [
      {
@@ -5849,7 +5867,7 @@
     "compras": []
    },
    "Habitação": {
-    "pago": 546160.23,
+    "pago": 788619.86,
     "por_mes": {
      "4": 5451.49,
      "5": 39025.38,
@@ -5857,14 +5875,14 @@
      "7": 256724.2,
      "9": 233427.26,
      "10": 3766.0,
-     "11": 3401.8
+     "11": 245861.43
     },
     "recebedores": [
      {
       "nome": "TERRACOTA ENGENHARIA LTDA - EPP",
       "pf": false,
-      "valor": 477606.69,
-      "n": 2
+      "valor": 717393.12,
+      "n": 3
      },
      {
       "nome": "URBANO ENGENHARIA E CONSTRUÇÕES LTDA",
@@ -5885,16 +5903,16 @@
       "n": 2
      },
      {
+      "nome": "CASA MAIS M. DE CONSTRUÇÃO E PRODUTOS AGROPECUARIOS EIRELI",
+      "pf": false,
+      "valor": 3758.0,
+      "n": 4
+     },
+     {
       "nome": "GRAFMOR",
       "pf": false,
       "valor": 2676.58,
       "n": 3
-     },
-     {
-      "nome": "CASA MAIS M. DE CONSTRUÇÃO E PRODUTOS AGROPECUARIOS EIRELI",
-      "pf": false,
-      "valor": 1084.8,
-      "n": 1
      },
      {
       "nome": "Operador de maquinas pesadas",
@@ -5934,12 +5952,17 @@
       "data": "03/11/2026",
       "quem": "TERRACOTA ENGENHARIA LTDA - EPP",
       "valor": 239786.43,
-      "pago": 0.0,
+      "pago": 239786.43,
       "desc": "PRESTAÇÃO DE SERVIÇO NA CONSTRUÇÃO DE UNIDADES HABITACIONAIS DO PROGRAMA \"MINHA CASA MINHA VIDA\". RECURSO MINISTÉRIO DAS CIDADES. PROGRAMA MORADIA DIGNA. TERMO COMPROMISSO 9871492025. OPERAÇÃO 110.3850-26. C/C: 572.989.833-5 C.E.F. 3º BOLETIM",
       "acao": "CONSTRUÇÃO E REFORMA CASA POPULAR BAIXA",
       "lic": "Artigo 75 Lei 14133 / 2021",
       "unidade": "Secretaria Municipal de Infra-estrutura",
-      "pagamentos": []
+      "pagamentos": [
+       [
+        "24/11/2026",
+        239786.43
+       ]
+      ]
      },
      {
       "n": "5048/2026",
@@ -6082,12 +6105,17 @@
       "data": "03/11/2026",
       "quem": "CASA MAIS M. DE CONSTRUÇÃO E PRODUTOS AGROPECUARIOS EIRELI",
       "valor": 1695.0,
-      "pago": 0.0,
+      "pago": 1695.0,
       "desc": "AQUISIÇÃO DE MATERIAIS DE DOAÇÃO PARA EXECUÇÃO DO QUARTO PARA MARIA LUCIMEIRE NA RUA PROFESSOR JOSÉ FELIPE 285 NO BAIRRO NOVA CAP. RECURSO FUNDO MUNICIPAL HABITACIONAL.",
       "acao": "CONSTRUÇÃO E REFORMA CASA POPULAR BAIXA",
       "lic": "Artigo 75 Lei 14133 / 2021",
       "unidade": "Secretaria Municipal de Infra-estrutura",
-      "pagamentos": []
+      "pagamentos": [
+       [
+        "23/11/2026",
+        1695.0
+       ]
+      ]
      },
      {
       "n": "3902/2026",
@@ -6109,7 +6137,7 @@
     ]
    }
   },
-  "ultima": "2026-11-19",
+  "ultima": "2026-11-24",
   "portal": "https://ilai.memory.com.br/#/entidades/login/9BP6DH/1/"
  },
  "camara": {
