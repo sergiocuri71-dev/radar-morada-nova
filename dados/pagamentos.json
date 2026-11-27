@@ -1,5 +1,5 @@
 {
- "coletado_em": "2026-11-26T17:10:32+00:00",
+ "coletado_em": "2026-11-27T16:56:19+00:00",
  "ano": 2026,
  "fonte": "https://publico.memory.com.br/openknowledge",
  "prefeitura": {
@@ -6143,7 +6143,7 @@
  "camara": {
   "areas": {
    "Câmara": {
-    "pago": 1789698.7,
+    "pago": 1975277.25,
     "por_mes": {
      "1": 130266.59,
      "2": 154322.57,
@@ -6154,44 +6154,45 @@
      "7": 268970.29,
      "8": 206537.43,
      "9": 168330.82,
-     "10": 168902.99
+     "10": 168902.99,
+     "11": 185578.55
     },
     "recebedores": [
      {
       "nome": "Folha de pagamento (salários e subsídios, em bloco)",
       "pf": false,
-      "valor": 986670.5,
-      "n": 72
+      "valor": 1089405.9,
+      "n": 78
      },
      {
       "nome": "Advogado(a) (sociedade individual)",
       "pf": true,
-      "valor": 129250.0,
-      "n": 20
+      "valor": 142175.0,
+      "n": 22
      },
      {
       "nome": "INSTITUTO NACIONAL DO SEGURO SOCIAL -INSS",
       "pf": false,
-      "valor": 101007.68,
-      "n": 10
+      "valor": 112419.88,
+      "n": 11
      },
      {
       "nome": "SYSSOLUTION",
       "pf": false,
-      "valor": 92000.0,
-      "n": 8
-     },
-     {
-      "nome": "INSTITUTO MUNICIPAL DE PREVIDENCIA E ASSISTENCIA SOCIAL - IM",
-      "pf": false,
-      "valor": 87642.68,
-      "n": 20
+      "valor": 103993.35,
+      "n": 9
      },
      {
       "nome": "PUBLICUS CONTABILIDADE E SISTEMAS S/C LTDA",
       "pf": false,
-      "valor": 83411.5,
-      "n": 10
+      "valor": 100093.8,
+      "n": 11
+     },
+     {
+      "nome": "INSTITUTO MUNICIPAL DE PREVIDENCIA E ASSISTENCIA SOCIAL - IM",
+      "pf": false,
+      "valor": 96525.23,
+      "n": 22
      },
      {
       "nome": "LIDER SOM - A CASA DA MÚSICA",
@@ -6200,28 +6201,34 @@
       "n": 3
      },
      {
-      "nome": "Servidor(a) (acerto ou indenização)",
-      "pf": true,
-      "valor": 26740.79,
-      "n": 24
-     },
-     {
       "nome": "Microempreendedor(a) individual (serviços)",
       "pf": true,
-      "valor": 24968.61,
-      "n": 24
+      "valor": 27453.46,
+      "n": 27
+     },
+     {
+      "nome": "Servidor(a) (acerto ou indenização)",
+      "pf": true,
+      "valor": 27344.79,
+      "n": 27
      },
      {
       "nome": "MEMORY PROJETOS E DESENVOLVIMENTO DE SISTEMAS LTDA.",
       "pf": false,
-      "valor": 23642.1,
-      "n": 10
+      "valor": 26065.11,
+      "n": 11
      },
      {
       "nome": "CEMIG DISTRIBUIÇÃO S/A",
       "pf": false,
-      "valor": 19157.15,
-      "n": 10
+      "valor": 21297.01,
+      "n": 11
+     },
+     {
+      "nome": "FUNDO DE ASSIST. SAUDE SERV. PUBLICOS MUNIC. MORADA NOVA-FAS",
+      "pf": false,
+      "valor": 18648.72,
+      "n": 11
      },
      {
       "nome": "WLS DISTRIBUIDORA LTDA",
@@ -6240,23 +6247,17 @@
       "pf": false,
       "valor": 17344.65,
       "n": 8
-     },
-     {
-      "nome": "FUNDO DE ASSIST. SAUDE SERV. PUBLICOS MUNIC. MORADA NOVA-FAS",
-      "pf": false,
-      "valor": 17000.59,
-      "n": 10
      }
     ],
-    "outros": 82652.95,
-    "n_outros": 20,
+    "outros": 94300.85,
+    "n_outros": 22,
     "compras": [
      {
       "n": "19/2026",
       "data": "19/01/2026",
       "quem": "SYSSOLUTION",
       "valor": 138000.0,
-      "pago": 92000.0,
+      "pago": 103993.35,
       "desc": "VALOR REFERE-SE A PREST. SERV. E LOCAÇÃO DE LICENCIAMENTO, NÃO VITALÍCIO, DO DIREITO DE USO DE SISTEMA DE GESTÃO LEGISLATIVA, APOIO PARLAMENTAR, HOSPEDAGEM DE PORTAL WEB E MÓDULOS DE CONTROLE E VOTAÇÃO DAS SESSÕES LEGISLATIVAS, NO EXERCÍCIO DE 2026.",
       "acao": "MANUT. ATIVIDADES SECRETARIA DA CÂMARA",
       "lic": "PREGÃO ELETRONICO 2025/1",
@@ -6293,6 +6294,10 @@
        [
         "07/10/2026",
         11500.0
+       ],
+       [
+        "10/11/2026",
+        11993.35
        ]
       ]
      },
@@ -6313,7 +6318,7 @@
       "data": "12/01/2026",
       "quem": "PUBLICUS CONTABILIDADE E SISTEMAS S/C LTDA",
       "valor": 104000.0,
-      "pago": 83411.5,
+      "pago": 100093.8,
       "desc": "VALOR QUE SE EMPENHA REFERE-SE A SERVIÇOS PRESTADOS EM ASSESSORIA E CONSULTORIA CONTÁBIL À CÂMARA MUNICIPAL DE MORADA NOVA DE MINAS, NO EXERCÍCIO DE 2026.",
       "acao": "MANUT. ATIVIDADES SECRETARIA DA CÂMARA",
       "lic": "Inexigibilidade 2025/2",
@@ -6358,6 +6363,10 @@
        [
         "23/10/2026",
         8341.15
+       ],
+       [
+        "24/11/2026",
+        16682.3
        ]
       ]
      },
@@ -6366,7 +6375,7 @@
       "data": "17/01/2026",
       "quem": "MEMORY PROJETOS E DESENVOLVIMENTO DE SISTEMAS LTDA.",
       "valor": 71307.55,
-      "pago": 23642.1,
+      "pago": 26065.11,
       "desc": "VALOR REFERE-SE A LOCAÇÃO DE SOFTWARES DE SISTEMA DE CONTABILIDADE, COMPRAS, LICITAÇÃO, RECURSOS HUMANOS E OUTROS À CÂMARA MUNICIPAL DE MORADA NOVA DE MINAS, PARA O EXERCICIO DE 2026.",
       "acao": "MANUT. ATIVIDADES SECRETARIA DA CÂMARA",
       "lic": "ADESÃO PREGÃO ELETRONICO 2025/1",
@@ -6411,6 +6420,10 @@
        [
         "23/10/2026",
         2423.01
+       ],
+       [
+        "24/11/2026",
+        2423.01
        ]
       ]
      },
@@ -6419,7 +6432,7 @@
       "data": "09/01/2026",
       "quem": "INSTITUTO MUNICIPAL DE PREVIDENCIA E ASSISTENCIA SOCIAL - IM",
       "valor": 55519.57,
-      "pago": 46044.13,
+      "pago": 50770.39,
       "desc": "VALOR REFERE-SE AO REPASSE AO IMPAS - INSTITUTO MUNICIPAL DE PREVIDÊNCIA SOCIAL, DO APORTE FINANCEIRO, CONFORME LEI MUNICIPal nº 1.751/2022, RELATIVO AO MÊ DE",
       "acao": "CONTRIBUIÇÃO PREVIDENCIÁRIA RPPS",
       "lic": "Não se Aplica",
@@ -6464,6 +6477,10 @@
        [
         "27/10/2026",
         4703.45
+       ],
+       [
+        "24/11/2026",
+        4726.26
        ]
       ]
      },
@@ -6489,7 +6506,7 @@
       "data": "02/01/2026",
       "quem": "CEMIG DISTRIBUIÇÃO S/A",
       "valor": 30000.0,
-      "pago": 19157.15,
+      "pago": 21297.01,
       "desc": "VALOR REFERE-SE A SERVIÇOS PRESTADOS EM FORNECIMENTO DE ENERGIA ELETRICA PARA USO NAS DEPEDÊNCIAS DO LEGISLATIVO MUNICIPAL NO EXERCÍCIO 2026",
       "acao": "MANUT. ATIVIDADES SECRETARIA DA CÂMARA",
       "lic": "Não se Aplica",
@@ -6534,6 +6551,10 @@
        [
         "23/10/2026",
         2686.76
+       ],
+       [
+        "24/11/2026",
+        2139.86
        ]
       ]
      },
@@ -6660,7 +6681,7 @@
     ]
    }
   },
-  "ultima": "2026-10-30",
+  "ultima": "2026-11-26",
   "portal": "https://ilai.memory.com.br/#/entidades/login/9BP6DY/2/"
  }
 }
